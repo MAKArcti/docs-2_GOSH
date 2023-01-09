@@ -1,0 +1,955 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../../on-chain-architecture/gosh-smart-contracts/">
+      
+      
+        <link rel="next" href="../gosh-web/">
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
+    
+    
+      
+        <title>Docker Extension - Git Open Source Hodler - GOSH</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.6b71719e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="teal">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#docker-extension" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Git Open Source Hodler - GOSH" class="md-header__button md-logo" aria-label="Git Open Source Hodler - GOSH" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Git Open Source Hodler - GOSH
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docker Extension
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../.." class="md-tabs__link">
+      Git Open Source Hodler
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../on-chain-architecture/gosh-wallet/" class="md-tabs__link">
+        On-chain Architecture
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Working with GOSH
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="https://gosh.sh/" class="md-tabs__link">
+        Links
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Git Open Source Hodler - GOSH" class="md-nav__button md-logo" aria-label="Git Open Source Hodler - GOSH" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Git Open Source Hodler - GOSH
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Git Open Source Hodler
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2" tabindex="0" aria-expanded="false">
+          On-chain Architecture
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="On-chain Architecture" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          On-chain Architecture
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-wallet/" class="md-nav__link">
+        GOSH Wallet
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/" class="md-nav__link">
+        Organizations - GOSH DAO and SMV
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../on-chain-architecture/gosh-smart-contracts/" class="md-nav__link">
+        GOSH smart contracts
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3" tabindex="0" aria-expanded="true">
+          Working with GOSH
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Working with GOSH" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Working with GOSH
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Docker Extension
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Docker Extension
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-account" class="md-nav__link">
+    Create account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-organization" class="md-nav__link">
+    Create Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    ​Create Repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-branch" class="md-nav__link">
+    Create Branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-file" class="md-nav__link">
+    Create File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-pull-request" class="md-nav__link">
+    Create Pull Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voting-in-smv-soft-majority-vote" class="md-nav__link">
+    Voting in SMV (Soft Majority Vote)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-public-key" class="md-nav__link">
+    View Public Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-members-to-organization" class="md-nav__link">
+    Add Members to Organization 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gosh-web/" class="md-nav__link">
+        GOSH Web
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../git-remote-helper/" class="md-nav__link">
+        Git Remote Helper
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../build-and-sign-images/" class="md-nav__link">
+        Build and Sign Images
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../verify-images-in-docker-extension/" class="md-nav__link">
+        Verify Images in Docker Extension
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" tabindex="0" aria-expanded="false">
+          Links
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Links" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Links
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gosh.sh/" class="md-nav__link">
+        GOSH website
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://app.gosh.sh/" class="md-nav__link">
+        GOSH Web App
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://gosh.live/" class="md-nav__link">
+        GOSH Blockchain Explorer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://github.com/gosh-sh/gosh" class="md-nav__link">
+        GOSH repository
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installation" class="md-nav__link">
+    Installation
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-account" class="md-nav__link">
+    Create account
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-organization" class="md-nav__link">
+    Create Organization
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-repository" class="md-nav__link">
+    ​Create Repository
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-branch" class="md-nav__link">
+    Create Branch
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-file" class="md-nav__link">
+    Create File
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#create-pull-request" class="md-nav__link">
+    Create Pull Request
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#voting-in-smv-soft-majority-vote" class="md-nav__link">
+    Voting in SMV (Soft Majority Vote)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#view-public-key" class="md-nav__link">
+    View Public Key
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#add-members-to-organization" class="md-nav__link">
+    Add Members to Organization 
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#whats-next" class="md-nav__link">
+    What's next?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="docker-extension">Docker Extension</h1>
+<p>GOSH Docker Extension is a good way to get started with GOSH.&#x20;</p>
+<p>It implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.</p>
+<p>You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories through a graphical interface directly in Docker Desktop. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.</p>
+<p>Images built directly from code stored in GOSH can be verified as GOSH-sourced in the Docker Extension, ensuring security of the software supply chain. You will always know what code specifically is running in your containers, and that none of it was tampered with during build.</p>
+<h2 id="installation">Installation</h2>
+<p>Get the latest <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> (4.8.0 or later), which supports extensions.</p>
+<p>Launch the Desktop, go to the <strong>Extensions</strong> section, and click Add Extensions.</p>
+<figure><img src="/images/1.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Select and install <strong>Gosh</strong> extension on the marketplace.</p>
+<h2 id="create-account">Create account</h2>
+<p>To get started with GOSH, you need an active Github-account</p>
+<p>Open <strong>Gosh verified images</strong> extension in Docker Desktop and click <strong>Create account with Github.</strong></p>
+<figure><img src="/images/1 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Enter the username.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The User name must contain only Latin letters, numbers, hyphen, underscore character <em>( a...z, 0...9, -, _ )</em></p>
+</div>
+<p>GOSH will generate a seed phrase for you.&#x20;</p>
+<figure><img src="/images/4 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+<p>If you are familiar with blockchain, you know what to do with a seed phrase.&#x20;</p>
+<p>If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.&#x20;</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.</strong></p>
+</div>
+<p><strong>Your username and seed phrase will be used to log into GOSH.</strong></p>
+<p>Once you have written down your seed phrase, click <strong>Create account</strong>.</p>
+<p>GOSH will ask you to set up a PIN code:&#x20;</p>
+<figure><img src="/images/5 (2).jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Once done, you will be logged into GOSH.</p>
+<h2 id="create-organization">Create Organization</h2>
+<p>The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.</p>
+<figure><img src="/images/6 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Click <strong>New organization</strong> button in the Organizations section.</p>
+<p>Input Organization name.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Organizations name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p>The first mandatory member is the creator, identified by their username. Any other members can be added at creation or later - just enter the username of each member with the <code>@</code> symbol.</p>
+<figure><img src="/images/7 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Click <strong>Create organization</strong>.</p>
+<p>Once created, your organization will appear in the organization list. Click on it to continue.</p>
+<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
+
+<h2 id="create-repository">​Create Repository</h2>
+<p>To create a repository in your organization click <strong>Create</strong> in the Repositories section.</p>
+<figure><img src="/images/9 create repo.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Enter repository name and click <strong>Create repository</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The repository name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<figure><img src="/images/10.jpg" alt=""><figcaption></figcaption></figure>
+
+<h2 id="create-branch">Create Branch</h2>
+<p>Repository is created with default main branch. To create another branch, click on the <strong>branches</strong> counter.</p>
+<figure><img src="/images/11 crreate branch.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Select the branch to be forked, enter new branch name, and click​ <strong>Create branch</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The branch name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<figure><img src="/images/12.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Once the branch is created, it will appear in the branches list.</p>
+<figure><img src="/images/13.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>Switch to it via drop down list.</p>
+<figure><img src="/images/14.jpg" alt=""><figcaption></figcaption></figure>
+
+<h2 id="create-file">Create File</h2>
+<p>To create file, click <strong>Add file</strong> button.</p>
+<p>Enter file contents and name. MD syntax is supported for preview.</p>
+<p><img alt="" src="../../images/62.png" /></p>
+<p>Once done, scroll down to <strong>Commit data</strong>, enter commit info and click <strong>Commit changes</strong>.</p>
+<p><img alt="" src="../../images/14.png" /></p>
+<p>If the branch you are working in requires no vote to commit to, the changes will be commited immediately/ Otherwise a DAO <a href="./#voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
+<h2 id="create-pull-request">Create Pull Request</h2>
+<p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to.&#x20;</p>
+<p><img alt="" src="../../images/65.png" /></p>
+<p>View the diff, scroll down to <strong>Commit data</strong>, enter details and click <strong>Commit changes</strong>.</p>
+<p><img alt="" src="../../images/66.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.</p>
+<p><a href="./#move-tokens-to-smv">Organization Tokens have to be sent to the DAO Soft Majority Vote</a> contract to start a proposal for DAO members to <a href="./#voting-in-smv-soft-majority-vote">vote</a> on.</p>
+</div>
+<h2 id="voting-in-smv-soft-majority-vote">Voting in SMV (Soft Majority Vote)</h2>
+<p>Actions that require a DAO vote, such as merging into main, are performed by creating a proposal.</p>
+<p>To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be <a href="./#move-tokens-to-smv">allocated to SMV</a> (once the proposal is completed), you can get them back.</p>
+<p>For example, to merge into main, <a href="./#create-pull-request">create a pull request</a> from some other branch. A proposal will be generated and will appear on the <strong>Events</strong> page.</p>
+<figure><img src="/images/Voting in SMV.jpg" alt=""><figcaption></figcaption></figure>
+
+<p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. Unless a decisive majority of &gt;50% is achieved early, votes will be counted at the end of this period.</p>
+<p>The thumbs up and down counters under <strong>Running</strong> status indicate how many tokens were used by now to vote for and against the proposal.</p>
+<p>The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.</p>
+<p>Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.&#x20;</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.</p>
+<p>For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.</p>
+<p>On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.</p>
+<p>The more tokens are sent against the proposal, the higher the approving amount needs to be (up to 50% of the total supply  + 1 token) for the proposal to pass.</p>
+</div>
+<p>Other members of the Organization, who have transferred their tokens to SMV, will be able to vote for the proposal on this page in their own accounts.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.</p>
+</div>
+<p>Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.</p>
+<h2 id="view-public-key">View Public Key</h2>
+<p>A user needs to know their public key, for example, when joining an organization.</p>
+<p>To view your public key go to the main page of your account and click <strong>Settings</strong>.</p>
+<figure><img src="/images/View Public Key.jpg" alt=""><figcaption></figcaption></figure>
+
+<h2 id="add-members-to-organization">Add Members to Organization <a href="#whats-next" id="whats-next"></a></h2>
+<p>Go to <strong>Organization</strong> <strong>menu - Participants.</strong> To add participants, click <strong>Add participant</strong> button, enter new participant <a href="./#view-public-key">public key</a> and click <strong>Save changes</strong>.</p>
+<p><img alt="" src="../../images/73.png" /></p>
+<h2 id="whats-next">What's next?</h2>
+<p>Set up <a href="../git-remote-helper/">Git remote helper</a> and continue working with your repository.</p>
+<p>You'll need your wallet credentials. Go to <strong>Organization menu - Wallet</strong> .</p>
+<p><img alt="" src="../../images/68.png" /></p>
+<p>Scroll down and copy your Git Remote credentials:</p>
+<p><img alt="" src="../../images/69%20%281%29.png" /></p>
+<p>To view the command to clone your repo, click the <strong>Clone</strong> button on your repo page.</p>
+<p><img alt="" src="../../images/75.png" /></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "navigation.tabs"], "search": "../../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.ba449ae6.min.js"></script>
+      
+    
+  </body>
+</html>
