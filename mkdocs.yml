@@ -1,4 +1,4 @@
-site_name: Git Open Source Hodler - GOSH
+site_name: GOSH
 nav:
   - Git Open Source Hodler: index.md
   - On-chain Architecture:
@@ -11,23 +11,22 @@ nav:
     - Git Remote Helper: working-with-gosh/git-remote-helper.md
     - Build and Sign Images: working-with-gosh/build-and-sign-images.md
     - Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
-  - Links:
-    - GOSH website: https://gosh.sh/
-    - GOSH Web App: https://app.gosh.sh/
-    - GOSH Blockchain Explorer: https://gosh.live/
-    - GOSH repository: https://github.com/gosh-sh/gosh
+  - Links: links.md
 
 markdown_extensions:
     - admonition
 
-theme: 
+theme:
+  logo: images/gosh2.svg
+  favicon: images/gosh2.svg
   # name: readthedocs
   name: material
   language: en
   features:
-    - navigation.sections
+    # - navigation.sections
     - navigation.tabs
+    - navigation.expand
   palette:
     scheme: default
     primary: white
-    accent: teal
+    accent: light blue
