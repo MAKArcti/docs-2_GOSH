@@ -16,14 +16,14 @@ pipeline {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
                             echo 'Bucket already exists. Just syncing.'
-                            sh "aws s3 sync build/ s3://${BUCKET_NAME}"
+                            sh "aws s3 sync docs/ s3://${BUCKET_NAME}"
                         } else {
                             sh """
                                 aws s3api create-bucket --bucket ${BUCKET_NAME} --region eu-west-2 --acl public-read --create-bucket-configuration LocationConstraint=eu-west-2
-                                aws s3 website s3://${BUCKET_NAME} --index-document site/index.html --error-document site/index.html
+                                aws s3 website s3://${BUCKET_NAME} --index-document index.html --error-document index.html
                                 sed 's/BUCKET_NAME/${BUCKET_NAME}/g' s3/policy.json.template > policy.json
                                 aws s3api put-bucket-policy --bucket ${BUCKET_NAME} --policy file://policy.json
-                                aws s3 sync build/ s3://${BUCKET_NAME}
+                                aws s3 sync docs/ s3://${BUCKET_NAME}
                                 sed "s/BUCKET_NAME/\$BUCKET_NAME/g" nginx/proxy.s3.conf.template >> /opt/nginx/s3-proxy.conf
                             """
                         }
