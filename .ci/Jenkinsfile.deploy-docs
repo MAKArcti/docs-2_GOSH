@@ -11,7 +11,7 @@ pipeline {
         stage('Docs: deploy') {
             steps {
                 script {
-                    env.BUCKET_NAME = 'docs'
+                    env.BUCKET_NAME = 'docs-gosh'
                     dir('web') {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
@@ -30,7 +30,7 @@ pipeline {
                     }
                     timeout(15) {
                         waitUntil {
-                            def r = sh script: "sleep 10 && curl -s --retry-connrefused --retry 100 --retry-delay 5 https://${BUCKET_NAME}.gosh.sh > /dev/null", returnStatus: true
+                            def r = sh script: "sleep 10 && curl -s --retry-connrefused --retry 100 --retry-delay 5 https://docs.gosh.sh > /dev/null", returnStatus: true
                             return r == 0
                         }
                     }
