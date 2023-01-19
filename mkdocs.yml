@@ -1,4 +1,4 @@
-site_name: GOSH1
+site_name: GOSH
 nav:
   - Git Open Source Hodler: index.md
   - On-chain Architecture:
