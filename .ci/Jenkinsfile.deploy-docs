@@ -13,6 +13,8 @@ pipeline {
     stages {
         stage('Docs: deploy') {
             steps {
+                git branch: "${sha1}", url: 'https://github.com/gosh-sh/docs.git'
+                checkout scm
                 script {
                     env.BUCKET_NAME = 'docs-gosh'
                     dir('site') {
