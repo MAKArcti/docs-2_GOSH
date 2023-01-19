@@ -1,4 +1,7 @@
 pipeline {
+    triggers {
+       githubPush()
+    }
     agent {
         node {
             label 'jenkins-main'
