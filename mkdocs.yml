@@ -1,6 +1,6 @@
 site_name: GOSH
 nav:
-  - Git Open Source Hodler: index.mdasdads
+  - Git Open Source Hodler: index.md
   - On-chain Architecture:
     - GOSH Wallet: on-chain-architecture/gosh-wallet.md
     - Organizations - GOSH DAO and SMV: on-chain-architecture/organizations-gosh-dao-and-smv.md
