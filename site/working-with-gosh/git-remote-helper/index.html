@@ -12,7 +12,7 @@
         <link rel="prev" href="../gosh-web/">
       
       
-        <link rel="next" href="../build-and-sign-images/">
+        <link rel="next" href="../../links/">
       
       <link rel="icon" href="../../images/gosh2.svg">
       <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.3">
@@ -507,34 +507,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../build-and-sign-images/" class="md-nav__link">
-        Build and Sign Images
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../verify-images-in-docker-extension/" class="md-nav__link">
-        Verify Images in Docker Extension
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -660,15 +632,21 @@
 
 
 <h1 id="git-remote-helper">Git Remote Helper</h1>
-<p>Git Remote Helper is a git-client helper to interact with remote repositories hosted on the GOSH blockchain.</p>
+<p>Git Remote Helper is a <a href="https://git-scm.com/docs/gitremote-helpers#_description"><code>git-client helper</code></a> to interact with remote repositories hosted on the GOSH blockchain.</p>
 <h2 id="setup-helper-from-source">Setup helper from source</h2>
 <ol>
-<li>Prerequisites:</li>
+<li>
+<p>Prerequisites:</p>
+<ul>
 <li>Rust v1.65+</li>
 <li>Protobuf Compiler</li>
 <li><code>git</code></li>
 <li><code>make</code></li>
-<li>Clone <a href="https://github.com/gosh-sh/gosh"><code>git-remote-gosh</code></a> repo</li>
+</ul>
+</li>
+<li>
+<p>Clone <a href="https://github.com/gosh-sh/gosh"><code>git-remote-gosh</code></a> repo</p>
+</li>
 <li><code>cd git-remote-gosh</code> and run <code>make build</code></li>
 <li>Add path with <code>git-remote-gosh</code> for availability via <code>$PATH</code>:</li>
 </ol>
@@ -682,14 +660,24 @@
 </code></pre>
 <h2 id="setup-helper-from-binary-releases">Setup helper from binary releases</h2>
 <ol>
-<li>Prerequisites:</li>
+<li>
+<p>Prerequisites:</p>
+<ul>
 <li>wget</li>
-<li>Download latest version\
-   <code>wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-arm64</code></li>
-<li>Set executable flag:\
-   <code>chmod +x git-remote-gosh-amd64</code></li>
-<li>Copy binary to any searchable path: \
-   <code>cp git-remote-gosh-amd64 /usr/local/bin/git-remote-gosh</code></li>
+</ul>
+</li>
+<li>
+<p>Download latest version:</p>
+<p><code>wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-arm64</code></p>
+</li>
+<li>
+<p>Set executable flag:</p>
+<p><code>chmod +x git-remote-gosh-amd64</code></p>
+</li>
+<li>
+<p>Copy binary to any searchable path:</p>
+<p><code>cp git-remote-gosh-amd64 /usr/local/bin/git-remote-gosh</code></p>
+</li>
 </ol>
 <h3 id="setup-user-account">Setup user account</h3>
 <p>When creating your account in <a href="../docker-extension/">Docker extension</a> or <a href="../gosh-web/">GOSH Web</a> you received a GOSH wallet address and keys.</p>
@@ -701,7 +689,7 @@
   &quot;networks&quot;: {
     &quot;goshnet&quot;: {
       &quot;user-wallet&quot;: {
-        &quot;profile&quot;: &quot;@USERNAME&quot;,
+        &quot;profile&quot;: &quot;USERNAME&quot;,
         &quot;pubkey&quot;: &quot;655b120c996b4f69c686cb3b769fbdfa0141006ce6a88dc012bf323c30265924&quot;,
         &quot;secret&quot;: &quot;6bdc38c0ecd6f74399f6b8ff2486f0e2abb32fca712caf3e4a47ef4a2634c4e8&quot;
       },
