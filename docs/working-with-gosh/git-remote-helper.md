@@ -1,14 +1,16 @@
 # Git Remote Helper
 
-Git Remote Helper is a git-client helper to interact with remote repositories hosted on the GOSH blockchain.
+Git Remote Helper is a [`git-client helper`](https://git-scm.com/docs/gitremote-helpers#_description) to interact with remote repositories hosted on the GOSH blockchain.
 
 ## Setup helper from source
 
 1. Prerequisites:
-   1. Rust v1.65+
-   2. Protobuf Compiler
-   3. `git`
-   4. `make`
+
+      - Rust v1.65+
+      - Protobuf Compiler
+      - `git`
+      - `make`
+
 2. Clone [`git-remote-gosh`](https://github.com/gosh-sh/gosh) repo
 3. `cd git-remote-gosh` and run `make build`
 4. Add path with `git-remote-gosh` for availability via `$PATH`:
@@ -32,13 +34,20 @@ which git-remote-gosh
 ## Setup helper from binary releases
 
 1. Prerequisites:
-   1. wget
-2. Download latest version\
-   `wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-arm64`
-3. Set executable flag:\
-   `chmod +x git-remote-gosh-amd64`
-4. Copy binary to any searchable path: \
-   `cp git-remote-gosh-amd64 /usr/local/bin/git-remote-gosh`
+
+      - wget
+
+2. Download latest version:
+
+      `wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-arm64`
+
+3. Set executable flag:
+
+      `chmod +x git-remote-gosh-amd64`
+
+4. Copy binary to any searchable path:
+
+      `cp git-remote-gosh-amd64 /usr/local/bin/git-remote-gosh`
 
 ### Setup user account
 
@@ -55,7 +64,7 @@ The helper expects that the wallet credentials are in the file `~/.gosh/config.j
   "networks": {
     "goshnet": {
       "user-wallet": {
-        "profile": "@USERNAME",
+        "profile": "USERNAME",
         "pubkey": "655b120c996b4f69c686cb3b769fbdfa0141006ce6a88dc012bf323c30265924",
         "secret": "6bdc38c0ecd6f74399f6b8ff2486f0e2abb32fca712caf3e4a47ef4a2634c4e8"
       },
