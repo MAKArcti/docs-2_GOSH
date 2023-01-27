@@ -1,114 +1,115 @@
-# GOSH Web
+# __GOSH Web__
 
-[GOSH Web](https://app.gosh.sh/) is also a good way to get started with GOSH.&#x20;
+[GOSH Web](https://app.gosh.sh/) is also a good way to get started with GOSH.
 
 It implements GOSH repository management as a simple web interface.
 
 You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
 
-## Create account
+## __Create account__
 
 To get started with GOSH, you need an active Github-account
 
 Click **Create account with Github** to start registering on GOSH
 
-<figure><img src="/images/1 (2).jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_01.jpg)
 
-After click **Authorize gosh-sh**&#x20;
+After click **Authorize gosh-sh**
 
-<figure><img src="/images/2 -11.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_02.jpg)
 
 In the list of organizations received from Github, click on the organization
 
-<figure><img src="/images/3 — 12.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_03.jpg)
 
 and select repositories for upload into Gosh
 
-<figure><img src="/images/4 — 12.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_04.jpg)
 
-Do this **for each** organization for which you want to upload repositories to Gosh.&#x20;
+Do this **for each** organization for which you want to upload repositories to Gosh.
 
 !!! danger
     After registering on GOSH you will not be able to return to this step in this release.
 
     This will be available later
 
-Then return to the list of organizations and click **Upload**
+Then click **Upload**
 
-<figure><img src="/images/3 — 11.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_05.jpg)
 
 ​If you are familiar with blockchain, you know what to do with a seed phrase.
 
 If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
 
-To create a Gosh-account, insert your seed phrase or сlick **Generate phrase**
+To create the GOSH-account, the seed phrase will be generated for you. If you already have the GOSH-account, click **Clear** and enter your own one seed phrase.
 
-<figure><img src="/images/6-1.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
 
-!!! warning
+!!! danger
     Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
 
-**Your seed phrase will be used to log into GOSH.**\
-****\
-****Once you have written down your seed phrase, click **Continue.**
+!!! info
+    Your seed phrase will be used to log into GOSH.
 
-****
+Once you have written down your seed phrase, click **Continue.**
 
 Then choose a short nickname or create a new one and click **Create account**.
 
 !!! warning
     The Usernames must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-<figure><img src="/images/7-1.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
 !!! info
-    When the repositories are uploaded, a notification will be sent to your email.
+    __When the repositories are uploaded, a notification will be sent to your email.__
 
-<figure><img src="/images/9-11.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_08_wellcom.jpg)
 
-To log into Gosh, click **Sign in.**
+To log into Gosh, click **Sign in**.
 
-<figure><img src="/images/10-11signIn.jpg" alt=""><figcaption></figcaption></figure>
+Enter the saved seed phrase and click **Sign in**.
 
-Enter the saved seed phrase and click **Sign in.**
-
-<figure><img src="/images/10-1-seedpf (3).jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Authorize_Gosh_09_signIn.jpg)
 
 GOSH will ask you to set up a PIN code:
 
-![](../images/23.png)
+![](../images/gosh_web_Authorize_Gosh_10_pin.jpg)
+
+And unlock with PIN code.
 
 Once done, you will be logged into GOSH.
 
 
-
-## Create Organization
+## __Create Organization__
 
 The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
 
 Click **New organization** button in the Organizations section.
 
-<figure><img src="/images/6 (1).jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_ORG_01.jpg)
 
-​Input Organization name and members.&#x20;
+​Input Organization name and members.
 
 !!! warning
     The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-The first mandatory member is the creator, identified by their username.&#x20;
+The first mandatory member is the creator, identified by their username.
 
-Any other members can be added at creation - just enter the username of each member with the `@` symbol. At any later time the list of members [can be expanded](gosh-web.md#whats-next).
+Any other members can be added at creation - just enter the username of each member in new line.
 
-<figure><img src="/images/7 (1).jpg" alt=""><figcaption></figcaption></figure>
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization).
 
 Click **Create organization**.
 
-​Once created, your organization will appear in the organization list. Click on it to continue.\
+![](../images/gosh_web_Create_ORG_02_name_members.jpg)
+
+
+​Once created, your organization will appear in the organization list. Click on it to continue.
 
 
 <figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
 
-## Create Repository
+## __Create Repository__
 
 To create a repository in your organization click **New repository** in the Repositories section.​
 
@@ -121,7 +122,7 @@ Enter repository name and click **Create repository**.
 
 <figure><img src="/images/10.jpg" alt=""><figcaption></figcaption></figure>
 
-## ​Create Branch
+## __​Create Branch__
 
 Repository is created with default main branch. To create another branch, click on the **branches** counter.​
 
@@ -142,7 +143,7 @@ Switch to it via drop down list.
 
 <figure><img src="/images/14.jpg" alt=""><figcaption></figcaption></figure>
 
-## Create File
+## __Create File__
 
 To create file, click **Add file** button.
 
@@ -179,7 +180,7 @@ The branches will be compared. Review the changes, set up the pull request and c
 
     [Organization Tokens have to be sent to the DAO Soft Majority Vote](gosh-web.md#move-tokens-to-smv) contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
 
-## Voting in SMV (Soft Majority Vote)
+## __Voting in SMV (Soft Majority Vote)__
 
 Actions that require a DAO vote, such as merging into main, are performed by creating a proposal.
 
@@ -199,7 +200,7 @@ The red and green numbers next to **Running** status indicate how many tokens we
 
 The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
 
-Once you have made a decision, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.&#x20;
+Once you have made a decision, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
 
 !!! info
     As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
@@ -219,7 +220,7 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 ![](../images/123.png)
 
-## View Public Key
+## __View Public Key__
 
 A user needs to know their public key, for example, when joining an organization.
 
@@ -230,7 +231,7 @@ To view your public key go to the main page of your account and click **Settings
 
 <figure><img src="/images/9.jpg" alt=""><figcaption></figcaption></figure>
 
-## Add Members to Organization <a href="#whats-next" id="whats-next"></a>
+## __Add Members to Organization__ <a href="#whats-next" id="whats-next"></a>
 
 Go to Organization **Settings** to the **Members** tab to manage your organization.
 
@@ -238,7 +239,7 @@ Go to Organization **Settings** to the **Members** tab to manage your organizati
 
 To add members, enter their [public key](gosh-web.md#view-public-key)s in the field, each from a new line, and click  **Add members** button.
 
-## What's next? <a href="#whats-next" id="whats-next"></a>
+## __What's next?__ <a href="#whats-next" id="whats-next"></a>
 
 Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
 

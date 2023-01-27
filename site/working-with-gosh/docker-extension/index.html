@@ -523,34 +523,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../build-and-sign-images/" class="md-nav__link">
-        Build and Sign Images
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../verify-images-in-docker-extension/" class="md-nav__link">
-        Verify Images in Docker Extension
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -692,57 +664,130 @@
 
 
 <h1 id="docker-extension">Docker Extension</h1>
-<p>GOSH Docker Extension is a good way to get started with GOSH.&#x20;</p>
-<p>It implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.</p>
+<p>GOSH Docker Extension implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.</p>
 <p>You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories through a graphical interface directly in Docker Desktop. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.</p>
 <p>Images built directly from code stored in GOSH can be verified as GOSH-sourced in the Docker Extension, ensuring security of the software supply chain. You will always know what code specifically is running in your containers, and that none of it was tampered with during build.</p>
 <h2 id="installation">Installation</h2>
 <p>Get the latest <a href="https://www.docker.com/products/docker-desktop/">Docker Desktop</a> (4.8.0 or later), which supports extensions.</p>
-<p>Launch the Desktop, go to the <strong>Extensions</strong> section, and click Add Extensions.</p>
-<figure><img src="/images/1.jpg" alt=""><figcaption></figcaption></figure>
-
+<p>Launch the Desktop, go to the <strong>Extensions</strong> section, and click <strong>Add Extensions</strong>.</p>
+<p><img alt="" src="../../images/docker_ext_install_01.jpg" /></p>
 <p>Select and install <strong>Gosh</strong> extension on the marketplace.</p>
 <h2 id="create-account">Create account</h2>
-<p>To get started with GOSH, you need an active Github-account</p>
-<p>Open <strong>Gosh verified images</strong> extension in Docker Desktop and click <strong>Create account with Github.</strong></p>
-<figure><img src="/images/1 (1).jpg" alt=""><figcaption></figcaption></figure>
-
-<p>Enter the username.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The User name must contain only Latin letters, numbers, hyphen, underscore character <em>( a...z, 0...9, -, _ )</em></p>
+<p>Open the <strong>Gosh verified images</strong> extension in Docker Desktop. 
+If you have a Gosh account, then enter your own one seed phrase, if not, you can create it by clicking on the link app.gosh.sh.</p>
+<p><img alt="" src="../../images/docker_ext_create_acc_01.jpg" /></p>
+<p>To get started with GOSH, you need an active Github-account.</p>
+<p>Click <strong>Create account with Github.</strong></p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_01.jpg" /></p>
+<p>After click <strong>Authorize gosh-sh</strong></p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_02.jpg" /></p>
+<p>In the list of organizations received from Github, click on the organization</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_03.jpg" /></p>
+<p>and select repositories for upload into Gosh</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_04.jpg" /></p>
+<p>Do this <strong>for each</strong> organization for which you want to upload repositories to Gosh.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>After registering on GOSH you will not be able to return to this step in this release.</p>
+<p>This will be available later</p>
 </div>
-<p>GOSH will generate a seed phrase for you.&#x20;</p>
-<figure><img src="/images/4 (1).jpg" alt=""><figcaption></figcaption></figure>
-
-<p>If you are familiar with blockchain, you know what to do with a seed phrase.&#x20;</p>
-<p>If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.&#x20;</p>
+<p>Then click <strong>Upload</strong></p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_05.jpg" /></p>
+<p>​If you are familiar with blockchain, you know what to do with a seed phrase.</p>
+<p>If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.</p>
+<p>To create the GOSH-account, the seed phrase will be generated for you.</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_06_seedF.jpg" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><strong>Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.</strong></p>
+<p>Your seed phrase will be used to log into GOSH.</p>
 </div>
-<p><strong>Your username and seed phrase will be used to log into GOSH.</strong></p>
-<p>Once you have written down your seed phrase, click <strong>Create account</strong>.</p>
-<p>GOSH will ask you to set up a PIN code:&#x20;</p>
-<figure><img src="/images/5 (2).jpg" alt=""><figcaption></figcaption></figure>
-
+<p>Once you have written down your seed phrase, click <strong>Continue.</strong></p>
+<p>Then choose a short nickname or create a new one and click <strong>Create account</strong>.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The Usernames must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_07_createAk.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p><strong>When the repositories are uploaded, a notification will be sent to your email.</strong></p>
+</div>
+<p>Follow the link in the email.
+<img alt="" src="../../images/docker_ext_create_acc_02_welcom_letter.jpg" /></p>
+<p>To log into Gosh open the <strong>Gosh verified images</strong> extension in Docker Desktop and enter the saved seed phrase and click <strong>Sign in</strong>.</p>
+<p><img alt="" src="../../images/docker_ext_create_acc_03.jpg" /></p>
+<p>GOSH will ask you to set up a PIN code:</p>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_10_pin.jpg" /></p>
+<p>And unlock with PIN code.</p>
 <p>Once done, you will be logged into GOSH.</p>
-<h2 id="create-organization">Create Organization</h2>
+<p><img alt="" src="../../images/docker_ext_create_acc_04_signIn.jpg" /></p>
+<h2 id="create-organization"><strong>Create Organization</strong></h2>
 <p>The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.</p>
-<figure><img src="/images/6 (1).jpg" alt=""><figcaption></figcaption></figure>
-
 <p>Click <strong>New organization</strong> button in the Organizations section.</p>
-<p>Input Organization name.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_01.jpg" /></p>
+<p>​Input Organization name and members.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The Organizations name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
 </div>
-<p>The first mandatory member is the creator, identified by their username. Any other members can be added at creation or later - just enter the username of each member with the <code>@</code> symbol.</p>
+<p>The first mandatory member is the creator, identified by their username.</p>
+<p>Any other members can be added at creation - just enter the username of each member in new line.</p>
+<p>At any later time the list of members <a href="../gosh-web/#add-members-to-organization">can be expanded</a>.</p>
+<p>Click <strong>Create organization</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Create_ORG_02_name_members.jpg" /></p>
+<p>​Once created, your organization will appear in the organization list. Click on it to continue.</p>
+<!-- Enter the username.
+
+!!! note
+    The User name must contain only Latin letters, numbers, hyphen, underscore character *( a...z, 0...9, -, _ )*
+
+GOSH will generate a seed phrase for you.
+
+<figure><img src="/images/4 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+If you are familiar with blockchain, you know what to do with a seed phrase.
+
+If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+
+!!! info
+    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
+
+**Your username and seed phrase will be used to log into GOSH.**
+
+Once you have written down your seed phrase, click **Create account**.
+
+GOSH will ask you to set up a PIN code:
+
+<figure><img src="/images/5 (2).jpg" alt=""><figcaption></figcaption></figure>
+
+Once done, you will be logged into GOSH.
+
+## Create Organization
+
+The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
+
+<figure><img src="/images/6 (1).jpg" alt=""><figcaption></figcaption></figure>
+
+Click **New organization** button in the Organizations section.
+
+Input Organization name.
+
+!!! warning
+    The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+The first mandatory member is the creator, identified by their username. Any other members can be added at creation or later - just enter the username of each member with the `@` symbol.
+
 <figure><img src="/images/7 (1).jpg" alt=""><figcaption></figcaption></figure>
 
-<p>Click <strong>Create organization</strong>.</p>
-<p>Once created, your organization will appear in the organization list. Click on it to continue.</p>
-<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
+Click **Create organization**.
+
+Once created, your organization will appear in the organization list. Click on it to continue.
+
+<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure> -->
 
 <h2 id="create-repository">​Create Repository</h2>
 <p>To create a repository in your organization click <strong>Create</strong> in the Repositories section.</p>
@@ -780,7 +825,7 @@
 <p><img alt="" src="../../images/14.png" /></p>
 <p>If the branch you are working in requires no vote to commit to, the changes will be commited immediately/ Otherwise a DAO <a href="./#voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
 <h2 id="create-pull-request">Create Pull Request</h2>
-<p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to.&#x20;</p>
+<p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to.</p>
 <p><img alt="" src="../../images/65.png" /></p>
 <p>View the diff, scroll down to <strong>Commit data</strong>, enter details and click <strong>Commit changes</strong>.</p>
 <p><img alt="" src="../../images/66.png" /></p>
@@ -798,7 +843,7 @@
 <p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. Unless a decisive majority of &gt;50% is achieved early, votes will be counted at the end of this period.</p>
 <p>The thumbs up and down counters under <strong>Running</strong> status indicate how many tokens were used by now to vote for and against the proposal.</p>
 <p>The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.</p>
-<p>Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.&#x20;</p>
+<p>Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.</p>

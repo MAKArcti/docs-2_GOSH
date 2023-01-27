@@ -9,8 +9,8 @@ nav:
     - Docker Extension: working-with-gosh/docker-extension.md
     - GOSH Web: working-with-gosh/gosh-web.md
     - Git Remote Helper: working-with-gosh/git-remote-helper.md
-    - Build and Sign Images: working-with-gosh/build-and-sign-images.md
-    - Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
+    #- Build and Sign Images: working-with-gosh/build-and-sign-images.md
+    #- Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
   - Links: links.md
 
 markdown_extensions:
