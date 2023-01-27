@@ -11,8 +11,8 @@ Git Remote Helper is a [`git-client helper`](https://git-scm.com/docs/gitremote-
       - `git`
       - `make`
 
-2. Clone [`git-remote-gosh`](https://github.com/gosh-sh/gosh) repo
-3. `cd git-remote-gosh` and run `make build`
+2. Clone [`gosh`](https://github.com/gosh-sh/gosh) repository
+3. `cd git-remote-gosh` and run `make install`
 4. Add path with `git-remote-gosh` for availability via `$PATH`:
 
 ```
@@ -39,7 +39,7 @@ which git-remote-gosh
 
 2. Download latest version:
 
-      `wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-arm64`
+      `wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-amd64`
 
 3. Set executable flag:
 

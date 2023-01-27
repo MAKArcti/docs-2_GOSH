@@ -1,8 +1,6 @@
 # Docker Extension
 
-GOSH Docker Extension is a good way to get started with GOSH.&#x20;
-
-It implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.
+GOSH Docker Extension implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.
 
 You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories through a graphical interface directly in Docker Desktop. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
 
@@ -12,32 +10,131 @@ Images built directly from code stored in GOSH can be verified as GOSH-sourced i
 
 Get the latest [Docker Desktop](https://www.docker.com/products/docker-desktop/) (4.8.0 or later), which supports extensions.
 
-Launch the Desktop, go to the **Extensions** section, and click Add Extensions.
+Launch the Desktop, go to the **Extensions** section, and click **Add Extensions**.
 
-<figure><img src="/images/1.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/docker_ext_install_01.jpg)
 
 Select and install **Gosh** extension on the marketplace.
 
 ## Create account
 
-To get started with GOSH, you need an active Github-account
+Open the **Gosh verified images** extension in Docker Desktop. 
+If you have a Gosh account, then enter your own one seed phrase, if not, you can create it by clicking on the link app.gosh.sh.
 
-Open **Gosh verified images** extension in Docker Desktop and click **Create account with Github.**
+![](../images/docker_ext_create_acc_01.jpg)
 
-<figure><img src="/images/1 (1).jpg" alt=""><figcaption></figcaption></figure>
+To get started with GOSH, you need an active Github-account.
 
-Enter the username.
+Click **Create account with Github.**
+
+![](../images/gosh_web_Authorize_Gosh_01.jpg)
+
+After click **Authorize gosh-sh**
+
+![](../images/gosh_web_Authorize_Gosh_02.jpg)
+
+In the list of organizations received from Github, click on the organization
+
+![](../images/gosh_web_Authorize_Gosh_03.jpg)
+
+and select repositories for upload into Gosh
+
+![](../images/gosh_web_Authorize_Gosh_04.jpg)
+
+Do this **for each** organization for which you want to upload repositories to Gosh.
+
+!!! danger
+    After registering on GOSH you will not be able to return to this step in this release.
+
+    This will be available later
+
+Then click **Upload**
+
+![](../images/gosh_web_Authorize_Gosh_05.jpg)
+
+​If you are familiar with blockchain, you know what to do with a seed phrase.
+
+If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
+
+To create the GOSH-account, the seed phrase will be generated for you.
+
+![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
+
+!!! danger
+    Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
+
+!!! info
+    Your seed phrase will be used to log into GOSH.
+
+Once you have written down your seed phrase, click **Continue.**
+
+Then choose a short nickname or create a new one and click **Create account**.
+
+!!! warning
+    The Usernames must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
+
+!!! info
+    __When the repositories are uploaded, a notification will be sent to your email.__
+
+Follow the link in the email.
+![](../images/docker_ext_create_acc_02_welcom_letter.jpg)
+
+
+To log into Gosh open the **Gosh verified images** extension in Docker Desktop and enter the saved seed phrase and click **Sign in**.
+
+![](../images/docker_ext_create_acc_03.jpg)
+
+GOSH will ask you to set up a PIN code:
+
+![](../images/gosh_web_Authorize_Gosh_10_pin.jpg)
+
+And unlock with PIN code.
+
+Once done, you will be logged into GOSH.
+
+![](../images/docker_ext_create_acc_04_signIn.jpg)
+
+
+## __Create Organization__
+
+The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
+
+Click **New organization** button in the Organizations section.
+
+![](../images/gosh_web_Create_ORG_01.jpg)
+
+​Input Organization name and members.
+
+!!! warning
+    The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+The first mandatory member is the creator, identified by their username.
+
+Any other members can be added at creation - just enter the username of each member in new line.
+
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization).
+
+Click **Create organization**.
+
+![](../images/gosh_web_Create_ORG_02_name_members.jpg)
+
+
+​Once created, your organization will appear in the organization list. Click on it to continue.
+
+<!-- Enter the username.
 
 !!! note
     The User name must contain only Latin letters, numbers, hyphen, underscore character *( a...z, 0...9, -, _ )*
 
-GOSH will generate a seed phrase for you.&#x20;
+GOSH will generate a seed phrase for you.
 
 <figure><img src="/images/4 (1).jpg" alt=""><figcaption></figcaption></figure>
 
-If you are familiar with blockchain, you know what to do with a seed phrase.&#x20;
+If you are familiar with blockchain, you know what to do with a seed phrase.
 
-If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.&#x20;
+If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
 
 !!! info
     **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
@@ -46,7 +143,7 @@ If you're new to blockchain, all you need to know, is that this is the key to yo
 
 Once you have written down your seed phrase, click **Create account**.
 
-GOSH will ask you to set up a PIN code:&#x20;
+GOSH will ask you to set up a PIN code:
 
 <figure><img src="/images/5 (2).jpg" alt=""><figcaption></figcaption></figure>
 
@@ -73,7 +170,7 @@ Click **Create organization**.
 
 Once created, your organization will appear in the organization list. Click on it to continue.
 
-<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
+<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure> -->
 
 ## ​Create Repository
 
@@ -127,7 +224,7 @@ If the branch you are working in requires no vote to commit to, the changes will
 
 ## Create Pull Request
 
-Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to.&#x20;
+Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to.
 
 ![](../images/65.png)
 
@@ -156,7 +253,7 @@ The thumbs up and down counters under **Running** status indicate how many token
 
 The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
 
-Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.&#x20;
+Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.
 
 !!! info
     As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
