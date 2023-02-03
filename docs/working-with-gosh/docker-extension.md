@@ -1,4 +1,4 @@
-# Docker Extension
+# __Docker Extension__
 
 GOSH Docker Extension implements GOSH repository management and image verification as the newest feature of Docker - a Docker Extension.
 
@@ -6,7 +6,7 @@ You will be able to create your GOSH account and Decentralized Autonomous Organi
 
 Images built directly from code stored in GOSH can be verified as GOSH-sourced in the Docker Extension, ensuring security of the software supply chain. You will always know what code specifically is running in your containers, and that none of it was tampered with during build.
 
-## Installation
+## __Installation__
 
 Get the latest [Docker Desktop](https://www.docker.com/products/docker-desktop/) (4.8.0 or later), which supports extensions.
 
@@ -16,7 +16,7 @@ Launch the Desktop, go to the **Extensions** section, and click **Add Extensions
 
 Select and install **Gosh** extension on the marketplace.
 
-## Create account
+## __Create account__
 
 Open the **Gosh verified images** extension in Docker Desktop. 
 If you have a Gosh account, then enter your own one seed phrase, if not, you can create it by clicking on the link app.gosh.sh.
@@ -84,7 +84,7 @@ Follow the link in the email.
 
 To log into Gosh open the **Gosh verified images** extension in Docker Desktop and enter the saved seed phrase and click **Sign in**.
 
-![](../images/docker_ext_create_acc_03.jpg)
+![](../images/docker_ext_create_acc_03_signIn.jpg)
 
 GOSH will ask you to set up a PIN code:
 
@@ -94,16 +94,21 @@ And unlock with PIN code.
 
 Once done, you will be logged into GOSH.
 
-![](../images/docker_ext_create_acc_04_signIn.jpg)
+!!! info
+    The GOSH DAO Bot will be a member of your organization.
+    In the future, it will track changes in your repositories on Github and synchronize them with Gosh.
+
+    The Bot can be removed from the DAO members by voting.
+    But then there will be no automatic synchronization of repositories in GOSH if they have been changed in Github.
 
 
 ## __Create Organization__
 
-The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
+The Organizations page will open after your account is created.
 
 Click **New organization** button in the Organizations section.
 
-![](../images/gosh_web_Create_ORG_01.jpg)
+![](../images/docker_ext_create_org_01_new_org.jpg)
 
 ​Input Organization name and members.
 
@@ -112,117 +117,77 @@ Click **New organization** button in the Organizations section.
 
 The first mandatory member is the creator, identified by their username.
 
+The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+
 Any other members can be added at creation - just enter the username of each member in new line.
 
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization).
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting.
 
 Click **Create organization**.
 
 ![](../images/gosh_web_Create_ORG_02_name_members.jpg)
 
-
 ​Once created, your organization will appear in the organization list. Click on it to continue.
 
-<!-- Enter the username.
+![](../images/docker_ext_create_org_03_list_org.jpg)
 
-!!! note
-    The User name must contain only Latin letters, numbers, hyphen, underscore character *( a...z, 0...9, -, _ )*
 
-GOSH will generate a seed phrase for you.
-
-<figure><img src="/images/4 (1).jpg" alt=""><figcaption></figcaption></figure>
-
-If you are familiar with blockchain, you know what to do with a seed phrase.
-
-If you're new to blockchain, all you need to know, is that this is the key to your account and all your assets on GOSH. Your public key, which can identify you on the blockchain and the secret key you'll use to sign your actions can always be calculated from your seed phrase.
-
-!!! info
-    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
-
-**Your username and seed phrase will be used to log into GOSH.**
-
-Once you have written down your seed phrase, click **Create account**.
-
-GOSH will ask you to set up a PIN code:
-
-<figure><img src="/images/5 (2).jpg" alt=""><figcaption></figcaption></figure>
-
-Once done, you will be logged into GOSH.
-
-## Create Organization
-
-The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
-
-<figure><img src="/images/6 (1).jpg" alt=""><figcaption></figcaption></figure>
-
-Click **New organization** button in the Organizations section.
-
-Input Organization name.
-
-!!! warning
-    The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
-
-The first mandatory member is the creator, identified by their username. Any other members can be added at creation or later - just enter the username of each member with the `@` symbol.
-
-<figure><img src="/images/7 (1).jpg" alt=""><figcaption></figcaption></figure>
-
-Click **Create organization**.
-
-Once created, your organization will appear in the organization list. Click on it to continue.
-
-<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure> -->
-
-## ​Create Repository
+## __​Create Repository__
 
 To create a repository in your organization click **Create** in the Repositories section.
 
-<figure><img src="/images/9 create repo.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/docker_ext_create_repo_01_new_repo.jpg)
 
 Enter repository name and click **Create repository**.
 
 !!! warning
     The repository name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-<figure><img src="/images/10.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_Repo_02_name_repo.jpg)
 
-## Create Branch
+
+## __Create Branch__
 
 Repository is created with default main branch. To create another branch, click on the **branches** counter.
 
-<figure><img src="/images/11 crreate branch.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/docker_ext_create_branch_01.jpg)
 
 Select the branch to be forked, enter new branch name, and click​ **Create branch**.
 
 !!! warning
     The branch name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-<figure><img src="/images/12.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/docker_ext_create_branch_02_name.jpg)
 
 Once the branch is created, it will appear in the branches list.
 
-<figure><img src="/images/13.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_03_list_dranches.jpg)
 
 Switch to it via drop down list.
 
-<figure><img src="/images/14.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_04_switch_branches.jpg)
 
-## Create File
+## __Create File__
 
 To create file, click **Add file** button.
 
+![](../images/docker_ext_create_file_01_new_file.jpg)
+
 Enter file contents and name. MD syntax is supported for preview.
 
+![](../images/gosh_web_Create_file_02_name_contents.jpg)
 
+Once done, scroll down to **Commit data**, enter commit info and click **Commit changes** button.
 
-![](../images/62.png)
+![](../images/gosh_web_Create_file_03_commit_data.jpg)
 
-Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.
+Commit status will be displayed below.
 
-![](../images/14.png)
+![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
 
 If the branch you are working in requires no vote to commit to, the changes will be commited immediately/ Otherwise a DAO [vote](docker-extension.md#voting-in-smv-soft-majority-vote) will be initiated.
 
-## Create Pull Request
+## __Create Pull Request__
 
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to.
 
@@ -237,7 +202,7 @@ View the diff, scroll down to **Commit data**, enter details and click **Commit 
 
     [Organization Tokens have to be sent to the DAO Soft Majority Vote](docker-extension.md#move-tokens-to-smv) contract to start a proposal for DAO members to [vote](docker-extension.md#voting-in-smv-soft-majority-vote) on.
 
-## Voting in SMV (Soft Majority Vote)
+## __Voting in SMV (Soft Majority Vote)__
 
 Actions that require a DAO vote, such as merging into main, are performed by creating a proposal.
 
@@ -271,7 +236,7 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
 
 Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
 
-## View Public Key
+## __View Public Key__
 
 A user needs to know their public key, for example, when joining an organization.
 
@@ -279,13 +244,13 @@ To view your public key go to the main page of your account and click **Settings
 
 <figure><img src="/images/View Public Key.jpg" alt=""><figcaption></figcaption></figure>
 
-## Add Members to Organization <a href="#whats-next" id="whats-next"></a>
+## __Add Members to Organization__ <a href="#whats-next" id="whats-next"></a>
 
 Go to **Organization** **menu - Participants.** To add participants, click **Add participant** button, enter new participant [public key](docker-extension.md#view-public-key) and click **Save changes**.
 
 ![](../images/73.png)
 
-## What's next?
+## __What's next?__
 
 Set up [Git remote helper](git-remote-helper.md) and continue working with your repository.
 
