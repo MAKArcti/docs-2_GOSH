@@ -654,14 +654,19 @@
 <p>It implements GOSH repository management as a simple web interface.</p>
 <p>You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.</p>
 <h2 id="create-account"><strong>Create account</strong></h2>
-<p>To get started with GOSH, you need an active Github-account</p>
+<p>To get started with GOSH, you need an active Github-account.</p>
 <p>Click <strong>Create account with Github</strong> to start registering on GOSH</p>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_01.jpg" /></p>
 <p>After click <strong>Authorize gosh-sh</strong></p>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_02.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The special GOSH DAO Bot will help with registration in Gosh.
+It will deploy your DAO and upload your selected repositories to GOSH.</p>
+</div>
 <p>In the list of organizations received from Github, click on the organization</p>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_03.jpg" /></p>
-<p>and select repositories for upload into Gosh</p>
+<p>and select repositories for upload into Gosh.</p>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_04.jpg" /></p>
 <p>Do this <strong>for each</strong> organization for which you want to upload repositories to Gosh.</p>
 <div class="admonition danger">
@@ -702,8 +707,15 @@
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_10_pin.jpg" /></p>
 <p>And unlock with PIN code.</p>
 <p>Once done, you will be logged into GOSH.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The GOSH DAO Bot will be a member of your organization.
+In the future, it will track changes in your repositories on Github and synchronize them with Gosh.</p>
+<p>The Bot can be removed from the DAO members by voting.
+But then there will be no automatic synchronization of repositories in GOSH if they have been changed in Github.</p>
+</div>
 <h2 id="create-organization"><strong>Create Organization</strong></h2>
-<p>The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.</p>
+<p>The Organizations page will open after your account is created.</p>
 <p>Click <strong>New organization</strong> button in the Organizations section.</p>
 <p><img alt="" src="../../images/gosh_web_Create_ORG_01.jpg" /></p>
 <p>​Input Organization name and members.</p>
@@ -712,55 +724,45 @@
 <p>The Organizations name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
 </div>
 <p>The first mandatory member is the creator, identified by their username.</p>
+<p>The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.</p>
 <p>Any other members can be added at creation - just enter the username of each member in new line.</p>
-<p>At any later time the list of members <a href="./#add-members-to-organization">can be expanded</a>.</p>
+<p>At any later time the list of members <a href="./#add-members-to-organization">can be expanded</a> by voting.</p>
 <p>Click <strong>Create organization</strong>.</p>
 <p><img alt="" src="../../images/gosh_web_Create_ORG_02_name_members.jpg" /></p>
 <p>​Once created, your organization will appear in the organization list. Click on it to continue.</p>
-<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_ORG_03_list_orgs.jpg" /></p>
 <h2 id="create-repository"><strong>Create Repository</strong></h2>
 <p>To create a repository in your organization click <strong>New repository</strong> in the Repositories section.​</p>
-<figure><img src="/images/9 create repo.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_Repo_01_new_repo.jpg" /></p>
 <p>Enter repository name and click <strong>Create repository</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The repository name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
 </div>
-<figure><img src="/images/10.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_Repo_02_name_repo.jpg" /></p>
 <h2 id="create-branch"><strong>​Create Branch</strong></h2>
 <p>Repository is created with default main branch. To create another branch, click on the <strong>branches</strong> counter.​</p>
-<figure><img src="/images/11 crreate branch.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_branch_01.jpg" /></p>
 <p>Select the branch to be forked, enter new branch name, and click​ <strong>Create branch</strong>.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>The branch name must contain only Latin letters, numbers, hyphen, underscore character <code>( a...z, 0...9, -, _ )</code></p>
 </div>
-<figure><img src="/images/12.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_branch_02_name.jpg" /></p>
 <p>Once the branch is created, it will appear in the branches list.</p>
-<figure><img src="/images/13.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_branch_03_list_dranches.jpg" /></p>
 <p>Switch to it via drop down list.</p>
-<figure><img src="/images/14.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_branch_04_switch_branches.jpg" /></p>
 <h2 id="create-file"><strong>Create File</strong></h2>
 <p>To create file, click <strong>Add file</strong> button.</p>
-<figure><img src="/images/15 create file.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_file_01_new_file.jpg" /></p>
 <p>Enter file contents and name.</p>
-<figure><img src="/images/16.jpg" alt=""><figcaption></figcaption></figure>
-
-<p>You can use preview if needed. MD syntax is supported for preview.</p>
+<p><img alt="" src="../../images/gosh_web_Create_file_02_name_contents.jpg" /></p>
+<p>You can use <strong>Preview</strong> if needed. MD syntax is supported for preview.</p>
 <p>Once done, scroll down to <strong>Commit data</strong>, enter commit info and click <strong>Commit changes</strong>.​</p>
-<figure><img src="/images/17.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_file_03_commit_data.jpg" /></p>
 <p>Commit status will be displayed below.</p>
-<figure><img src="/images/17-18.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/gosh_web_Create_file_04_proces_create_file.jpg" /></p>
 <p>If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO <a href="./#voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
 <h2 id="create-pull-request">Create Pull Request <a href="#create-pull-request" id="create-pull-request"></a></h2>
 <p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to. Once selected, click <strong>Compare</strong>.</p>

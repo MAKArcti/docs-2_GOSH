@@ -8,21 +8,26 @@ You will be able to create your GOSH account and Decentralized Autonomous Organi
 
 ## __Create account__
 
-To get started with GOSH, you need an active Github-account
+To get started with GOSH, you need an active Github-account.
 
 Click **Create account with Github** to start registering on GOSH
 
 ![](../images/gosh_web_Authorize_Gosh_01.jpg)
 
+
 After click **Authorize gosh-sh**
 
 ![](../images/gosh_web_Authorize_Gosh_02.jpg)
+
+!!! info
+    The special GOSH DAO Bot will help with registration in Gosh.
+    It will deploy your DAO and upload your selected repositories to GOSH.
 
 In the list of organizations received from Github, click on the organization
 
 ![](../images/gosh_web_Authorize_Gosh_03.jpg)
 
-and select repositories for upload into Gosh
+and select repositories for upload into Gosh.
 
 ![](../images/gosh_web_Authorize_Gosh_04.jpg)
 
@@ -79,10 +84,16 @@ And unlock with PIN code.
 
 Once done, you will be logged into GOSH.
 
+!!! info
+    The GOSH DAO Bot will be a member of your organization.
+    In the future, it will track changes in your repositories on Github and synchronize them with Gosh.
+
+    The Bot can be removed from the DAO members by voting.
+    But then there will be no automatic synchronization of repositories in GOSH if they have been changed in Github.
 
 ## __Create Organization__
 
-The Organizations page will open after your account is created. At first there will be no Organizations or Repositories there.
+The Organizations page will open after your account is created.
 
 Click **New organization** button in the Organizations section.
 
@@ -95,73 +106,74 @@ Click **New organization** button in the Organizations section.
 
 The first mandatory member is the creator, identified by their username.
 
+The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+
 Any other members can be added at creation - just enter the username of each member in new line.
 
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization).
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting.
 
 Click **Create organization**.
 
 ![](../images/gosh_web_Create_ORG_02_name_members.jpg)
 
-
 ​Once created, your organization will appear in the organization list. Click on it to continue.
 
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
 
-<figure><img src="/images/8.jpg" alt=""><figcaption></figcaption></figure>
 
 ## __Create Repository__
 
 To create a repository in your organization click **New repository** in the Repositories section.​
 
-<figure><img src="/images/9 create repo.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
 
 Enter repository name and click **Create repository**.
 
 !!! warning
     The repository name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-<figure><img src="/images/10.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_Repo_02_name_repo.jpg)
 
 ## __​Create Branch__
 
 Repository is created with default main branch. To create another branch, click on the **branches** counter.​
 
-<figure><img src="/images/11 crreate branch.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_01.jpg)
 
 Select the branch to be forked, enter new branch name, and click​ **Create branch**.
 
 !!! warning
     The branch name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-<figure><img src="/images/12.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_02_name.jpg)
 
 Once the branch is created, it will appear in the branches list.
 
-<figure><img src="/images/13.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_03_list_dranches.jpg)
 
 Switch to it via drop down list.
 
-<figure><img src="/images/14.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_branch_04_switch_branches.jpg)
 
 ## __Create File__
 
 To create file, click **Add file** button.
 
-<figure><img src="/images/15 create file.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_file_01_new_file.jpg)
 
 Enter file contents and name.
 
-<figure><img src="/images/16.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_file_02_name_contents.jpg)
 
-You can use preview if needed. MD syntax is supported for preview.
+You can use **Preview** if needed. MD syntax is supported for preview.
 
 Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.​
 
-<figure><img src="/images/17.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_file_03_commit_data.jpg)
 
 Commit status will be displayed below.
 
-<figure><img src="/images/17-18.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
 
 If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
 
