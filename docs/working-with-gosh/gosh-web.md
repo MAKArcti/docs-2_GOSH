@@ -245,25 +245,32 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 A user needs to know their public key, for example, when joining an organization.
 
-To view your public key go to the main page of your account and click **Settings**.
+To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
 
-!!! warning
+!!! danger
     Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
 
-<figure><img src="/images/9.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_View_Public_Key_01.jpg)
 
-## __Add Members to Organization__ <a href="#whats-next" id="whats-next"></a>
+
+## __Add Members to Organization__
 
 Go to Organization **Settings** to the **Members** tab to manage your organization.
 
-<figure><img src="/images/10 (1).jpg" alt=""><figcaption></figcaption></figure>
+To add member enter the username of each candidate from a new line and click **Add members** button.
 
-To add members, enter their [public key](gosh-web.md#view-public-key)s in the field, each from a new line, and click  **Add members** button.
+![](../images/gosh_web_Add_Members_01.jpg)
 
-## __What's next?__ <a href="#whats-next" id="whats-next"></a>
+
+## __What's next?__
 
 Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
 
-You'll need your wallet credentials. Go to **Organization Settings**  - **Wallet** and copy your Git Remote credentials.
+You'll need your wallet credentials. Go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
+Scroll down and copy them.
 
-<figure><img src="/images/11.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Whats_next_01.jpg)
+
+To view the command to clone your repo, click the **Clone** button on your repo page.
+
+![](../images/gosh_web_Whats_next_02.jpg)

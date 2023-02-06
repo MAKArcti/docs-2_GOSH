@@ -15,6 +15,7 @@ nav:
 
 markdown_extensions:
     - admonition
+    - attr_list
 
 theme:
   logo: images/gosh2.svg
