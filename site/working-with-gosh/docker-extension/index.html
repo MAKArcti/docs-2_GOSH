@@ -792,14 +792,15 @@ But then there will be no automatic synchronization of repositories in GOSH if t
 </div>
 <h2 id="voting-in-smv-soft-majority-vote"><strong>Voting in SMV (Soft Majority Vote)</strong></h2>
 <p>Actions that require a DAO vote, such as merging into main, are performed by creating a proposal.</p>
-<p>To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be <a href="./#move-tokens-to-smv">allocated to SMV</a> (once the proposal is completed), you can get them back.</p>
+<p>To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be allocated to SMV (once the proposal is completed), you can get them back.</p>
 <p>For example, to merge into main, <a href="./#create-pull-request">create a pull request</a> from some other branch. A proposal will be generated and will appear on the <strong>Events</strong> page.</p>
-<figure><img src="/images/Voting in SMV.jpg" alt=""><figcaption></figcaption></figure>
-
+<p><img alt="" src="../../images/docker_ext_Voiting_SMV_01.jpg" /></p>
+<p>Open the proposal and review the contents.</p>
+<p><img alt="" src="../../images/docker_ext_Voiting_SMV_02_proposal.jpg" /></p>
 <p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. Unless a decisive majority of &gt;50% is achieved early, votes will be counted at the end of this period.</p>
-<p>The thumbs up and down counters under <strong>Running</strong> status indicate how many tokens were used by now to vote for and against the proposal.</p>
+<p>Voting statistics are located under the status <strong>Running</strong>. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.</p>
 <p>The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.</p>
-<p>Once you have made a decision, vote for the proposal with your tokens. Vote registration can take a bit of time.</p>
+<p>Once you have made a decision, input the amount of tokens, select <strong>Approve</strong> or <strong>Reject</strong> and click <strong>Vote for proposal</strong>. Vote registration can take a bit of time.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.</p>
@@ -813,6 +814,7 @@ But then there will be no automatic synchronization of repositories in GOSH if t
 <p>Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.</p>
 </div>
 <p>Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.</p>
+<p><img alt="" src="../../images/docker_ext_Voiting_SMV_03_result.jpg" /></p>
 <h2 id="view-public-key"><strong>View Public Key</strong></h2>
 <p>A user needs to know their public key, for example, when joining an organization.</p>
 <p>To view your public key go to the main page of your account and click <strong>Settings</strong>.</p>
