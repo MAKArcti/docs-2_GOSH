@@ -191,16 +191,16 @@ If the branch you are working in requires no vote to commit to, the changes will
 
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to.
 
-![](../images/65.png)
+![](../images/docker_ext_create_PR_01.jpg)
 
 View the diff, scroll down to **Commit data**, enter details and click **Commit changes**.
 
-![](../images/66.png)
+![](../images/docker_ext_create_PR_02_comparing.jpg)
 
 !!! info
     When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
 
-    [Organization Tokens have to be sent to the DAO Soft Majority Vote](docker-extension.md#move-tokens-to-smv) contract to start a proposal for DAO members to [vote](docker-extension.md#voting-in-smv-soft-majority-vote) on.
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](docker-extension.md#voting-in-smv-soft-majority-vote) on.
 
 ## __Voting in SMV (Soft Majority Vote)__
 

@@ -177,20 +177,22 @@ Commit status will be displayed below.
 
 If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
 
-## Create Pull Request <a href="#create-pull-request" id="create-pull-request"></a>
+## __Create Pull Request__
+ <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
 
-![](../images/117.png)
+![](../images/gosh_web_Create_PR_01.jpg)
 
 The branches will be compared. Review the changes, set up the pull request and click Commit changes.
 
-<figure><img src="/images/7.jpg" alt=""><figcaption></figcaption></figure>
+![](../images/gosh_web_Create_PR_02_comparing.jpg)
+
 
 !!! info
     **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
 
-    [Organization Tokens have to be sent to the DAO Soft Majority Vote](gosh-web.md#move-tokens-to-smv) contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
 
 ## __Voting in SMV (Soft Majority Vote)__
 
