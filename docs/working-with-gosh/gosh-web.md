@@ -202,19 +202,26 @@ To create a proposal, or to vote for a proposal someone else created, some of yo
 
 For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
 
-![](../images/120.png)
+![](../images/gosh_web_Voiting_SMV_01.jpg)
 
 Open the proposal and review the contents.
 
-![](../images/121.png)
+![](../images/docker_ext_Voiting_SMV_02_proposal.jpg)
 
 The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
+
+Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+
+Once you have made a decision, select the amount of tokens with which you are ready to vote and click **Vote for proposal**
+
 
 The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
 
 The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
 
-Once you have made a decision, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
+Once you have made a decision, input the amount of tokens, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
 
 !!! info
     As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
@@ -232,7 +239,7 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
 
 Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
 
-![](../images/123.png)
+![](../images/docker_ext_Voiting_SMV_03_result.jpg)
 
 ## __View Public Key__
 
