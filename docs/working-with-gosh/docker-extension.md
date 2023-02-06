@@ -246,28 +246,31 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 A user needs to know their public key, for example, when joining an organization.
 
-To view your public key go to the main page of your account and click **Settings**.
+To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
 
-<figure><img src="/images/View Public Key.jpg" alt=""><figcaption></figcaption></figure>
+!!! danger
+    Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
 
-## __Add Members to Organization__ <a href="#whats-next" id="whats-next"></a>
+![](../images/gosh_web_View_Public_Key_01.jpg)
 
-Go to **Organization** **menu - Participants.** To add participants, click **Add participant** button, enter new participant [public key](docker-extension.md#view-public-key) and click **Save changes**.
 
-![](../images/73.png)
+## __Add Members to Organization__
+
+Go to Organization **Settings** to the **Members** tab to manage your organization.
+
+To add member enter the username of each candidate from a new line and click **Add members** button.
+
+![](../images/gosh_web_Add_Members_01.jpg)
 
 ## __What's next?__
 
-Set up [Git remote helper](git-remote-helper.md) and continue working with your repository.
+Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
 
-You'll need your wallet credentials. Go to **Organization menu - Wallet** .
+You'll need your wallet credentials. Go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
+Scroll down and copy them.
 
-![](../images/68.png)
-
-Scroll down and copy your Git Remote credentials:
-
-![](../images/69 (1).png)
+![](../images/gosh_web_Whats_next_01.jpg)
 
 To view the command to clone your repo, click the **Clone** button on your repo page.
 
-![](../images/75.png)
+![](../images/gosh_web_Whats_next_02.jpg)
