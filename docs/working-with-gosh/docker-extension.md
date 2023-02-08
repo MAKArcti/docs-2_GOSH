@@ -274,3 +274,19 @@ Scroll down and copy them.
 To view the command to clone your repo, click the **Clone** button on your repo page.
 
 ![](../images/gosh_web_Whats_next_02.jpg)
+
+
+## __Update Docker Extension__
+
+When you need to update the Gosh verified images extension in Docker Desktop, you will see an orange indicator.
+
+To update the extension, go to the menu and select **Manage**
+![](../images/docker_ext_update_01.jpg)
+
+В открывшейся вкладке нажмите **Update**
+
+![](../images/docker_ext_update_02.jpg)
+
+After downloading the update, click **Open**
+
+![](../images/docker_ext_update_03.jpg)
