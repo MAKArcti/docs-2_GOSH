@@ -33,19 +33,14 @@ which git-remote-gosh
 
 ## Setup helper from binary releases
 
-1. Prerequisites:
+1. Follow the [`link`](https://github.com/gosh-sh/gosh/releases)
+and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows)
 
-      - wget
-
-2. Download latest version:
-
-      `wget https://github.com/gosh-sh/gosh/releases/latest/download/git-remote-gosh-amd64`
-
-3. Set executable flag:
+2. If necessary, set the executable flag, e.g.:
 
       `chmod +x git-remote-gosh-amd64`
 
-4. Copy binary to any searchable path:
+3. Copy binary to any searchable path, e.g.:
 
       `cp git-remote-gosh-amd64 /usr/local/bin/git-remote-gosh`
 
