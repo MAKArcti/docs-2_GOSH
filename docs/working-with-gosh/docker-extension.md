@@ -48,6 +48,9 @@ Do this **for each** organization for which you want to upload repositories to G
 
     This will be available later
 
+!!! info
+    If you want other GOSH users to be able to find you by your email, give permission.
+
 Then click **Upload**
 
 ![](../images/gosh_web_Authorize_Gosh_05.jpg)
@@ -79,8 +82,8 @@ Then choose a short nickname or create a new one and click **Create account**.
     __When the repositories are uploaded, a notification will be sent to your email.__
 
 Follow the link in the email.
-![](../images/docker_ext_create_acc_02_welcom_letter.jpg)
 
+![](../images/docker_ext_create_acc_02_welcom_letter.jpg)
 
 To log into Gosh open the **Gosh verified images** extension in Docker Desktop and enter the saved seed phrase and click **Sign in**.
 

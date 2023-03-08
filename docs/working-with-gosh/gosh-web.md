@@ -38,6 +38,9 @@ Do this **for each** organization for which you want to upload repositories to G
 
     This will be available later
 
+!!! info
+    If you want other GOSH users to be able to find you by your email, give permission.
+
 Then click **Upload**
 
 ![](../images/gosh_web_Authorize_Gosh_05.jpg)
@@ -65,35 +68,36 @@ Then choose a short nickname or create a new one and click **Create account**.
 
 ![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
+When entering the GOSH will ask you to set up a PIN code:
+
 !!! info
-    __When the repositories are uploaded, a notification will be sent to your email.__
-
-![](../images/gosh_web_Authorize_Gosh_08_wellcom.jpg)
-
-To log into Gosh, click **Sign in**.
-
-Enter the saved seed phrase and click **Sign in**.
-
-![](../images/gosh_web_Authorize_Gosh_09_signIn.jpg)
-
-GOSH will ask you to set up a PIN code:
+    Set a new PIN code for each new session.
 
 ![](../images/gosh_web_Authorize_Gosh_10_pin.jpg)
 
 And unlock with PIN code.
 
-Once done, you will be logged into GOSH.
+The Organizations page will open after your account is created.
+
+![](../images/gosh_web_Authorize_Gosh_08_wellcom.jpg)
+
 
 !!! info
-    The GOSH DAO Bot will be a member of your organization.
-    In the future, it will track changes in your repositories on Github and synchronize them with Gosh.
+    __When the repositories are uploaded, a notification will be sent to your email.__
 
-    The Bot can be removed from the DAO members by voting.
-    But then there will be no automatic synchronization of repositories in GOSH if they have been changed in Github.
+Follow the link in the letter.
+
+![](../images/docker_ext_create_acc_02_welcom_letter.jpg)
+
+Enter the saved seed phrase and click **Sign in**.
+
+![](../images/gosh_web_Authorize_Gosh_09_signIn.jpg)
+
+Also set up a PIN code and unlock with PIN code.
 
 ## __Create Organization__
 
-The Organizations page will open after your account is created.
+<!-- The Organizations page will open after your account is created. -->
 
 Click **New organization** button in the Organizations section.
 
