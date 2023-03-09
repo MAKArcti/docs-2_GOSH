@@ -99,35 +99,118 @@ Also set up a PIN code and unlock with PIN code.
 
 <!-- The Organizations page will open after your account is created. -->
 
-Click **New organization** button in the Organizations section.
+Click **Сreate new DAO** button in the Organizations section.
 
 ![](../images/gosh_web_Create_ORG_01.jpg)
 
-​Input Organization name and members.
+On the DAO settings page that opens, input:
 
-!!! warning
-    The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
 
-The first mandatory member is the creator, identified by their username.
+* __Organization name__
+
+    !!! warning
+        The Organizations name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+* __Organization picture__
+
+    The icon will be generated automatically.
+
+* __Theme tags__
+
+    You can add up to 3 tags separated by spaces. 
+    According to them, GOSH users will be able to find your DAO.
+
+* __Description__
+
+
+* __Total supply__
+
+    You also need to enter the number of tokens that will be issued for this DAO.
+
+    The maximum value of the total supply can be the number 2^128.
+
+* __Allow mint__
+
+    This is a permission to issue DAO tokens.
+    It is enabled by default.
+
+    In the future, it will be possible to prohibit the issuance of DAO tokens through proposals and voting.
+
+    !!! warning
+        If you uncheck this box during the initial setup, then the DAO tokens will never be released.
+
+
+<!-- The first mandatory member is the creator, identified by their username.
 
 The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
 Any other members can be added at creation - just enter the username of each member in new line.
 
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting.
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
 
 Click **Create organization**.
 
-![](../images/gosh_web_Create_ORG_02_name_members.jpg)
+![](../images/gosh_web_Create_ORG_02_set_up_DAO.jpg)
 
-​Once created, your organization will appear in the organization list. Click on it to continue.
+The DAO page will open after its creation.
 
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
+All information about your DAO and its activities will be displayed here.
+<!-- 
+Overview
+DAO
+Repositories
+Members
+Tasks
+Settings -->
 
+<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
+<!-- 
+Overview
+* DAO system repository
+* Recent proposals
+* Repositories
+
+* DAO total supply
+* DAO reserve
+* Your wallet balance
+* Allowance
+* Members1 + Invite members
+
+DAO
+* DAO events
+
+Repositories
+* DAO system repository
+* create repo
+
+Members
+* Invite user to DAO
+
+Tasks
+* create task
+
+Settings
+* DAO Set up
+    * Token setup
+    * Proposal setup
+    * Members setup
+    * Save changes
+
+* Upgrade
+    * Upgrade DAO -->
+
+![](../images/gosh_web_Create_ORG_04_DAO-page.jpg)
+
+The _index of the DAO system repository will be created automatically in your organization.
+
+    !!! info
+        After creating the DAO, it will already contain a text file with a brief description of your DAO, which you added in the settings earlier.
 
 ## __Create Repository__
 
-To create a repository in your organization click **New repository** in the Repositories section.​
+To create a repository in your DAO click **Create new** in the Repositories section.​
 
 ![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
 
