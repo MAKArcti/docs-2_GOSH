@@ -17,3 +17,7 @@ GOSH consists of the following contracts:
 * [Diff ](https://github.com/gosh-sh/gosh/blob/dev/contracts/gosh/diff.sol)- contract storing diff object
 * [Snapshot ](https://github.com/gosh-sh/gosh/blob/dev/contracts/gosh/snapshot.sol)- contract storing snapshot object
 * [Tag](https://github.com/gosh-sh/gosh/blob/main/contracts/gosh/tag.sol) - contract storing tag object
+<!-- 
+TODO 
+add Task, Discription (Topic)
+change github-links to gosh-links -->

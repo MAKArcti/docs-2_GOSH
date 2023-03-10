@@ -6,8 +6,14 @@ nav:
     - Organizations - GOSH DAO and SMV: on-chain-architecture/organizations-gosh-dao-and-smv.md
     - GOSH smart contracts: on-chain-architecture/gosh-smart-contracts.md
   - Working with GOSH:
-    - Docker Extension: working-with-gosh/docker-extension.md
     - GOSH Web: working-with-gosh/gosh-web.md
+      # - Overview: empty.md
+      # - DAO: empty.md
+      # - Repositories: empty.md
+      # - Members: empty.md
+      # - Tasks: empty.md
+      # - Settings: empty.md
+    - Docker Extension: working-with-gosh/docker-extension.md
     - Git Remote Helper: working-with-gosh/git-remote-helper.md
     #- Build and Sign Images: working-with-gosh/build-and-sign-images.md
     #- Verify Images in Docker Extension: working-with-gosh/verify-images-in-docker-extension.md
