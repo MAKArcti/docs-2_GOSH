@@ -6,7 +6,63 @@ It implements GOSH repository management as a simple web interface.
 
 You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
 
-## __Create account__
+
+
+<!-- 
+tabs:
+
+Overview
+DAO
+Repositories
+Members
+Tasks
+Settings -->
+
+
+<!-- 
+Overview
+* DAO system repository
+* Recent proposals
+* Repositories
+    * create repo
+    * ...
+-----
+* DAO total supply
+* DAO reserve
+* Your wallet balance
+* Allowance
+* Members1 + Invite members
+
+DAO
+* DAO events
+
+Repositories
+* DAO system repository ?
+* create repo
+
+Members
+* Invite user to DAO
+
+Tasks
+* create task
+
+Settings
+* DAO Set up
+    * Token setup
+    * Proposal setup
+    * Members setup
+    * Save changes
+
+* Upgrade
+    * Upgrade DAO -->
+
+
+## __Working with account__
+
+
+
+### __Create account__
+
 
 To get started with GOSH, you need an active Github-account.
 
@@ -15,7 +71,7 @@ Click **Create account with Github** to start registering on GOSH
 ![](../images/gosh_web_Authorize_Gosh_01.jpg)
 
 
-After click **Authorize gosh-sh**
+After click **Authorize gosh-sh** 
 
 ![](../images/gosh_web_Authorize_Gosh_02.jpg)
 
@@ -95,7 +151,40 @@ Enter the saved seed phrase and click **Sign in**.
 
 Also set up a PIN code and unlock with PIN code.
 
-## __Create Organization (DAO)__
+
+### __View Public Key__
+
+
+A user needs to know their public key, for example, when joining an organization.
+
+To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
+
+!!! danger
+    Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
+
+![](../images/gosh_web_View_Public_Key_01.jpg)
+
+
+
+## __Working with DAO__
+
+
+
+<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
+
+<!-- The first mandatory member is the creator, identified by their username.
+
+The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+
+Any other members can be added at creation - just enter the username of each member in new line.
+
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
+
+
+### __Create Organization (DAO)__
+
 
 <!-- The Organizations page will open after your account is created. -->
 
@@ -139,76 +228,15 @@ On the DAO settings page that opens, input:
     !!! warning
         If you uncheck this box during the initial setup, then the DAO tokens will never be issued.
 
-
-<!-- The first mandatory member is the creator, identified by their username.
-
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
-
-Any other members can be added at creation - just enter the username of each member in new line.
-
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
-
-
-<!-- 
-tabs:
-
-Overview
-DAO
-Repositories
-Members
-Tasks
-Settings -->
-
-
-<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
-
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
-
-
-<!-- 
-Overview
-* DAO system repository
-* Recent proposals
-* Repositories
-    * create repo
-    * 
------
-* DAO total supply
-* DAO reserve
-* Your wallet balance
-* Allowance
-* Members1 + Invite members
-
-DAO
-* DAO events
-
-Repositories
-* DAO system repository ?
-* create repo
-
-Members
-* Invite user to DAO
-
-Tasks
-* create task
-
-Settings
-* DAO Set up
-    * Token setup
-    * Proposal setup
-    * Members setup
-    * Save changes
-
-* Upgrade
-    * Upgrade DAO -->
-
 Click **Create organization**.
 
 ![](../images/gosh_web_Create_ORG_02_set_up_DAO.jpg)
 
 The DAO page will open after its creation.
 
-## __Overview of the DAO pages__
+
+### __Overview of the DAO pages__
+
 
 All information about your DAO and its activities will be displayed here.
 
@@ -281,7 +309,9 @@ To add a README for your DAO, go to the _index repository and [create a file](gg
     add organization description by placing
     readme.md file to main branch of _index repository -->
 
-## __DAO Set up__
+
+### __DAO Set up__
+
 
 You can continue with the initial setup the DAO in the Settings tab.
 
@@ -294,7 +324,6 @@ In the **Token Setup** section, you can create a proposal to ban the issue of to
     After the ban on the issue of DAO tokens, it will be impossible to allow the issue.
 
 ![](../images/gosh_web_Create_ORG_05_DAO_settings_02_token_setup.jpg)
-
 
 In the **Proposal setup** section you can enable/disable the option to view the voting results before it ends.
 
@@ -315,105 +344,9 @@ Then add a comment on changing the settings for other members of the DAO and cli
 !!! info
     __All settings and actions in the DAO will be performed the [voting](gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
 
-## __Create Repository__
 
-To create a repository in your DAO click **Create new** in the Repositories section.​
+### __Proposals and voting in SMV (Soft Majority Vote)__
 
-![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
-
-Enter repository name and its description and click **Create repository**.
-
-!!! warning
-    The repository name must contain only Latin letters, numbers,hyphen, underscore character`( a...z, 0...9, -, _ )`
-
-![](../images/gosh_web_Create_Repo_02_name_repo.jpg)
-
-A page with **DAO** events will open for you.
-
-![](../images/gosh_web_Create_Repo_03_event_create_repo.jpg)
-
-Open the event click on its name.
-
-![](../images/gosh_web_Event_02_all.jpg)
-
-The page that opens displays the name of the proposal, its status, and the time of creation and as well as the end of voting.
-
-![](../images/gosh_web_Event_03_status_time_details.jpg)
-
-The scale shows the number of votes for the proposal and against.
-
-![](../images/gosh_web_Event_04_result.jpg)
-
-Specify the number of tokens within your allowance for voting and choose whether to accept or reject this proposal. 
-
-Add your opinion about the proposal to the discussion below and click **Send vote**
-
-![](../images/gosh_web_Event_05_vote.jpg)
-
-
-## __​Create Branch__
-
-Repository is created with default main branch. To create another branch, click on the **branches** counter.​
-
-![](../images/gosh_web_Create_branch_01.jpg)
-
-
-
-Select the branch to be forked, enter new branch name, and click​ **Create branch**.
-
-!!! warning
-    The branch name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
-
-![](../images/gosh_web_Create_branch_02_name.jpg)
-
-Once the branch is created, it will appear in the branches list.
-
-![](../images/gosh_web_Create_branch_03_list_dranches.jpg)
-
-Switch to it via drop down list.
-
-![](../images/gosh_web_Create_branch_04_switch_branches.jpg)
-
-## __Create File__
-
-To create file, click **Add file** button.
-
-![](../images/gosh_web_Create_file_01_new_file.jpg)
-
-Enter file contents and name.
-
-![](../images/gosh_web_Create_file_02_name_contents.jpg)
-
-You can use **Preview** if needed. MD syntax is supported for preview.
-
-Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.​
-
-![](../images/gosh_web_Create_file_03_commit_data.jpg)
-
-Commit status will be displayed below.
-
-![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
-
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
-
-## __Create Pull Request__
- <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
-
-Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
-
-![](../images/gosh_web_Create_PR_01.jpg)
-
-The branches will be compared. Review the changes, set up the pull request and click Commit changes.
-
-![](../images/gosh_web_Create_PR_02_comparing.jpg)
-
-
-!!! info
-    **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
-
-    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
-
-## __Voting in SMV (Soft Majority Vote)__
 
 Actions that require a DAO vote are performed by creating a proposal.
 
@@ -488,19 +421,10 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 ![](../images/docker_ext_Voiting_SMV_03_result.jpg)
 
-## __View Public Key__
-
-A user needs to know their public key, for example, when joining an organization.
-
-To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
-
-!!! danger
-    Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
-
-![](../images/gosh_web_View_Public_Key_01.jpg)
 
 
-## __Add Members to Organization__
+### __Add Members to Organization__
+
 
 Go to Organization **Settings** to the **Members** tab to manage your organization.
 
@@ -509,7 +433,8 @@ To add member enter the username of each candidate from a new line and click **A
 ![](../images/gosh_web_Add_Members_01.jpg)
 
 
-## __What's next?__
+### __What's next?__
+
 
 Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
 
@@ -521,3 +446,119 @@ Scroll down and copy them.
 To view the command to clone your repo, click the **Clone** button on your repo page.
 
 ![](../images/gosh_web_Whats_next_02.jpg)
+
+
+
+## __Working with Repository__
+
+
+
+### __Create Repository__
+
+
+To create a repository in your DAO click **Create new** in the Repositories section.​
+
+![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
+
+Enter repository name and its description and click **Create repository**.
+
+!!! warning
+    The repository name must contain only Latin letters, numbers,hyphen, underscore character`( a...z, 0...9, -, _ )`
+
+![](../images/gosh_web_Create_Repo_02_name_repo.jpg)
+
+A page with **DAO** events will open for you.
+
+![](../images/gosh_web_Create_Repo_03_event_create_repo.jpg)
+
+Open the event click on its name.
+
+![](../images/gosh_web_Event_02_all.jpg)
+
+The page that opens displays the name of the proposal, its status, and the time of creation and as well as the end of voting.
+
+![](../images/gosh_web_Event_03_status_time_details.jpg)
+
+The scale shows the number of votes for the proposal and against.
+
+![](../images/gosh_web_Event_04_result.jpg)
+
+Specify the number of tokens within your allowance for voting and choose whether to accept or reject this proposal. 
+
+Add your opinion about the proposal to the discussion below and click **Send vote**
+
+![](../images/gosh_web_Event_05_vote.jpg)
+
+
+### __​Create Branch__
+
+
+Repository is created with default main branch. To create another branch, click on the **branches** counter.​
+
+![](../images/gosh_web_Create_branch_01.jpg)
+
+
+
+Select the branch to be forked, enter new branch name, and click​ **Create branch**.
+
+!!! warning
+    The branch name must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+![](../images/gosh_web_Create_branch_02_name.jpg)
+
+Once the branch is created, it will appear in the branches list.
+
+![](../images/gosh_web_Create_branch_03_list_dranches.jpg)
+
+Switch to it via drop down list.
+
+![](../images/gosh_web_Create_branch_04_switch_branches.jpg)
+
+
+### __Create File__
+
+
+To create file, click **Add file** button.
+
+![](../images/gosh_web_Create_file_01_new_file.jpg)
+
+Enter file contents and name.
+
+![](../images/gosh_web_Create_file_02_name_contents.jpg)
+
+You can use **Preview** if needed. MD syntax is supported for preview.
+
+Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.​
+
+![](../images/gosh_web_Create_file_03_commit_data.jpg)
+
+Commit status will be displayed below.
+
+![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
+
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
+
+
+### __Create Pull Request__
+
+
+ <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
+Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
+
+![](../images/gosh_web_Create_PR_01.jpg)
+
+The branches will be compared. Review the changes, set up the pull request and click Commit changes.
+
+![](../images/gosh_web_Create_PR_02_comparing.jpg)
+
+
+!!! info
+    **Note**: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.
+
+    Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
+
+
+
+## __Working with Task__
+
+
