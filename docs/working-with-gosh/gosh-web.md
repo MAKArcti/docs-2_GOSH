@@ -350,29 +350,61 @@ Then add a comment on changing the settings for other members of the DAO and cli
 
 Actions that require a DAO vote are performed by creating a proposal.
 
+* Pull request
+* Add branch protection
+* Remove branch protection
+* Add DAO member
+* Remove DAO member
+* Upgrade DAO'
+* Delete task
+* Create task
+* Create repository
+* Add voting tokens
+* Add regular tokens
+* Mint DAO tokens
+* Add DAO tag
+* Remove DAO tag
+* Disable minting DAO tokens
+* Change DAO member allowance
+* Multi proposal
+* Add repository tag
+* Remove repository tag
+* Update repository description
+* Allow event discussions
+* Show event progress
+* Upgrade repository tags
+* Ask DAO membership allowance
+
 <!-- 
 TODO 
 kinds of proposals:
-Set Сommit
-Add Protected Branch
-Delete Protected Branch
-Set Tombstone
-Deploy Wallet Dao
-Delete Wallet Dao
-Set Upgrade
-Change Token Config
-Task
-Task Destroy
-Task Deploy
-Deploy Repo
-Add Vote Token
-Add Regular Token
-Mint Token
-Dao tag
-Dao tag Destroy
-Allow Mint
-Change Allowance 
-Multi Proposal
+1: 'Pull request',  // SETCOMMIT_PROPOSAL_KIND = 1
+2: 'Add branch protection',   //ADD_PROTECTED_BRANCH_PROPOSAL_KIND = 2
+3: 'Remove branch protection',   //DELETE_PROTECTED_BRANCH_PROPOSAL_KIND = 3
+                                 //SET_TOMBSTONE_PROPOSAL_KIND = 4
+5: 'Add DAO member',    //DEPLOY_WALLET_DAO_PROPOSAL_KIND = 5
+6: 'Remove DAO member',   //DELETE_WALLET_DAO_PROPOSAL_KIND = 6
+7: 'Upgrade DAO',     //SET_UPGRADE_PROPOSAL_KIND = 7
+//8: 'Change DAO config',
+//9: 'Confirm task',
+10: 'Delete task',    //TASK_DESTROY_PROPOSAL_KIND = 10
+11: 'Create task',    //TASK_DEPLOY_PROPOSAL_KIND = 11
+12: 'Create repository',  //DEPLOY_REPO_PROPOSAL_KIND = 12
+13: 'Add voting tokens',  //ADD_VOTE_TOKEN_PROPOSAL_KIND = 13
+14: 'Add regular tokens', //ADD_REGULAR_TOKEN_PROPOSAL_KIND = 14
+15: 'Mint DAO tokens',   //MINT_TOKEN_PROPOSAL_KIND = 15
+16: 'Add DAO tag',     //DAOTAG_PROPOSAL_KIND = 16
+17: 'Remove DAO tag',  //DAOTAG_DESTROY_PROPOSAL_KIND = 17
+18: 'Disable minting DAO tokens',  //ALLOW_MINT_PROPOSAL_KIND = 18
+19: 'Change DAO member allowance', //CHANGE_ALLOWANCE_PROPOSAL_KIND = 19
+20: 'Multi proposal',  //MULTI_PROPOSAL_KIND = 20
+21: 'Add repository tag',  //REPOTAG_PROPOSAL_KIND = 21
+22: 'Remove repository tag', //REPOTAG_DESTROY_PROPOSAL_KIND = 22
+23: 'Update repository description', //CHANGE_DESCRIPTION_PROPOSAL_KIND = 23
+24: 'Allow event discussions',  // CHANGE_ALLOW_DISCUSSION_PROPOSAL_KIND = 24
+25: 'Show event progress',  //CHANGE_HIDE_VOTING_PROPOSAL_KIND = 25
+26: 'Upgrade repository tags', //TAG_UPGRADE_PROPOSAL_KIND = 26
+27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
 To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be [allocated to SMV](gosh-web.md#send-tokens-to-smv) (once the proposal is completed), you can get them back.
