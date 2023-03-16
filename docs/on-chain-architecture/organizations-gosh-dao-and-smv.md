@@ -4,19 +4,21 @@
 
 As a blockchain-based product, GOSH is all about decentralization.
 
-The primary entity on GOSH is a **Decentralized Autonomous Organization** - DAO.
+The primary entity on [GOSH](../working-with-gosh/gosh-web.md#create-account) is a [**Decentralized Autonomous Organization** - DAO](../working-with-gosh/gosh-web.md#create-organization-dao).
 
-At a minimum, organizations have one member, who signle-handedly creates and manages repositories.
+At a minimum, organizations have one member, who signle-handedly [creates and manages repositories](../working-with-gosh/gosh-web.md#working-with-repository).
 
-Once more than one user is added to an Organization, however, decentralized management of repositories begins.
+Once more than one user is [added to a DAO](../working-with-gosh/gosh-web.md#add-members-to-dao), however, decentralized management of DAO begins.
 
-DAO can be configured to require a vote of members for any action within the repository.
+<!-- DAO can be configured to require a vote of members for any action within the repository. -->
+Any actions in the DAO require a vote and are created using [proposals](../working-with-gosh/gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote)
 
-For example, a user may propose a commit to DAO, and a [soft-majority vote](https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance) of all other DAO members may be required to approve it.
+For example, a user may propose a [commit](../working-with-gosh/gosh-web.md#create-file) to repository, and a [soft-majority vote](https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance) of all other DAO members may be required to approve it.
 
-Repositories could be Locked to resuire any changes to them to be voted by DAO SMV.
+[Branches](../working-with-gosh/gosh-web.md#create-branch) could be locked to required any changes to them to be voted by DAO SMV.
 
-DAO configuration is very flexible. Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit.
+[DAO configuration](../working-with-gosh/gosh-web.md#dao-set-up) is very flexible. 
+<!-- Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit. -->
 
 ## Soft Majority Voting
 

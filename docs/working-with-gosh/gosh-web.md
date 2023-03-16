@@ -211,6 +211,9 @@ On the DAO settings page that opens, input:
 
 * __Description__
 
+    A short description that can be seen on the DAO page under the heading.
+
+    The extended description can be added to the Readme file into _index system repository from the [Overview page](gosh-web.md#overview-of-the-dao) after creating the DAO.
 
 * __Total supply__
 
@@ -220,10 +223,10 @@ On the DAO settings page that opens, input:
 
 * __Allow mint__
 
-    This is a permission to issue DAO tokens.
+    This is a permission to emission DAO tokens.
     It is enabled by default.
 
-    In the future, it will be possible to disable the issuance of DAO tokens through proposal and voting in the **Settings** section.
+    In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the [**Settings**](gosh-web.md#dao-set-up) section.
 
     !!! warning
         If you uncheck this box during the initial setup, then the DAO tokens will never be issued.
@@ -235,7 +238,7 @@ Click **Create organization**.
 The DAO page will open after its creation.
 
 
-### __Overview of the DAO pages__
+### __Overview of the DAO__
 
 
 All information about your DAO and its activities will be displayed here.
@@ -458,12 +461,12 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 
 
-### __Add Members to Organization__
+### __Add Members to DAO__
 
 <!-- TODO
 change -->
 
-Go to Organization **Settings** to the **Members** tab to manage your organization.
+Go to the ** Members ** tab to invite users to join the DAO.
 
 To add member enter the username of each candidate from a new line and click **Add members** button.
 
