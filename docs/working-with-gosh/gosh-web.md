@@ -6,7 +6,63 @@ It implements GOSH repository management as a simple web interface.
 
 You will be able to create your GOSH account and Decentralized Autonomous Organization (DAO), set up and manage repositories. Repositories stored in GOSH can then be interacted with like any regular remote repository, with a few small configurations to git, making decentralized code management easily available to anyone.
 
-## __Create account__
+
+
+<!-- 
+tabs:
+
+Overview
+DAO
+Repositories
+Members
+Tasks
+Settings -->
+
+
+<!-- 
+Overview
+* DAO system repository
+* Recent proposals
+* Repositories
+    * create repo
+    * ...
+-----
+* DAO total supply
+* DAO reserve
+* Your wallet balance
+* Allowance
+* Members1 + Invite members
+
+DAO
+* DAO events
+
+Repositories
+* DAO system repository ?
+* create repo
+
+Members
+* Invite user to DAO
+
+Tasks
+* create task
+
+Settings
+* DAO Set up
+    * Token setup
+    * Proposal setup
+    * Members setup
+    * Save changes
+
+* Upgrade
+    * Upgrade DAO -->
+
+
+## __Working with account__
+
+
+
+### __Create account__
+
 
 To get started with GOSH, you need an active Github-account.
 
@@ -15,7 +71,7 @@ Click **Create account with Github** to start registering on GOSH
 ![](../images/gosh_web_Authorize_Gosh_01.jpg)
 
 
-After click **Authorize gosh-sh**
+After click **Authorize gosh-sh** 
 
 ![](../images/gosh_web_Authorize_Gosh_02.jpg)
 
@@ -95,7 +151,40 @@ Enter the saved seed phrase and click **Sign in**.
 
 Also set up a PIN code and unlock with PIN code.
 
-## __Create Organization (DAO)__
+
+### __View Public Key__
+
+
+A user needs to know their public key, for example, when joining an organization.
+
+To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
+
+!!! danger
+    Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
+
+![](../images/gosh_web_View_Public_Key_01.jpg)
+
+
+
+## __Working with DAO__
+
+
+
+<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
+
+<!-- The first mandatory member is the creator, identified by their username.
+
+The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+
+Any other members can be added at creation - just enter the username of each member in new line.
+
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
+
+
+### __Create Organization (DAO)__
+
 
 <!-- The Organizations page will open after your account is created. -->
 
@@ -139,76 +228,15 @@ On the DAO settings page that opens, input:
     !!! warning
         If you uncheck this box during the initial setup, then the DAO tokens will never be issued.
 
-
-<!-- The first mandatory member is the creator, identified by their username.
-
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
-
-Any other members can be added at creation - just enter the username of each member in new line.
-
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
-
-
-<!-- 
-tabs:
-
-Overview
-DAO
-Repositories
-Members
-Tasks
-Settings -->
-
-
-<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
-
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
-
-
-<!-- 
-Overview
-* DAO system repository
-* Recent proposals
-* Repositories
-    * create repo
-    * 
------
-* DAO total supply
-* DAO reserve
-* Your wallet balance
-* Allowance
-* Members1 + Invite members
-
-DAO
-* DAO events
-
-Repositories
-* DAO system repository ?
-* create repo
-
-Members
-* Invite user to DAO
-
-Tasks
-* create task
-
-Settings
-* DAO Set up
-    * Token setup
-    * Proposal setup
-    * Members setup
-    * Save changes
-
-* Upgrade
-    * Upgrade DAO -->
-
 Click **Create organization**.
 
 ![](../images/gosh_web_Create_ORG_02_set_up_DAO.jpg)
 
 The DAO page will open after its creation.
 
-## __Overview of the DAO pages__
+
+### __Overview of the DAO pages__
+
 
 All information about your DAO and its activities will be displayed here.
 
@@ -281,7 +309,9 @@ To add a README for your DAO, go to the _index repository and [create a file](gg
     add organization description by placing
     readme.md file to main branch of _index repository -->
 
-## __DAO Set up__
+
+### __DAO Set up__
+
 
 You can continue with the initial setup the DAO in the Settings tab.
 
@@ -294,7 +324,6 @@ In the **Token Setup** section, you can create a proposal to ban the issue of to
     After the ban on the issue of DAO tokens, it will be impossible to allow the issue.
 
 ![](../images/gosh_web_Create_ORG_05_DAO_settings_02_token_setup.jpg)
-
 
 In the **Proposal setup** section you can enable/disable the option to view the voting results before it ends.
 
@@ -315,7 +344,156 @@ Then add a comment on changing the settings for other members of the DAO and cli
 !!! info
     __All settings and actions in the DAO will be performed the [voting](gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
 
-## __Create Repository__
+
+### __Proposals and voting in SMV (Soft Majority Vote)__
+
+
+Actions that require a DAO vote are performed by creating a proposal.
+
+* [**create a pull request**](gosh-web.md#create-pull-request)
+* **Add branch protection**
+* **Remove branch protection**
+* [**Add DAO member**](gosh-web/#add-members-to-organization)
+* **Remove DAO member**
+* **Upgrade DAO**
+* **Delete task**
+* **Create task**
+* [**Create repository**](gosh-web/#create-repository)
+* **Add voting tokens**
+* **Add regular tokens**
+* **Mint DAO tokens**
+* **Add DAO tag**
+* **Remove DAO tag**
+* **Disable minting DAO tokens**
+* **Change DAO member allowance**
+* **Multi proposal**
+* **Add repository tag**
+* **Remove repository tag**
+* **Update repository description**
+* **Allow event discussions**
+* **Show event progress**
+* **Upgrade repository tags**
+* **Ask DAO membership allowance**
+
+<!-- 
+TODO 
+kinds of proposals:
+1: 'Pull request',  // SETCOMMIT_PROPOSAL_KIND = 1
+2: 'Add branch protection',   //ADD_PROTECTED_BRANCH_PROPOSAL_KIND = 2
+3: 'Remove branch protection',   //DELETE_PROTECTED_BRANCH_PROPOSAL_KIND = 3
+                                 //SET_TOMBSTONE_PROPOSAL_KIND = 4
+5: 'Add DAO member',    //DEPLOY_WALLET_DAO_PROPOSAL_KIND = 5
+6: 'Remove DAO member',   //DELETE_WALLET_DAO_PROPOSAL_KIND = 6
+7: 'Upgrade DAO',     //SET_UPGRADE_PROPOSAL_KIND = 7
+//8: 'Change DAO config',
+//9: 'Confirm task',
+10: 'Delete task',    //TASK_DESTROY_PROPOSAL_KIND = 10
+11: 'Create task',    //TASK_DEPLOY_PROPOSAL_KIND = 11
+12: 'Create repository',  //DEPLOY_REPO_PROPOSAL_KIND = 12
+13: 'Add voting tokens',  //ADD_VOTE_TOKEN_PROPOSAL_KIND = 13
+14: 'Add regular tokens', //ADD_REGULAR_TOKEN_PROPOSAL_KIND = 14
+15: 'Mint DAO tokens',   //MINT_TOKEN_PROPOSAL_KIND = 15
+16: 'Add DAO tag',     //DAOTAG_PROPOSAL_KIND = 16
+17: 'Remove DAO tag',  //DAOTAG_DESTROY_PROPOSAL_KIND = 17
+18: 'Disable minting DAO tokens',  //ALLOW_MINT_PROPOSAL_KIND = 18
+19: 'Change DAO member allowance', //CHANGE_ALLOWANCE_PROPOSAL_KIND = 19
+20: 'Multi proposal',  //MULTI_PROPOSAL_KIND = 20
+21: 'Add repository tag',  //REPOTAG_PROPOSAL_KIND = 21
+22: 'Remove repository tag', //REPOTAG_DESTROY_PROPOSAL_KIND = 22
+23: 'Update repository description', //CHANGE_DESCRIPTION_PROPOSAL_KIND = 23
+24: 'Allow event discussions',  // CHANGE_ALLOW_DISCUSSION_PROPOSAL_KIND = 24
+25: 'Show event progress',  //CHANGE_HIDE_VOTING_PROPOSAL_KIND = 25
+26: 'Upgrade repository tags', //TAG_UPGRADE_PROPOSAL_KIND = 26
+27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
+-->
+
+To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be [allocated to SMV](gosh-web.md#send-tokens-to-smv) (once the proposal is completed), you can get them back.
+
+!!! info
+    You can vote for a proposal only once.
+
+For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
+
+<!-- TODO 
+change images -->
+
+<!-- ![](../images/gosh_web_Voiting_SMV_01.jpg) -->
+
+Open the proposal and review the contents.
+
+<!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
+
+The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
+
+Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+
+Once you have made a decision, select the amount of tokens with which you are ready to vote and click **Vote for proposal**
+
+
+The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+
+Once you have made a decision, input the amount of tokens, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
+
+!!! info
+    As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
+
+    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.
+
+    On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.
+
+    The more tokens are sent against the proposal, the higher the approving amount needs to be (up to 50% of the total supply  + 1 token) for the proposal to pass.
+
+Other members of the Organization, who have transferred their tokens to SMV, will be able to vote for the proposal on this page in their own accounts.
+
+!!! info
+    Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.
+
+Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
+
+![](../images/docker_ext_Voiting_SMV_03_result.jpg)
+
+
+
+### __Add Members to Organization__
+
+<!-- TODO
+change -->
+
+Go to Organization **Settings** to the **Members** tab to manage your organization.
+
+To add member enter the username of each candidate from a new line and click **Add members** button.
+
+<!-- ![](../images/gosh_web_Add_Members_01.jpg) -->
+
+
+### __What's next?__
+
+<!-- TODO
+change -->
+
+Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
+
+You'll need your wallet credentials. Go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
+Scroll down and copy them.
+
+![](../images/gosh_web_Whats_next_01.jpg)
+
+To view the command to clone your repo, click the **Clone** button on your repo page.
+
+![](../images/gosh_web_Whats_next_02.jpg)
+
+
+
+## __Working with Repository__
+
+
+
+### __Create Repository__
+
 
 To create a repository in your DAO click **Create new** in the Repositories section.​
 
@@ -351,7 +529,8 @@ Add your opinion about the proposal to the discussion below and click **Send vot
 ![](../images/gosh_web_Event_05_vote.jpg)
 
 
-## __​Create Branch__
+### __​Create Branch__
+
 
 Repository is created with default main branch. To create another branch, click on the **branches** counter.​
 
@@ -374,7 +553,9 @@ Switch to it via drop down list.
 
 ![](../images/gosh_web_Create_branch_04_switch_branches.jpg)
 
-## __Create File__
+
+### __Create File__
+
 
 To create file, click **Add file** button.
 
@@ -396,9 +577,11 @@ Commit status will be displayed below.
 
 If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
 
-## __Create Pull Request__
- <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 
+### __Create Pull Request__
+
+
+ <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
 
 ![](../images/gosh_web_Create_PR_01.jpg)
@@ -413,111 +596,9 @@ The branches will be compared. Review the changes, set up the pull request and c
 
     Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to [vote](gosh-web.md#voting-in-smv-soft-majority-vote) on.
 
-## __Voting in SMV (Soft Majority Vote)__
-
-Actions that require a DAO vote are performed by creating a proposal.
-
-<!-- 
-TODO 
-kinds of proposals:
-Set Сommit
-Add Protected Branch
-Delete Protected Branch
-Set Tombstone
-Deploy Wallet Dao
-Delete Wallet Dao
-Set Upgrade
-Change Token Config
-Task
-Task Destroy
-Task Deploy
-Deploy Repo
-Add Vote Token
-Add Regular Token
-Mint Token
-Dao tag
-Dao tag Destroy
-Allow Mint
-Change Allowance 
-Multi Proposal
--->
-
-To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be [allocated to SMV](gosh-web.md#send-tokens-to-smv) (once the proposal is completed), you can get them back.
-
-!!! info
-    You can vote for a proposal only once.
-
-For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
-
-![](../images/gosh_web_Voiting_SMV_01.jpg)
-
-Open the proposal and review the contents.
-
-![](../images/docker_ext_Voiting_SMV_02_proposal.jpg)
-
-The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
-
-Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
-
-The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
-
-Once you have made a decision, select the amount of tokens with which you are ready to vote and click **Vote for proposal**
 
 
-The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
+<!-- ## __Working with Task__ -->
+<!-- TODO 
+add  -->
 
-The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
-
-Once you have made a decision, input the amount of tokens, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
-
-!!! info
-    As per the rules of Soft Majority Voting, to have a proposal approved early, you need at least 50% of the total supply of tokens in the repository + 1 token used to vote for the proposal.
-
-    For example, in a repository with two members, where the total supply of tokens is 200, 101 token needs to be used to instantly approve a proposal. Thus with every member holding 100 tokens a proposal can never be instantly completed without the participation of members other than the proposal's author.
-
-    On the other hand, so as not to depend on all members of an organization to vote, soft majority vote will complete with an approval at the end of the voting period, if 10% of the total token supply were used to vote for, and no one voted against.
-
-    The more tokens are sent against the proposal, the higher the approving amount needs to be (up to 50% of the total supply  + 1 token) for the proposal to pass.
-
-Other members of the Organization, who have transferred their tokens to SMV, will be able to vote for the proposal on this page in their own accounts.
-
-!!! info
-    Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.
-
-Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
-
-![](../images/docker_ext_Voiting_SMV_03_result.jpg)
-
-## __View Public Key__
-
-A user needs to know their public key, for example, when joining an organization.
-
-To view your public key go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
-
-!!! danger
-    Avoid storing your private key and seed phrase in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
-
-![](../images/gosh_web_View_Public_Key_01.jpg)
-
-
-## __Add Members to Organization__
-
-Go to Organization **Settings** to the **Members** tab to manage your organization.
-
-To add member enter the username of each candidate from a new line and click **Add members** button.
-
-![](../images/gosh_web_Add_Members_01.jpg)
-
-
-## __What's next?__
-
-Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
-
-You'll need your wallet credentials. Go to the main page of your account and click [**Settings**](https://app.gosh.sh/a/settings).
-Scroll down and copy them.
-
-![](../images/gosh_web_Whats_next_01.jpg)
-
-To view the command to clone your repo, click the **Clone** button on your repo page.
-
-![](../images/gosh_web_Whats_next_02.jpg)
