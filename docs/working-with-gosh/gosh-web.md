@@ -350,30 +350,30 @@ Then add a comment on changing the settings for other members of the DAO and cli
 
 Actions that require a DAO vote are performed by creating a proposal.
 
-* Pull request
-* Add branch protection
-* Remove branch protection
-* Add DAO member
-* Remove DAO member
-* Upgrade DAO'
-* Delete task
-* Create task
-* Create repository
-* Add voting tokens
-* Add regular tokens
-* Mint DAO tokens
-* Add DAO tag
-* Remove DAO tag
-* Disable minting DAO tokens
-* Change DAO member allowance
-* Multi proposal
-* Add repository tag
-* Remove repository tag
-* Update repository description
-* Allow event discussions
-* Show event progress
-* Upgrade repository tags
-* Ask DAO membership allowance
+* [**create a pull request**](gosh-web.md#create-pull-request)
+* **Add branch protection**
+* **Remove branch protection**
+* [**Add DAO member**](gosh-web/#add-members-to-organization)
+* **Remove DAO member**
+* **Upgrade DAO**
+* **Delete task**
+* **Create task**
+* [**Create repository**](gosh-web/#create-repository)
+* **Add voting tokens**
+* **Add regular tokens**
+* **Mint DAO tokens**
+* **Add DAO tag**
+* **Remove DAO tag**
+* **Disable minting DAO tokens**
+* **Change DAO member allowance**
+* **Multi proposal**
+* **Add repository tag**
+* **Remove repository tag**
+* **Update repository description**
+* **Allow event discussions**
+* **Show event progress**
+* **Upgrade repository tags**
+* **Ask DAO membership allowance**
 
 <!-- 
 TODO 
@@ -414,11 +414,14 @@ To create a proposal, or to vote for a proposal someone else created, some of yo
 
 For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
 
-![](../images/gosh_web_Voiting_SMV_01.jpg)
+<!-- TODO 
+change images -->
+
+<!-- ![](../images/gosh_web_Voiting_SMV_01.jpg) -->
 
 Open the proposal and review the contents.
 
-![](../images/docker_ext_Voiting_SMV_02_proposal.jpg)
+<!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
 
 The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
 
@@ -457,16 +460,20 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 ### __Add Members to Organization__
 
+<!-- TODO
+change -->
 
 Go to Organization **Settings** to the **Members** tab to manage your organization.
 
 To add member enter the username of each candidate from a new line and click **Add members** button.
 
-![](../images/gosh_web_Add_Members_01.jpg)
+<!-- ![](../images/gosh_web_Add_Members_01.jpg) -->
 
 
 ### __What's next?__
 
+<!-- TODO
+change -->
 
 Set up [Git Remote Helper](git-remote-helper.md) and continue working with your repository.
 
@@ -591,6 +598,7 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 
 
-## __Working with Task__
-
+<!-- ## __Working with Task__ -->
+<!-- TODO 
+add  -->
 

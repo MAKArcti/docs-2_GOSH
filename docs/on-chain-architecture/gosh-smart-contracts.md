@@ -16,7 +16,7 @@ GOSH consists of the following contracts (latest version):
 * [Tree ](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/tree.sol)- contract storing tree object
 * [Diff ](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/diff.sol)- contract storing diff object
 * [Snapshot ](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/snapshot.sol)- contract storing snapshot object
-* [Tag](https://github.com/gosh-sh/gosh/blob/main/v2_x/contracts/gosh/tag.sol) - contract storing tag object
+* [Tag](https://github.com/gosh-sh/gosh/blob/main/v2_x/contracts/gosh/tag.sol) - contract storing tag commit
 * [DaoTag](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/daotag.sol) - contract storing DAO tags
 * [RepoTagGosh](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/taggosh.sol) - contract storing Repo tags
 * [Task](https://github.com/gosh-sh/gosh/blob/dev/v2_x/contracts/gosh/task.sol) - contract storing task object
