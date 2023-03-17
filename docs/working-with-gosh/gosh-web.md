@@ -229,7 +229,7 @@ On the DAO settings page that opens, input:
     In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the [**Settings**](gosh-web.md#dao-set-up) section.
 
     !!! warning
-        If you uncheck this box during the initial setup, then the DAO tokens will never be issued.
+        If you uncheck this option, the number of tokens issued for this DAO will be capped to the number entered during the initial setup
 
 Click **Create organization**.
 
@@ -268,9 +268,9 @@ Information about DAO assets is displayed on the right.
     Push on the **SEND** button, you will to transfer your tokens to the DAO reserve or to the GOSH user.
 <!-- TODO -->
 
-* **Allowance** - the amount of tokens (upper limit) within which a DAO member can vote. 
+* **Karma** - the amount of tokens (upper limit) within which a DAO member can vote. 
 
-    It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Allowance can be changed only by voting.
+    It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.
 
 ![](../images/gosh_web_OVERVIEW_02_wallet_balance.jpg)
 
@@ -356,19 +356,19 @@ Actions that require a DAO vote are performed by creating a proposal.
 * [**create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
-* [**Add DAO member**](gosh-web/#add-members-to-organization)
+* [**Add DAO member**](gosh-web.md#add-members-to-organization)
 * **Remove DAO member**
 * **Upgrade DAO**
 * **Delete task**
 * **Create task**
-* [**Create repository**](gosh-web/#create-repository)
+* [**Create repository**](gosh-web.md#create-repository)
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
 * **Add DAO tag**
 * **Remove DAO tag**
 * **Disable minting DAO tokens**
-* **Change DAO member allowance**
+* **Change DAO member Karma**
 * **Multi proposal**
 * **Add repository tag**
 * **Remove repository tag**
@@ -376,7 +376,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Allow event discussions**
 * **Show event progress**
 * **Upgrade repository tags**
-* **Ask DAO membership allowance**
+* **Ask DAO membership Karma**
 
 <!-- 
 TODO 
@@ -410,7 +410,7 @@ kinds of proposals:
 27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
-To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be [allocated to SMV](gosh-web.md#send-tokens-to-smv) (once the proposal is completed), you can get them back.
+To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be allocated to SMV (once the proposal is completed), you can get them back.
 
 !!! info
     You can vote for a proposal only once.
@@ -498,7 +498,7 @@ To view the command to clone your repo, click the **Clone** button on your repo 
 ### __Create Repository__
 
 
-To create a repository in your DAO click **Create new** in the Repositories section.​
+To create a repository in your DAO click **Create new** in the Repositories section or Overview section.​
 
 ![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
 
@@ -525,12 +525,21 @@ The scale shows the number of votes for the proposal and against.
 
 ![](../images/gosh_web_Event_04_result.jpg)
 
-Specify the number of tokens within your allowance for voting and choose whether to accept or reject this proposal. 
+Specify the number of tokens less than or equal to your Karma for voting and accept or reject this proposal.
 
 Add your opinion about the proposal to the discussion below and click **Send vote**
 
 ![](../images/gosh_web_Event_05_vote.jpg)
 
+<!-- TODO
+remove this images -->
+When the voting is over, its status will change to Accepted.
+
+![](../images/gosh_web_Event_05_vote_result.jpg)
+
+The created repository will appear in the list on the Repositories tab.
+
+![](../images/gosh_web_Create_Repo_04_repo_created.jpg)
 
 ### __​Create Branch__
 
@@ -538,7 +547,6 @@ Add your opinion about the proposal to the discussion below and click **Send vot
 Repository is created with default main branch. To create another branch, click on the **branches** counter.​
 
 ![](../images/gosh_web_Create_branch_01.jpg)
-
 
 
 Select the branch to be forked, enter new branch name, and click​ **Create branch**.

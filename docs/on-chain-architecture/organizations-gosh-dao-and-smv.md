@@ -13,7 +13,7 @@ Once more than one user is [added to a DAO](../working-with-gosh/gosh-web.md#add
 <!-- DAO can be configured to require a vote of members for any action within the repository. -->
 Any actions in the DAO require a vote and are created using [proposals](../working-with-gosh/gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote)
 
-For example, a user may propose a [commit](../working-with-gosh/gosh-web.md#create-file) to repository, and a [soft-majority vote](https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance) of all other DAO members may be required to approve it.
+For example, a user may propose a [commit of file](../working-with-gosh/gosh-web.md#create-file) into repository, and a [soft-majority vote](https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance) of all other DAO members may be required to approve it.
 
 [Branches](../working-with-gosh/gosh-web.md#create-branch) could be locked to required any changes to them to be voted by DAO SMV.
 
