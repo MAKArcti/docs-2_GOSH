@@ -531,12 +531,6 @@ Add your opinion about the proposal to the discussion below and click **Send vot
 
 ![](../images/gosh_web_Event_05_vote.jpg)
 
-<!-- TODO
-remove this images -->
-When the voting is over, its status will change to Accepted.
-
-![](../images/gosh_web_Event_05_vote_result.jpg)
-
 The created repository will appear in the list on the Repositories tab.
 
 ![](../images/gosh_web_Create_Repo_04_repo_created.jpg)
@@ -578,21 +572,31 @@ Enter file contents and name.
 
 You can use **Preview** if needed. MD syntax is supported for preview.
 
-Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.​
+After scroll down and enter commit info:
+
+* Commit description - you can add a description of your commit;
+
+* Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;
+
+* Select task - if the branch is not protected and your file is a solution to a problem, you can choose a particular task;
+
+* and add Assigners, Reviewers and Managers if necessary.
+
+
+ and click **Commit changes**
 
 ![](../images/gosh_web_Create_file_03_commit_data.jpg)
+
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
 
 Commit status will be displayed below.
 
 ![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
-
 
 ### __Create Pull Request__
 
 
- <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
 
 ![](../images/gosh_web_Create_PR_01.jpg)
@@ -609,7 +613,8 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 
 
-<!-- ## __Working with Task__ -->
-<!-- TODO 
-add  -->
+## __Working with Task__
 
+
+
+![](../images/gosh_web_Create_Task_01.jpg)
