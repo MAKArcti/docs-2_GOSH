@@ -376,7 +376,10 @@ Actions that require a DAO vote are performed by creating a proposal.
     To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
 
 
-* [**Multi proposal**](gosh-web.md#add-members-to-dao) - includes several offers at once.
+* **Multi proposal** - includes several offers at once. 
+
+    For example: [adding members to the DAO by another DAO member](gosh-web.md#add-members-to-dao)
+
 
 * **Add repository tag**
 * **Remove repository tag**
@@ -384,7 +387,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Allow event discussions**
 * **Show event progress**
 * **Upgrade repository tags**
-* **Ask DAO membership Karma**
+* **Ask DAO membership**
 
 <!-- 
 
@@ -425,12 +428,12 @@ kinds of proposals:
 27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
-To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be allocated to SMV (once the proposal is completed), you can get them back.
+To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.
 
 !!! info
     You can vote for a proposal only once.
 
-For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
+For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **DAO** tab.
 
 <!-- TODO 
 change images -->
@@ -441,7 +444,15 @@ Open the proposal and review the contents.
 
 <!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
 
-The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
+The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). 
+
+Unless a decisive majority of >50% Global Karma Count is achieved early, votes will be counted at the end of this period.
+
+!!! info 
+    Global Karma Count is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.
+
+<!-- 
+TODO update
 
 Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
 
@@ -452,7 +463,7 @@ Once you have made a decision, select the amount of tokens with which you are re
 
 The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
 
-The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy. -->
 
 Once you have made a decision, input the amount of tokens, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
 
@@ -472,15 +483,22 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
 
 Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
 
-![](../images/docker_ext_Voiting_SMV_03_result.jpg)
+<!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
 
 
 ### __Add Members to DAO__
 
-!!! warning
-    Enable "Allow external users to request DAO membership" option in [DAO settings](gosh-web.md#dao-set-up) to enable invites by email/link.
 
-* A DAO member can create a proposle to add Gosh user into the DAO.
+
+!!! info
+    Adding a member to the DAO is possible only through an proposal.
+
+There are several ways to add members to the DAO.
+
+Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.
+
+
+#### **A DAO member can create a proposle to add GOSH user into the DAO**.
 
 To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address.
 
@@ -500,7 +518,11 @@ To vote go to the DAO tab and select the desired event.
 
 ![](../images/gosh_web_Multy_proposal_add_member_in_DAO.jpg)
 
-* You can invite to the DAO members by sending an invitation by mail or by providing a link to the GOSH user.
+
+#### **You can invite to the DAO members by sending an invitation by mail or by providing a link to the GOSH user**.
+
+!!! warning
+    Enable "Allow external users to request DAO membership" option in [DAO settings](gosh-web.md#dao-set-up) to enable invites by email/link.
 
 To do this, on the tab **Members** in the section **Invite user to DAO** click on **Get one-time invitation link**.
 
@@ -509,18 +531,30 @@ To do this, on the tab **Members** in the section **Invite user to DAO** click o
 
 ![](../images/gosh_web_Invite_to_DAO_01_2.jpg)
 
-By clicking on the link, the user will be able to create an account or log in to GOSH.
+
+All active invitation links will be displayed in the section on the right.
+
+When the invited user creates a membership proposle in the DAO, the link entry disappears.
+
+You can also deactivate the link click on the **Revoke**.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg)
+
+
+When the user clicks the link, they will be able to create an account or log in to GOSH.
 
 ![](../images/gosh_web_Invite_to_DAO_by_link_02_create_akk.jpg)
 
-Then input a short nickname or and click Create account.
 
-<!-- TODO
-images about nickname -->
+Then input a short nickname or and click **Create account and continue**.
 
-Enter a short comment who are you and click **Accept invitation**
+![](../images/gosh_web_Invite_to_DAO_by_link_03_shot_nickname.jpg)
+
+
+Enter a short comment who are you and click **Accept invitation**.
 
 ![](../images/gosh_web_Invite_to_DAO_by_link_04_shot_comm_who_are_U.jpg)
+
 
 On the event page that opens, you can find a request for your acceptance as a member of the DAO.
 
@@ -528,17 +562,21 @@ Click on it you can track the results of voting and discussions.
 
 ![](../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg)
 
+
 !!! info
     You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.
+<!-- TODO
+add a cross-reference to the karma change propos -->
 
 
 
 <!-- TODO
 what to do with the user search
+use it when I describe a request to increase karma
 
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
-* You can create a membership request in the DAO yourself.
+#### **You can create a membership request in the DAO yourself**.
 <!-- TODO -->
 
 
