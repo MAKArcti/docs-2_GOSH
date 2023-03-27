@@ -133,6 +133,13 @@ When entering the GOSH will ask you to set up a PIN code:
 
 And unlock with PIN code.
 
+!!! warning
+    If the name of the organization or repository already exists, you will receive the message.
+    Change the name, click **save changes** and confirm the action with a pin code.
+
+![](../images/gosh_web_Authorize_Gosh_11_error_rename.jpg)
+
+
 The Organizations page will open after your account is created.
 
 ![](../images/gosh_web_Authorize_Gosh_08_wellcom.jpg)
@@ -170,17 +177,18 @@ To view your public key go to the main page of your account and click [**Setting
 
 
 
-<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+​Once created, your organization will appear in the organization list. Click on it to continue.
 
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
+<!-- TODO
+change image when -->
 
-<!-- The first mandatory member is the creator, identified by their username.
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
+
+The first mandatory member is the creator, identified by their username.
 
 The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
-Any other members can be added at creation - just enter the username of each member in new line.
-
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-dao) by voting.
 
 
 ### __Create Organization (DAO)__
@@ -211,6 +219,9 @@ On the DAO settings page that opens, input:
 
 * __Description__
 
+    A short description that can be seen on the DAO page under the heading.
+
+    The extended description can be added to the Readme file into _index system repository from the [Overview page](gosh-web.md#overview-of-the-dao) after creating the DAO.
 
 * __Total supply__
 
@@ -220,13 +231,13 @@ On the DAO settings page that opens, input:
 
 * __Allow mint__
 
-    This is a permission to issue DAO tokens.
+    This is a permission to emission DAO tokens.
     It is enabled by default.
 
-    In the future, it will be possible to disable the issuance of DAO tokens through proposal and voting in the **Settings** section.
+    In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the [**Settings**](gosh-web.md#dao-set-up) section.
 
     !!! warning
-        If you uncheck this box during the initial setup, then the DAO tokens will never be issued.
+        If you uncheck this option, the number of tokens issued for this DAO will be capped to the number entered during the initial setup
 
 Click **Create organization**.
 
@@ -235,7 +246,7 @@ Click **Create organization**.
 The DAO page will open after its creation.
 
 
-### __Overview of the DAO pages__
+### __Overview of the DAO__
 
 
 All information about your DAO and its activities will be displayed here.
@@ -265,9 +276,9 @@ Information about DAO assets is displayed on the right.
     Push on the **SEND** button, you will to transfer your tokens to the DAO reserve or to the GOSH user.
 <!-- TODO -->
 
-* **Allowance** - the amount of tokens (upper limit) within which a DAO member can vote. 
+* **Karma** - the amount of tokens (upper limit) within which a DAO member can vote. 
 
-    It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Allowance can be changed only by voting.
+    It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.
 
 ![](../images/gosh_web_OVERVIEW_02_wallet_balance.jpg)
 
@@ -353,29 +364,47 @@ Actions that require a DAO vote are performed by creating a proposal.
 * [**create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
-* [**Add DAO member**](gosh-web/#add-members-to-organization)
+* [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
 * **Upgrade DAO**
 * **Delete task**
 * **Create task**
-* [**Create repository**](gosh-web/#create-repository)
+* [**Create repository**](gosh-web.md#create-repository)
 * **Add voting tokens**
 * **Add regular tokens**
 * **Mint DAO tokens**
 * **Add DAO tag**
 * **Remove DAO tag**
 * **Disable minting DAO tokens**
-* **Change DAO member allowance**
-* **Multi proposal**
+* **Change DAO member Karma**
+
+<!-- !!! Warning
+    Be careful when distributing karma among the members of the TAO.
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
+
+
+* **Multi proposal** - includes several offers at once. 
+
+    For example: [adding members to the DAO by another DAO member](gosh-web.md#add-members-to-dao)
+
+
 * **Add repository tag**
 * **Remove repository tag**
 * **Update repository description**
 * **Allow event discussions**
 * **Show event progress**
 * **Upgrade repository tags**
-* **Ask DAO membership allowance**
+* [**Ask DAO membership**](gosh-web.md#request-dao-membership)
 
 <!-- 
+
+status:
+In progress
+Accepted
+Rejected
+
+
 TODO 
 kinds of proposals:
 1: 'Pull request',  // SETCOMMIT_PROPOSAL_KIND = 1
@@ -407,12 +436,12 @@ kinds of proposals:
 27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
-To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be [allocated to SMV](gosh-web.md#send-tokens-to-smv) (once the proposal is completed), you can get them back.
+To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.
 
 !!! info
     You can vote for a proposal only once.
 
-For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **Events** page.
+For example, to merge into main, [create a pull request](gosh-web.md#create-pull-request) from some other branch. A proposal will be generated and will appear on the **DAO** tab.
 
 <!-- TODO 
 change images -->
@@ -423,7 +452,15 @@ Open the proposal and review the contents.
 
 <!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
 
-The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). Unless a decisive majority of >50% is achieved early, votes will be counted at the end of this period.
+The voting period is indicated on the proposal page. This is the time allotted for [voting](../on-chain-architecture/organizations-gosh-dao-and-smv.md#soft-majority-voting). 
+
+Unless a decisive majority of >50% Global Karma Count is achieved early, votes will be counted at the end of this period.
+
+!!! info 
+    Global Karma Count is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.
+
+<!-- 
+TODO update
 
 Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
 
@@ -434,7 +471,7 @@ Once you have made a decision, select the amount of tokens with which you are re
 
 The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
 
-The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy. -->
 
 Once you have made a decision, input the amount of tokens, select **Approve** or **Reject** and click **Vote for proposal**. Vote registration can take a bit of time.
 
@@ -454,20 +491,157 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
 
 Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
 
-![](../images/docker_ext_Voiting_SMV_03_result.jpg)
+<!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
 
 
+### __Add Members to DAO__
 
-### __Add Members to Organization__
+Membership in the DAO can be obtained in several ways.
+
+The user can be invited to the DAO using a [special form](gosh-web.md#add-by-gosh-username-or-e-mail) or by an [invitation link](gosh-web.md#invite-by-link).
+
+Also, the user can independently [create a membership request](gosh-web/#request-dao-membership) in the DAO.
+
+!!! info
+    Adding a member to the DAO is possible only through an proposal.
+
+
+*Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.*
+
+
+#### <u>Add by GOSH username or e-mail</u>
+
+
+A DAO member can create a proposle to add GOSH user into the DAO.
+
+<!-- To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address. -->
+To do this, go to the tab **Members** in the section **Invite user to DAO**.
+
+* If you know the GOSH username, then enter it.
+
+* If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.
+
+
+!!! info
+    The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.
+
+Offer the amount of karma for him and please comment your decision.
+
+!!! info
+    You can send an invitation proposal to several users at once.
+
+And click **Send invite**.
+
+![](../images/gosh_web_Invite_to_DAO_01_1.jpg)
+
+!!! info
+    At the same time, a multi proposal will be created to add DAO members and provide voting tokens.
+
+Go to the DAO tab and select the desired event for voting.
 
 <!-- TODO
-change -->
+insert a image before going to the events section -->
 
-Go to Organization **Settings** to the **Members** tab to manage your organization.
+![](../images/gosh_web_Invite_to_DAO_by_form_voting.jpg)
 
-To add member enter the username of each candidate from a new line and click **Add members** button.
+#### <u>Invite by link</u>
 
-<!-- ![](../images/gosh_web_Add_Members_01.jpg) -->
+
+You can invite a user to the DAO by generating an invitation link for them.
+
+!!! warning
+    Enable "Allow external users to request DAO membership" option in [DAO settings](gosh-web.md#dao-set-up) to enable invites by email/link.
+
+To do this, on the tab **Members** in the section **Invite user to DAO** click on **Get one-time invitation link**.
+
+!!! info
+    The link to the invitation can only be used one time.
+
+![](../images/gosh_web_Invite_to_DAO_01_2.jpg)
+
+
+All active invitation links will be displayed in the section on the right.
+
+When the invited user creates a membership proposle in the DAO, the link entry disappears.
+
+You can also deactivate the link click on the **Revoke**.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg)
+
+
+When the user clicks the link, they will be able to create an account or log into GOSH.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_02_create_akk.jpg)
+
+
+Then input a short nickname or and click **Create account and continue**.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_03_shot_nickname.jpg)
+
+
+Enter a short comment who are you and click **Accept invitation**.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_04_shot_comm_who_are_U.jpg)
+
+
+On the event page that opens, you can find a request for your acceptance as a member of the DAO.
+
+Click on it you can track the results of voting and discussions.
+
+![](../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg)
+
+
+After the proposal is accepted, its status will change to **Accepted**
+
+![](../images/gosh_web_Invite_to_DAO_by_link_06_voitung_for_him_02.jpg)
+
+
+!!! info
+    You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.
+
+<!-- TODO
+add a cross-reference to the karma change propos -->
+
+#### <u>Request DAO membership</u>
+
+You can create a membership request in the DAO yourself. To do this, you need to know the link to this DAO. 
+
+!!!info
+    Only a registered user will be able to create a membership request.
+
+Follow this link and you will see the overview page of the DAO you are interested in.
+
+Click **Request membership**.
+
+![](../images/gosh_web_memeber_request_to_DAO_01.jpg)
+
+In the window that opens, write who you are and why you want to become a member of this DAO. This description will help the members of the DAO to make a decision when voting.
+
+Then click **Create proposal**.
+
+![](../images/gosh_web_memeber_request_to_DAO_02_input_description.jpg)
+
+On the event page that opens, you can find a request for your acceptance as a member of the DAO.
+
+![](../images/gosh_web_memeber_request_to_DAO_03_dao_events.jpg)
+
+After the DAO members vote, the status of your request will change to **Accepted** or **Rejected**
+
+You can follow the voting and discussion by opening the event.
+
+
+
+<!-- TODO
+searching for users by DAO
+![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
+
+<!-- 
+TODO
+use it when I describe a request to increase karma
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
 
 
 ### __What's next?__
@@ -495,7 +669,7 @@ To view the command to clone your repo, click the **Clone** button on your repo 
 ### __Create Repository__
 
 
-To create a repository in your DAO click **Create new** in the Repositories section.​
+To create a repository in your DAO click **Create new** in the Repositories section or Overview section.​
 
 ![](../images/gosh_web_Create_Repo_01_new_repo.jpg)
 
@@ -522,12 +696,15 @@ The scale shows the number of votes for the proposal and against.
 
 ![](../images/gosh_web_Event_04_result.jpg)
 
-Specify the number of tokens within your allowance for voting and choose whether to accept or reject this proposal. 
+Specify the number of tokens less than or equal to your Karma for voting and accept or reject this proposal.
 
 Add your opinion about the proposal to the discussion below and click **Send vote**
 
 ![](../images/gosh_web_Event_05_vote.jpg)
 
+The created repository will appear in the list on the Repositories tab.
+
+![](../images/gosh_web_Create_Repo_04_repo_created.jpg)
 
 ### __​Create Branch__
 
@@ -535,7 +712,6 @@ Add your opinion about the proposal to the discussion below and click **Send vot
 Repository is created with default main branch. To create another branch, click on the **branches** counter.​
 
 ![](../images/gosh_web_Create_branch_01.jpg)
-
 
 
 Select the branch to be forked, enter new branch name, and click​ **Create branch**.
@@ -567,21 +743,31 @@ Enter file contents and name.
 
 You can use **Preview** if needed. MD syntax is supported for preview.
 
-Once done, scroll down to **Commit data**, enter commit info and click **Commit changes**.​
+After scroll down and enter commit info:
+
+* Commit description - you can add a description of your commit;
+
+* Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;
+
+* Select task - if the branch is not protected and your file is a solution to a problem, you can choose a particular task;
+
+* and add Assigners, Reviewers and Managers if necessary.
+
+
+ and click **Commit changes**
 
 ![](../images/gosh_web_Create_file_03_commit_data.jpg)
+
+If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
 
 Commit status will be displayed below.
 
 ![](../images/gosh_web_Create_file_04_proces_create_file.jpg)
 
-If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO [vote](gosh-web.md#voting-in-smv-soft-majority-vote) will be initiated.
-
 
 ### __Create Pull Request__
 
 
- <!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 Click on the **Pull requests** tab and set up the pull request: what branch to merge from and to. Once selected, click **Compare**.
 
 ![](../images/gosh_web_Create_PR_01.jpg)
@@ -598,7 +784,8 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 
 
-<!-- ## __Working with Task__ -->
-<!-- TODO 
-add  -->
+## __Working with Task__
 
+
+
+![](../images/gosh_web_Create_Task_01.jpg)
