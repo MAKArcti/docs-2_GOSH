@@ -133,6 +133,13 @@ When entering the GOSH will ask you to set up a PIN code:
 
 And unlock with PIN code.
 
+!!! warning
+    If the name of the organization or repository already exists, you will receive the message.
+    Change the name, click **save changes** and confirm the action with a pin code.
+
+![](../images/gosh_web_Authorize_Gosh_11_error_rename.jpg)
+
+
 The Organizations page will open after your account is created.
 
 ![](../images/gosh_web_Authorize_Gosh_08_wellcom.jpg)
@@ -170,17 +177,18 @@ To view your public key go to the main page of your account and click [**Setting
 
 
 
-<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+​Once created, your organization will appear in the organization list. Click on it to continue.
 
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
+<!-- TODO
+change image when -->
 
-<!-- The first mandatory member is the creator, identified by their username.
+![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
+
+The first mandatory member is the creator, identified by their username.
 
 The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
-Any other members can be added at creation - just enter the username of each member in new line.
-
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
+At any later time the list of members [can be expanded](ggosh-web.md#add-members-to-dao) by voting.
 
 
 ### __Create Organization (DAO)__
@@ -356,7 +364,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * [**create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
-* [**Add DAO member**](gosh-web.md#add-members-to-organization)
+* [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
 * **Upgrade DAO**
 * **Delete task**
@@ -387,7 +395,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Allow event discussions**
 * **Show event progress**
 * **Upgrade repository tags**
-* **Ask DAO membership**
+* [**Ask DAO membership**](gosh-web.md#request-dao-membership)
 
 <!-- 
 
@@ -488,19 +496,34 @@ Once a majority has been reached early, or the voting period ended and the soft 
 
 ### __Add Members to DAO__
 
+Membership in the DAO can be obtained in several ways.
 
+The user can be invited to the DAO using a [special form](gosh-web.md#add-by-gosh-username-or-e-mail) or by an [invitation link](gosh-web.md#invite-by-link).
+
+Also, the user can independently [create a membership request](gosh-web/#request-dao-membership) in the DAO.
 
 !!! info
     Adding a member to the DAO is possible only through an proposal.
 
-There are several ways to add members to the DAO.
 
-Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.
+*Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.*
 
 
-#### **A DAO member can create a proposle to add GOSH user into the DAO**.
+#### <u>Add by GOSH username or e-mail</u>
 
-To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address.
+
+A DAO member can create a proposle to add GOSH user into the DAO.
+
+<!-- To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address. -->
+To do this, go to the tab **Members** in the section **Invite user to DAO**.
+
+* If you know the GOSH username, then enter it.
+
+* If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.
+
+
+!!! info
+    The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.
 
 Offer the amount of karma for him and please comment your decision.
 
@@ -514,12 +537,17 @@ And click **Send invite**.
 !!! info
     At the same time, a multi proposal will be created to add DAO members and provide voting tokens.
 
-To vote go to the DAO tab and select the desired event.
+Go to the DAO tab and select the desired event for voting.
 
-![](../images/gosh_web_Multy_proposal_add_member_in_DAO.jpg)
+<!-- TODO
+insert a image before going to the events section -->
+
+![](../images/gosh_web_Invite_to_DAO_by_form_voting.jpg)
+
+#### <u>Invite by link</u>
 
 
-#### **You can invite to the DAO members by sending an invitation by mail or by providing a link to the GOSH user**.
+You can invite a user to the DAO by generating an invitation link for them.
 
 !!! warning
     Enable "Allow external users to request DAO membership" option in [DAO settings](gosh-web.md#dao-set-up) to enable invites by email/link.
@@ -541,7 +569,7 @@ You can also deactivate the link click on the **Revoke**.
 ![](../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg)
 
 
-When the user clicks the link, they will be able to create an account or log in to GOSH.
+When the user clicks the link, they will be able to create an account or log into GOSH.
 
 ![](../images/gosh_web_Invite_to_DAO_by_link_02_create_akk.jpg)
 
@@ -563,40 +591,55 @@ Click on it you can track the results of voting and discussions.
 ![](../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg)
 
 
+After the proposal is accepted, its status will change to **Accepted**
+
+![](../images/gosh_web_Invite_to_DAO_by_link_06_voitung_for_him_02.jpg)
+
+
 !!! info
     You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.
+
 <!-- TODO
 add a cross-reference to the karma change propos -->
 
+#### <u>Request DAO membership</u>
+
+You can create a membership request in the DAO yourself. To do this, you need to know the link to this DAO. 
+
+!!!info
+    Only a registered user will be able to create a membership request.
+
+Follow this link and you will see the overview page of the DAO you are interested in.
+
+Click **Request membership**.
+
+![](../images/gosh_web_memeber_request_to_DAO_01.jpg)
+
+In the window that opens, write who you are and why you want to become a member of this DAO. This description will help the members of the DAO to make a decision when voting.
+
+Then click **Create proposal**.
+
+![](../images/gosh_web_memeber_request_to_DAO_02_input_description.jpg)
+
+On the event page that opens, you can find a request for your acceptance as a member of the DAO.
+
+![](../images/gosh_web_memeber_request_to_DAO_03_dao_events.jpg)
+
+After the DAO members vote, the status of your request will change to **Accepted** or **Rejected**
+
+You can follow the voting and discussion by opening the event.
+
 
 
 <!-- TODO
-what to do with the user search
-use it when I describe a request to increase karma
-
+searching for users by DAO
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
-#### **You can create a membership request in the DAO yourself**.
-<!-- TODO -->
-
-
-
-<!-- delete?
-
-Go to the ** Members ** tab to invite users to join the DAO.
-
-To add member enter the username of each candidate from a new line and click **Add members** button. -->
-
-<!-- ![](../images/gosh_web_Add_Members_01.jpg) -->
-
-
-
-
-
-
-
-<!-- !!! Warning
-    Be careful when distributing karma among the members of the TAO.
+<!-- 
+TODO
+use it when I describe a request to increase karma
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.
     Avoid the possibility of a preponderance in the votes of one of the DAO members.
     To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
 
