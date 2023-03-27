@@ -558,10 +558,10 @@
 <p>At a minimum, organizations have one member, who signle-handedly <a href="../../working-with-gosh/gosh-web/#working-with-repository">creates and manages repositories</a>.</p>
 <p>Once more than one user is <a href="../../working-with-gosh/gosh-web/#add-members-to-dao">added to a DAO</a>, however, decentralized management of DAO begins.</p>
 <!-- DAO can be configured to require a vote of members for any action within the repository. -->
-<p>Any actions in the DAO require a vote and are created using <a href="../../working-with-gosh/gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">proposals</a></p>
-<p>For example, a user may propose a <a href="../../working-with-gosh/gosh-web/#create-file">commit</a> to repository, and a <a href="https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance">soft-majority vote</a> of all other DAO members may be required to approve it.</p>
+<p>Any actions in the DAO require a vote and are created using <a href="../../working-with-gosh/gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">proposals</a>.</p>
+<p>For example, a user may propose a <a href="../../working-with-gosh/gosh-web/#create-file">commit of file</a> into repository, and a soft-majority vote of all other DAO members may be required to approve it.</p>
 <p><a href="../../working-with-gosh/gosh-web/#create-branch">Branches</a> could be locked to required any changes to them to be voted by DAO SMV.</p>
-<p><a href="../../working-with-gosh/gosh-web/#dao-set-up">DAO configuration</a> is very flexible. </p>
+<!-- [DAO configuration](../working-with-gosh/gosh-web.md#dao-set-up) is very flexible.  -->
 <!-- Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit. -->
 
 <h2 id="soft-majority-voting">Soft Majority Voting</h2>
@@ -575,9 +575,13 @@
 <p>All SMV proposals have a set deadline. When it is reached, accumulated votes are counted, the decision is made, and the proposal completes.</p>
 <p>If however a majority of 50% + 1 vote is achieved early, the proposal completes immediately.</p>
 <h2 id="smv-in-gosh">SMV in GOSH</h2>
-<p>In GOSH one vote is one token on the user's GOSH wallet. Each user gets 100 tokens by default. The total supply of tokens in the repository is the sum of all tokens of all its participants.</p>
-<p>This way, for a proposal in GOSH to pass early several participants need to vote for it with 50% of the total token supply of the repository + 1 token.</p>
-<p>If no one objects to a proposal for the duration of its voting period, 10% of the total supply of tokens is enough, but the proposal will only complete at the end of the voting period.</p>
+<p>In GOSH one vote is one token on the user's GOSH wallet. First user gets 20 DAO tokens and 20 Karma by default. </p>
+<p>The <strong>total supply of tokens</strong> in the DAO is the sum of all tokens of all its members.</p>
+<p><strong>Karma</strong> is the amount of tokens (upper limit) within which a DAO member can vote. </p>
+<p>It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.</p>
+<p>This way, for a proposal in GOSH to pass early several participants need to vote for it with 50% of the Global Karma Count of the DAO + 1 token.</p>
+<p><strong>Global Karma Count</strong> is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.</p>
+<p>If no one objects to a proposal for the duration of its voting period, 10% f the Global Karma Count is enough, but the proposal will only complete at the end of the voting period.</p>
 <p>If votes are split, and neither side achieves 50% + 1 token early, the proposal completes at the end of the voting period and the result is calculated according to the diagram above.</p>
 
 

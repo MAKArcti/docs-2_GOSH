@@ -477,6 +477,33 @@
     Add Members to DAO
   </a>
   
+    <nav class="md-nav" aria-label="Add Members to DAO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-by-gosh-username-or-e-mail" class="md-nav__link">
+    Add by GOSH username or e-mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invite-by-link" class="md-nav__link">
+    Invite by link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-dao-membership" class="md-nav__link">
+    Request DAO membership
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -529,6 +556,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-task" class="md-nav__link">
+    Working with Task
+  </a>
   
 </li>
       
@@ -684,6 +718,33 @@
     Add Members to DAO
   </a>
   
+    <nav class="md-nav" aria-label="Add Members to DAO">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-by-gosh-username-or-e-mail" class="md-nav__link">
+    Add by GOSH username or e-mail
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invite-by-link" class="md-nav__link">
+    Invite by link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-dao-membership" class="md-nav__link">
+    Request DAO membership
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -736,6 +797,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#working-with-task" class="md-nav__link">
+    Working with Task
+  </a>
   
 </li>
       
@@ -860,6 +928,12 @@ It will deploy your DAO and upload your selected repositories to GOSH.</p>
 </div>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_10_pin.jpg" /></p>
 <p>And unlock with PIN code.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If the name of the organization or repository already exists, you will receive the message.
+Change the name, click <strong>save changes</strong> and confirm the action with a pin code.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Authorize_Gosh_11_error_rename.jpg" /></p>
 <p>The Organizations page will open after your account is created.</p>
 <p><img alt="" src="../../images/gosh_web_Authorize_Gosh_08_wellcom.jpg" /></p>
 <div class="admonition info">
@@ -880,18 +954,14 @@ It will deploy your DAO and upload your selected repositories to GOSH.</p>
 </div>
 <p><img alt="" src="../../images/gosh_web_View_Public_Key_01.jpg" /></p>
 <h2 id="working-with-dao"><strong>Working with DAO</strong></h2>
-<!-- ​Once created, your organization will appear in the organization list. Click on it to continue.
+<p>​Once created, your organization will appear in the organization list. Click on it to continue.</p>
+<!-- TODO
+change image when -->
 
-![](../images/gosh_web_Create_ORG_03_list_orgs.jpg) -->
-
-<!-- The first mandatory member is the creator, identified by their username.
-
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
-
-Any other members can be added at creation - just enter the username of each member in new line.
-
-At any later time the list of members [can be expanded](gosh-web.md#add-members-to-organization) by voting. -->
-
+<p><img alt="" src="../../images/gosh_web_Create_ORG_03_list_orgs.jpg" /></p>
+<p>The first mandatory member is the creator, identified by their username.</p>
+<p>The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.</p>
+<p>At any later time the list of members <a href="./#add-members-to-dao">can be expanded</a> by voting.</p>
 <h3 id="create-organization-dao"><strong>Create Organization (DAO)</strong></h3>
 <!-- The Organizations page will open after your account is created. -->
 
@@ -932,7 +1002,7 @@ It is enabled by default.</p>
 <p>In the future, it will be possible to disable the emission of DAO tokens through proposal and voting in the <a href="./#dao-set-up"><strong>Settings</strong></a> section.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>If you uncheck this box during the initial setup, then the DAO tokens will never be issued.</p>
+<p>If you uncheck this option, the number of tokens issued for this DAO will be capped to the number entered during the initial setup</p>
 </div>
 </li>
 </ul>
@@ -970,8 +1040,8 @@ It is enabled by default.</p>
 
 <ul>
 <li>
-<p><strong>Allowance</strong> - the amount of tokens (upper limit) within which a DAO member can vote. </p>
-<p>It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Allowance can be changed only by voting.</p>
+<p><strong>Karma</strong> - the amount of tokens (upper limit) within which a DAO member can vote. </p>
+<p>It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.</p>
 </li>
 </ul>
 <p><img alt="" src="../../images/gosh_web_OVERVIEW_02_wallet_balance.jpg" /></p>
@@ -1036,29 +1106,48 @@ which you added in the settings earlier.</p>
 <li><a href="./#create-pull-request"><strong>create a pull request</strong></a></li>
 <li><strong>Add branch protection</strong></li>
 <li><strong>Remove branch protection</strong></li>
-<li><a href="gosh-web/#add-members-to-organization"><strong>Add DAO member</strong></a></li>
+<li><a href="./#add-members-to-dao"><strong>Add DAO member</strong></a></li>
 <li><strong>Remove DAO member</strong></li>
 <li><strong>Upgrade DAO</strong></li>
 <li><strong>Delete task</strong></li>
 <li><strong>Create task</strong></li>
-<li><a href="gosh-web/#create-repository"><strong>Create repository</strong></a></li>
+<li><a href="./#create-repository"><strong>Create repository</strong></a></li>
 <li><strong>Add voting tokens</strong></li>
 <li><strong>Add regular tokens</strong></li>
 <li><strong>Mint DAO tokens</strong></li>
 <li><strong>Add DAO tag</strong></li>
 <li><strong>Remove DAO tag</strong></li>
 <li><strong>Disable minting DAO tokens</strong></li>
-<li><strong>Change DAO member allowance</strong></li>
-<li><strong>Multi proposal</strong></li>
-<li><strong>Add repository tag</strong></li>
+<li><strong>Change DAO member Karma</strong></li>
+</ul>
+<!-- !!! Warning
+    Be careful when distributing karma among the members of the TAO.
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
+
+<ul>
+<li>
+<p><strong>Multi proposal</strong> - includes several offers at once. </p>
+<p>For example: <a href="./#add-members-to-dao">adding members to the DAO by another DAO member</a></p>
+</li>
+<li>
+<p><strong>Add repository tag</strong></p>
+</li>
 <li><strong>Remove repository tag</strong></li>
 <li><strong>Update repository description</strong></li>
 <li><strong>Allow event discussions</strong></li>
 <li><strong>Show event progress</strong></li>
 <li><strong>Upgrade repository tags</strong></li>
-<li><strong>Ask DAO membership allowance</strong></li>
+<li><a href="./#request-dao-membership"><strong>Ask DAO membership</strong></a></li>
 </ul>
 <!-- 
+
+status:
+In progress
+Accepted
+Rejected
+
+
 TODO 
 kinds of proposals:
 1: 'Pull request',  // SETCOMMIT_PROPOSAL_KIND = 1
@@ -1090,12 +1179,12 @@ kinds of proposals:
 27: 'Ask DAO membership allowance',  //ABILITY_INVITE_PROPOSAL_KIND = 27
 -->
 
-<p>To create a proposal, or to vote for a proposal someone else created, some of your tokens need to be <a href="./#send-tokens-to-smv">allocated to SMV</a> (once the proposal is completed), you can get them back.</p>
+<p>To vote for the proposal, some of your tokens must be be allocated to SMV (once the proposal is completed), you can get them back.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>You can vote for a proposal only once.</p>
 </div>
-<p>For example, to merge into main, <a href="./#create-pull-request">create a pull request</a> from some other branch. A proposal will be generated and will appear on the <strong>Events</strong> page.</p>
+<p>For example, to merge into main, <a href="./#create-pull-request">create a pull request</a> from some other branch. A proposal will be generated and will appear on the <strong>DAO</strong> tab.</p>
 <!-- TODO 
 change images -->
 
@@ -1104,12 +1193,26 @@ change images -->
 <p>Open the proposal and review the contents.</p>
 <!-- ![](../images/docker_ext_Voiting_SMV_02_proposal.jpg) -->
 
-<p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. Unless a decisive majority of &gt;50% is achieved early, votes will be counted at the end of this period.</p>
-<p>Voting statistics are located under the status <strong>Running</strong>. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.</p>
-<p>The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.</p>
-<p>Once you have made a decision, select the amount of tokens with which you are ready to vote and click <strong>Vote for proposal</strong></p>
-<p>The red and green numbers next to <strong>Running</strong> status indicate how many tokens were used by now to vote for and against the proposal.</p>
-<p>The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.</p>
+<p>The voting period is indicated on the proposal page. This is the time allotted for <a href="../../on-chain-architecture/organizations-gosh-dao-and-smv/#soft-majority-voting">voting</a>. </p>
+<p>Unless a decisive majority of &gt;50% Global Karma Count is achieved early, votes will be counted at the end of this period.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Global Karma Count is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.</p>
+</div>
+<!-- 
+TODO update
+
+Voting statistics are located under the status **Running**. The green and red counters indicate how many tokens have been used at the moment to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy.
+
+Once you have made a decision, select the amount of tokens with which you are ready to vote and click **Vote for proposal**
+
+
+The red and green numbers next to **Running** status indicate how many tokens were used by now to vote for and against the proposal.
+
+The green indicator in the top right corner means that the SMV smart contracts are not currently processing any new votes. It turns red when the SMV contracts are busy. -->
+
 <p>Once you have made a decision, input the amount of tokens, select <strong>Approve</strong> or <strong>Reject</strong> and click <strong>Vote for proposal</strong>. Vote registration can take a bit of time.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1124,14 +1227,110 @@ change images -->
 <p>Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.</p>
 </div>
 <p>Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.</p>
-<p><img alt="" src="../../images/docker_ext_Voiting_SMV_03_result.jpg" /></p>
-<h3 id="add-members-to-dao"><strong>Add Members to DAO</strong></h3>
-<!-- TODO
-change -->
+<!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
 
-<p>Go to the <strong> Members </strong> tab to invite users to join the DAO.</p>
-<p>To add member enter the username of each candidate from a new line and click <strong>Add members</strong> button.</p>
-<!-- ![](../images/gosh_web_Add_Members_01.jpg) -->
+<h3 id="add-members-to-dao"><strong>Add Members to DAO</strong></h3>
+<p>Membership in the DAO can be obtained in several ways.</p>
+<p>The user can be invited to the DAO using a <a href="./#add-by-gosh-username-or-e-mail">special form</a> or by an <a href="./#invite-by-link">invitation link</a>.</p>
+<p>Also, the user can independently <a href="gosh-web/#request-dao-membership">create a membership request</a> in the DAO.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Adding a member to the DAO is possible only through an proposal.</p>
+</div>
+<p><em>Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.</em></p>
+<h4 id="add-by-gosh-username-or-e-mail"><u>Add by GOSH username or e-mail</u></h4>
+<p>A DAO member can create a proposle to add GOSH user into the DAO.</p>
+<!-- To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address. -->
+<p>To do this, go to the tab <strong>Members</strong> in the section <strong>Invite user to DAO</strong>.</p>
+<ul>
+<li>
+<p>If you know the GOSH username, then enter it.</p>
+</li>
+<li>
+<p>If you don't know the name or the user doesn't have a GOSH account yet, enter their email address.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The email address will change to the GOSH username if the user has given permission during registration so that it can be found by email.</p>
+</div>
+<p>Offer the amount of karma for him and please comment your decision.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You can send an invitation proposal to several users at once.</p>
+</div>
+<p>And click <strong>Send invite</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_01_1.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>At the same time, a multi proposal will be created to add DAO members and provide voting tokens.</p>
+</div>
+<p>Go to the DAO tab and select the desired event for voting.</p>
+<!-- TODO
+insert a image before going to the events section -->
+
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_form_voting.jpg" /></p>
+<h4 id="invite-by-link"><u>Invite by link</u></h4>
+<p>You can invite a user to the DAO by generating an invitation link for them.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Enable "Allow external users to request DAO membership" option in <a href="./#dao-set-up">DAO settings</a> to enable invites by email/link.</p>
+</div>
+<p>To do this, on the tab <strong>Members</strong> in the section <strong>Invite user to DAO</strong> click on <strong>Get one-time invitation link</strong>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>The link to the invitation can only be used one time.</p>
+</div>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_01_2.jpg" /></p>
+<p>All active invitation links will be displayed in the section on the right.</p>
+<p>When the invited user creates a membership proposle in the DAO, the link entry disappears.</p>
+<p>You can also deactivate the link click on the <strong>Revoke</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_01_1_all_links.jpg" /></p>
+<p>When the user clicks the link, they will be able to create an account or log into GOSH.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_02_create_akk.jpg" /></p>
+<p>Then input a short nickname or and click <strong>Create account and continue</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_03_shot_nickname.jpg" /></p>
+<p>Enter a short comment who are you and click <strong>Accept invitation</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_04_shot_comm_who_are_U.jpg" /></p>
+<p>On the event page that opens, you can find a request for your acceptance as a member of the DAO.</p>
+<p>Click on it you can track the results of voting and discussions.</p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_05_Page_dao.jpg" /></p>
+<p>After the proposal is accepted, its status will change to <strong>Accepted</strong></p>
+<p><img alt="" src="../../images/gosh_web_Invite_to_DAO_by_link_06_voitung_for_him_02.jpg" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.</p>
+</div>
+<!-- TODO
+add a cross-reference to the karma change propos -->
+
+<h4 id="request-dao-membership"><u>Request DAO membership</u></h4>
+<p>You can create a membership request in the DAO yourself. To do this, you need to know the link to this DAO. </p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Only a registered user will be able to create a membership request.</p>
+</div>
+<p>Follow this link and you will see the overview page of the DAO you are interested in.</p>
+<p>Click <strong>Request membership</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_01.jpg" /></p>
+<p>In the window that opens, write who you are and why you want to become a member of this DAO. This description will help the members of the DAO to make a decision when voting.</p>
+<p>Then click <strong>Create proposal</strong>.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_02_input_description.jpg" /></p>
+<p>On the event page that opens, you can find a request for your acceptance as a member of the DAO.</p>
+<p><img alt="" src="../../images/gosh_web_memeber_request_to_DAO_03_dao_events.jpg" /></p>
+<p>After the DAO members vote, the status of your request will change to <strong>Accepted</strong> or <strong>Rejected</strong></p>
+<p>You can follow the voting and discussion by opening the event.</p>
+<!-- TODO
+searching for users by DAO
+![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
+
+<!-- 
+TODO
+use it when I describe a request to increase karma
+!!! Warning
+    Be careful when distributing karma among the members of the DAO.
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
 
 <h3 id="whats-next"><strong>What's next?</strong></h3>
 <!-- TODO
@@ -1145,7 +1344,7 @@ Scroll down and copy them.</p>
 <p><img alt="" src="../../images/gosh_web_Whats_next_02.jpg" /></p>
 <h2 id="working-with-repository"><strong>Working with Repository</strong></h2>
 <h3 id="create-repository"><strong>Create Repository</strong></h3>
-<p>To create a repository in your DAO click <strong>Create new</strong> in the Repositories section.​</p>
+<p>To create a repository in your DAO click <strong>Create new</strong> in the Repositories section or Overview section.​</p>
 <p><img alt="" src="../../images/gosh_web_Create_Repo_01_new_repo.jpg" /></p>
 <p>Enter repository name and its description and click <strong>Create repository</strong>.</p>
 <div class="admonition warning">
@@ -1161,9 +1360,11 @@ Scroll down and copy them.</p>
 <p><img alt="" src="../../images/gosh_web_Event_03_status_time_details.jpg" /></p>
 <p>The scale shows the number of votes for the proposal and against.</p>
 <p><img alt="" src="../../images/gosh_web_Event_04_result.jpg" /></p>
-<p>Specify the number of tokens within your allowance for voting and choose whether to accept or reject this proposal. </p>
+<p>Specify the number of tokens less than or equal to your Karma for voting and accept or reject this proposal.</p>
 <p>Add your opinion about the proposal to the discussion below and click <strong>Send vote</strong></p>
 <p><img alt="" src="../../images/gosh_web_Event_05_vote.jpg" /></p>
+<p>The created repository will appear in the list on the Repositories tab.</p>
+<p><img alt="" src="../../images/gosh_web_Create_Repo_04_repo_created.jpg" /></p>
 <h3 id="create-branch"><strong>​Create Branch</strong></h3>
 <p>Repository is created with default main branch. To create another branch, click on the <strong>branches</strong> counter.​</p>
 <p><img alt="" src="../../images/gosh_web_Create_branch_01.jpg" /></p>
@@ -1183,13 +1384,27 @@ Scroll down and copy them.</p>
 <p>Enter file contents and name.</p>
 <p><img alt="" src="../../images/gosh_web_Create_file_02_name_contents.jpg" /></p>
 <p>You can use <strong>Preview</strong> if needed. MD syntax is supported for preview.</p>
-<p>Once done, scroll down to <strong>Commit data</strong>, enter commit info and click <strong>Commit changes</strong>.​</p>
+<p>After scroll down and enter commit info:</p>
+<ul>
+<li>
+<p>Commit description - you can add a description of your commit;</p>
+</li>
+<li>
+<p>Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;</p>
+</li>
+<li>
+<p>Select task - if the branch is not protected and your file is a solution to a problem, you can choose a particular task;</p>
+</li>
+<li>
+<p>and add Assigners, Reviewers and Managers if necessary.</p>
+</li>
+</ul>
+<p>and click <strong>Commit changes</strong></p>
 <p><img alt="" src="../../images/gosh_web_Create_file_03_commit_data.jpg" /></p>
+<p>If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO <a href="./#voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
 <p>Commit status will be displayed below.</p>
 <p><img alt="" src="../../images/gosh_web_Create_file_04_proces_create_file.jpg" /></p>
-<p>If the branch you are working in requires no voting to confirm commits, the file will be added. Otherwise a DAO <a href="./#voting-in-smv-soft-majority-vote">vote</a> will be initiated.</p>
 <h3 id="create-pull-request"><strong>Create Pull Request</strong></h3>
-<!-- <a href="#create-pull-request" id="create-pull-request"></a> -->
 <p>Click on the <strong>Pull requests</strong> tab and set up the pull request: what branch to merge from and to. Once selected, click <strong>Compare</strong>.</p>
 <p><img alt="" src="../../images/gosh_web_Create_PR_01.jpg" /></p>
 <p>The branches will be compared. Review the changes, set up the pull request and click Commit changes.</p>
@@ -1199,9 +1414,8 @@ Scroll down and copy them.</p>
 <p><strong>Note</strong>: When merging into the main branch, and in some other cases (depending on DAO setup), a DAO proposal will be initiated by trying to commit.</p>
 <p>Organization Tokens have to be sent to the DAO Soft Majority Vote contract to start a proposal for DAO members to <a href="./#voting-in-smv-soft-majority-vote">vote</a> on.</p>
 </div>
-<!-- ## __Working with Task__ -->
-<!-- TODO 
-add  -->
+<h2 id="working-with-task"><strong>Working with Task</strong></h2>
+<p><img alt="" src="../../images/gosh_web_Create_Task_01.jpg" /></p>
 
 
 

@@ -188,7 +188,7 @@ The first mandatory member is the creator, identified by their username.
 
 The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
-At any later time the list of members [can be expanded](ggosh-web.md#add-members-to-dao) by voting.
+At any later time the list of members [can be expanded](gosh-web.md#add-members-to-dao) by voting.
 
 
 ### __Create Organization (DAO)__
