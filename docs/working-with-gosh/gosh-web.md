@@ -107,20 +107,31 @@ If you're new to blockchain, all you need to know, is that this is the key to yo
 
 To create the GOSH-account, the seed phrase will be generated for you. If you already have the GOSH-account, click **Clear** and enter your own one seed phrase.
 
-![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
-
-!!! danger
-    Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
-
 !!! info
     Your seed phrase will be used to log into GOSH.
 
+
+!!! danger
+    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
+
+
 Once you have written down your seed phrase, click **Continue.**
 
-Then choose a short nickname or create a new one and click **Create account**.
+![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
+
+
+Then choose your username in GOSH. **This is your unique cryptographic identifier in Gosh.
+**
+
+!!! Danger
+    **Please note that after creating your username it will be impossible to change it in the future.**
+
+if your username is already taken, please choose another one.
 
 !!! warning
-    The Usernames must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+    The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+And click **Create account**.
 
 ![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
@@ -178,9 +189,6 @@ To view your public key go to the main page of your account and click [**Setting
 
 
 ​Once created, your organization will appear in the organization list. Click on it to continue.
-
-<!-- TODO
-change image when -->
 
 ![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
 
