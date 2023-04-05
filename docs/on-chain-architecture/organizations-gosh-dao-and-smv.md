@@ -4,20 +4,22 @@
 
 As a blockchain-based product, GOSH is all about decentralization.
 
-The primary entity on GOSH is a **Decentralized Autonomous Organization** - DAO.
+The primary entity on [GOSH](../working-with-gosh/gosh-web.md#create-account) is a [**Decentralized Autonomous Organization** - DAO](../working-with-gosh/gosh-web.md#create-organization-dao).
 
-At a minimum, organizations have one member, who signle-handedly creates and manages repositories.
+At a minimum, organizations have one member, who signle-handedly [creates and manages repositories](../working-with-gosh/gosh-web.md#working-with-repository).
 
-Once more than one user is added to an Organization, however, decentralized management of repositories begins.
+Once more than one user is [added to a DAO](../working-with-gosh/gosh-web.md#add-members-to-dao), however, decentralized management of DAO begins.
 
-DAO can be configured to require a vote of members for any action within the repository.
+<!-- DAO can be configured to require a vote of members for any action within the repository. -->
+Any actions in the DAO require a vote and are created using [proposals](../working-with-gosh/gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
 
-For example, a user may propose a commit to DAO, and a [soft-majority vote](https://mitja.gitbook.io/papers/v/everscale-white-paper/readme/chapter-one-everscale/governance) of all other DAO members may be required to approve it.
+For example, a user may propose a [commit of file](../working-with-gosh/gosh-web.md#create-file) into repository, and a soft-majority vote of all other DAO members may be required to approve it.
 
-Repositories could be Locked to resuire any changes to them to be voted by DAO SMV.
+[Branches](../working-with-gosh/gosh-web.md#create-branch) could be locked to required any changes to them to be voted by DAO SMV.
 
-DAO configuration is very flexible. Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit.
-
+<!-- [DAO configuration](../working-with-gosh/gosh-web.md#dao-set-up) is very flexible.  -->
+<!-- Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit. -->
+ 
 ## Soft Majority Voting
 
 Soft Majority Voting, or SMV for short, is a voting mechanism designed for transparency and optional participation.
@@ -40,10 +42,18 @@ If however a majority of 50% + 1 vote is achieved early, the proposal completes 
 
 ## SMV in GOSH
 
-In GOSH one vote is one token on the user's GOSH wallet. Each user gets 100 tokens by default. The total supply of tokens in the repository is the sum of all tokens of all its participants.
+In GOSH one vote is one token on the user's GOSH wallet. First user gets 20 DAO tokens and 20 Karma by default. 
 
-This way, for a proposal in GOSH to pass early several participants need to vote for it with 50% of the total token supply of the repository + 1 token.
+The **total supply of tokens** in the DAO is the sum of all tokens of all its members.
 
-If no one objects to a proposal for the duration of its voting period, 10% of the total supply of tokens is enough, but the proposal will only complete at the end of the voting period.
+**Karma** is the amount of tokens (upper limit) within which a DAO member can vote. 
+
+It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.
+
+This way, for a proposal in GOSH to pass early several participants need to vote for it with 50% of the Global Karma Count of the DAO + 1 token.
+
+**Global Karma Count** is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.
+
+If no one objects to a proposal for the duration of its voting period, 10% f the Global Karma Count is enough, but the proposal will only complete at the end of the voting period.
 
 If votes are split, and neither side achieves 50% + 1 token early, the proposal completes at the end of the voting period and the result is calculated according to the diagram above.
