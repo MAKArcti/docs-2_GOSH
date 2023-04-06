@@ -25,7 +25,7 @@ Git Remote Helper (this is a standard mechanism for working with non-standard co
 
     ```
       cd gosh
-    ``` 
+    ```
 
     Then assemble all the necessary components:
 
@@ -49,15 +49,17 @@ Git Remote Helper (this is a standard mechanism for working with non-standard co
         After assembling all the components, the finished binary files will be located in the `~/.cargo/bin` directory.
 
 
+
       You need to create a configuration file for the Git Remote Helper: `~/.gosh/dispatcher.ini`
 
       with the following content:
 
-    ```
-      git-remote-gosh_v1_0_0
-      git-remote-gosh_v2_0_0
-      git-remote-gosh_v3_0_0
-    ```
+  
+      `git-remote-gosh_v1_0_0`
+
+      `git-remote-gosh_v2_0_0`
+
+      `git-remote-gosh_v3_0_0`
 
 
       You can check the correctness of the configuration file by running the command:
