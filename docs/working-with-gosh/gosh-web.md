@@ -11,12 +11,13 @@ You will be able to create your GOSH account and Decentralized Autonomous Organi
 <!-- 
 tabs:
 
-Overview
-DAO
-Repositories
-Members
+Overview -- 
+DAO         
+Repositories 
+Members   
 Tasks
-Settings -->
+Settings 
+-->
 
 
 <!-- 
@@ -27,34 +28,35 @@ Overview
     * create repo
     * ...
 -----
-* DAO total supply
-* DAO reserve
-* Your wallet balance
-* Allowance
-* Members1 + Invite members
+* DAO total supply ---
+* DAO reserve----
+* Your wallet balance----
+* Allowance---
+* Members1 + Invite members---
 
 DAO
-* DAO events
+* DAO events---
 
 Repositories
 * DAO system repository ?
-* create repo
+* create repo---
 
 Members
-* Invite user to DAO
+* Invite user to DAO---
 
 Tasks
 * create task
 
 Settings
 * DAO Set up
-    * Token setup
-    * Proposal setup
-    * Members setup
-    * Save changes
+    * Token setup----
+    * Proposal setup---
+    * Members setup---
+    * Save changes---
 
 * Upgrade
-    * Upgrade DAO -->
+    * Upgrade DAO 
+-->
 
 
 ## __Working with account__
@@ -320,7 +322,7 @@ The **_index** is a DAO system repository that is created automatically.
     a text file with a brief description of your DAO,
     which you added in the settings earlier.
 
-To add a README for your DAO, go to the _index repository and [create a file](ggosh-web/#create-file) in the main branch.
+To add a README for your DAO, go to the _index repository and [create a file](gosh-web.md#create-file) in the main branch.
 
 ![](../images/gosh_web_OVERVIEW_04_readme_md.jpg)
 
@@ -364,6 +366,44 @@ Then add a comment on changing the settings for other members of the DAO and cli
     __All settings and actions in the DAO will be performed the [voting](gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
 
 
+### __Upgrade__
+
+
+When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
+
+The upgrade is initiated by the [proposal](gosh-web/#proposals-and-voting-in-smv-soft-majority-vote).
+
+You can see a message about the availability of a new version 
+and an invitation to update in the DAO.
+
+![](../images/gosh_web_upgrade_msg_new_vers_available_01.jpg)
+
+!!! info
+    Complete all proposle before starting the update.
+
+
+You can go to the Updates section from the new version message or by going to the Settings tab.
+
+
+<!-- Depending on which version you currently have, choose the appropriate update method. -->
+Select the version you want to upgrade to:
+
+* __From version 1 to version 2__
+
+![](../images/gosh_web_upgrade_02_in_settings.jpg)
+
+
+
+* __From version 2 to version 3__
+
+
+
+* __From version 1 to version 3__
+
+
+You can leave a comment on the proposal.
+
+
 ### __Proposals and voting in SMV (Soft Majority Vote)__
 
 
@@ -374,7 +414,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
-* **Upgrade DAO**
+* [**Upgrade DAO**](gosh-web.md#upgrade)
 * **Delete task**
 * **Create task**
 * [**Create repository**](gosh-web.md#create-repository)
