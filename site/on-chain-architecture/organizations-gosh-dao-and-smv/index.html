@@ -363,6 +363,26 @@
     SMV in GOSH
   </a>
   
+    <nav class="md-nav" aria-label="SMV in GOSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokens-and-karma" class="md-nav__link">
+    Tokens and Karma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voting" class="md-nav__link">
+    Voting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -533,6 +553,26 @@
     SMV in GOSH
   </a>
   
+    <nav class="md-nav" aria-label="SMV in GOSH">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tokens-and-karma" class="md-nav__link">
+    Tokens and Karma
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#voting" class="md-nav__link">
+    Voting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -552,21 +592,14 @@
 
 
 <h1 id="organizations-gosh-dao-and-smv">Organizations: GOSH DAO and SMV</h1>
-<h2 id="dao">DAO</h2>
-<p>As a blockchain-based product, GOSH is all about decentralization.</p>
-<p>The primary entity on <a href="../../working-with-gosh/gosh-web/#create-account">GOSH</a> is a <a href="../../working-with-gosh/gosh-web/#create-organization-dao"><strong>Decentralized Autonomous Organization</strong> - DAO</a>.</p>
-<p>At a minimum, organizations have one member, who signle-handedly <a href="../../working-with-gosh/gosh-web/#working-with-repository">creates and manages repositories</a>.</p>
-<p>Once more than one user is <a href="../../working-with-gosh/gosh-web/#add-members-to-dao">added to a DAO</a>, however, decentralized management of DAO begins.</p>
-<!-- DAO can be configured to require a vote of members for any action within the repository. -->
-<p>Any actions in the DAO require a vote and are created using <a href="../../working-with-gosh/gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">proposals</a>.</p>
-<p>For example, a user may propose a <a href="../../working-with-gosh/gosh-web/#create-file">commit of file</a> into repository, and a soft-majority vote of all other DAO members may be required to approve it.</p>
-<p><a href="../../working-with-gosh/gosh-web/#create-branch">Branches</a> could be locked to required any changes to them to be voted by DAO SMV.</p>
-<!-- [DAO configuration](../working-with-gosh/gosh-web.md#dao-set-up) is very flexible.  -->
-<!-- Voting requirements may be set (or not) for any action, from adding new members to DAO to merging a commit. -->
-
-<h2 id="soft-majority-voting">Soft Majority Voting</h2>
+<h2 id="dao"><strong>DAO</strong></h2>
+<p>Every repository on <a href="../../working-with-gosh/gosh-web/#create-account">GOSH</a> is managed as a <a href="../../working-with-gosh/gosh-web/#create-organization-dao"><strong>Decentralized Autonomous Organization</strong> - DAO</a> – a tool that allows every developer to build on GOSH in a way that is decentralized, secure, and scalable.</p>
+<p>Every organization has, as a minimum, one member who <a href="../../working-with-gosh/gosh-web/#working-with-repository">creates and manages repositories</a>. However, once more than one <a href="../../working-with-gosh/gosh-web/#add-members-to-dao">user is added to a DAO</a>, it is then governed through decentralized management mechanisms.</p>
+<p>Your can <a href="../../working-with-gosh/gosh-web/#dao-set-up">configure</a> your DAO easily.</p>
+<p>The main of these mechanisms is voting. Any action in a DAO requires a vote and is created through a <a href="../../working-with-gosh/gosh-web/#proposals-and-voting-in-smv-soft-majority-vote">proposals</a>. For example, a user may propose to <a href="../../working-with-gosh/gosh-web/#create-file">commit of file</a> into a repository, and a soft-majority vote (SMV) of all other DAO members may be required to approve it. <a href="../../working-with-gosh/gosh-web/#create-branch">Branches</a> could be locked to require any changes to them to be voted on by DAO SMV.</p>
+<h2 id="soft-majority-voting"><strong>Soft Majority Voting</strong></h2>
 <p>Soft Majority Voting, or SMV for short, is a voting mechanism designed for transparency and optional participation.</p>
-<p>The outcome of SMV depends on the difference between the number of votes for and against a proposal, with a minimal threshold of approving votes required to pass a proposal no one objects to.</p>
+<p>The outcome of an SMV vote is decided by the difference between the number of votes for, and the number of votes against a proposal. If nobody objects, a minimum threshold of approving votes is required for the proposal to pass.</p>
 <p>If everyone votes either for or against a proposal, 50% + 1 vote is required for the proposal to pass.</p>
 <p>If the only votes given are for the proposal, and no one votes against, 10% approving votes are enough for the proposal to pass.</p>
 <p>Everything in between these two extremes is a linear dependency between the percentage of votes against and percentage of votes for required to pass the proposal.</p>
@@ -574,12 +607,17 @@
 <p><img alt="" src="../../images/smv.png" /></p>
 <p>All SMV proposals have a set deadline. When it is reached, accumulated votes are counted, the decision is made, and the proposal completes.</p>
 <p>If however a majority of 50% + 1 vote is achieved early, the proposal completes immediately.</p>
-<h2 id="smv-in-gosh">SMV in GOSH</h2>
-<p>In GOSH one vote is one token on the user's GOSH wallet. First user gets 20 DAO tokens and 20 Karma by default. </p>
-<p>The <strong>total supply of tokens</strong> in the DAO is the sum of all tokens of all its members.</p>
-<p><strong>Karma</strong> is the amount of tokens (upper limit) within which a DAO member can vote. </p>
-<p>It is assigned when accepted as a member of the DAO. This determines the reputation of the DAO member. The Karma can be changed only by voting.</p>
-<p>This way, for a proposal in GOSH to pass early several participants need to vote for it with 50% of the Global Karma Count of the DAO + 1 token.</p>
+<h2 id="smv-in-gosh"><strong>SMV in GOSH</strong></h2>
+<p>In GOSH one vote is one token.</p>
+<h3 id="tokens-and-karma"><strong>Tokens and Karma</strong></h3>
+<p>The total supply of tokens is set when a DAO is created.</p>
+<p>A DAO's first user automatically gets 20 DAO tokens and 20 Karma.</p>
+<p><strong>Karma</strong> is the amount of tokens (upper limit) within which a DAO member can vote.</p>
+<p>Karma is either granted by a DAO decision upon member acceptance or earned through repository contribution.
+This determines the reputation of the DAO member. The Karma can be changed only by voting.</p>
+<p>See <a href="../../working-with-gosh/gosh-web/#overview-of-the-dao">here</a> for more information.</p>
+<h3 id="voting"><strong>Voting</strong></h3>
+<p>For a proposal in GOSH to pass early several participants need to vote for it with 50% of the Global Karma Count of the DAO + 1 token.</p>
 <p><strong>Global Karma Count</strong> is the total amount of Karma calculated by summing up the Karma of all DAO members at the time of the proposal creation.</p>
 <p>If no one objects to a proposal for the duration of its voting period, 10% f the Global Karma Count is enough, but the proposal will only complete at the end of the voting period.</p>
 <p>If votes are split, and neither side achieves 50% + 1 token early, the proposal completes at the end of the voting period and the result is calculated according to the diagram above.</p>
