@@ -371,37 +371,81 @@ Then add a comment on changing the settings for other members of the DAO and cli
 
 When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
 
-The upgrade is initiated by the [proposal](gosh-web/#proposals-and-voting-in-smv-soft-majority-vote).
+The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
+
+
+!!! info
+    Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
+
 
 You can see a message about the availability of a new version 
 and an invitation to update in the DAO.
 
-![](../images/gosh_web_upgrade_msg_new_vers_available_01.jpg)
-
-!!! info
-    Complete all proposle before starting the update.
-
-
-You can go to the Updates section from the new version message or by going to the Settings tab.
-
-
-<!-- Depending on which version you currently have, choose the appropriate update method. -->
-Select the version you want to upgrade to:
+Depending on which version you currently have, choose the appropriate update method.
 
 * __From version 1 to version 2__
 
+![](../images/gosh_web_upgrade_01_msg_v1tov2.jpg)
+
+You can go to the **Upgrade** section from the new version message or go to the **Settings** tab.
+
+Select the version you want to upgrade and click **Create proposal for DAO upgrade**:
+
 ![](../images/gosh_web_upgrade_02_in_settings.jpg)
 
+You will be taken to the DAO page with events.
+
+![](../images/gosh_web_upgrade_03_proposal.jpg)
+
+After the completion of [voting for the proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote), the procedure for updating your DAO will begin.
+
+Then you need to update all the Repositories.
+
+To do this, go to their tab and click **Get repositories**
+
+![](../images/gosh_web_upgrade_04_1_get_repo.jpg)
+
+and then click **Start repositories upgrade** to create a proposal
+
+![](../images/gosh_web_upgrade_04_2_upgr_repo.jpg)
+
+On the DAO tab, vote for the proposal to create a repository
+
+![](../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg)
 
 
 * __From version 2 to version 3__
+
+Tasks were added in contracts version 2.
+
+Uninitialized Tasks will not be migrated to the new version.
+
+!!! warning
+    Before starting the update make sure that there are commits in the Tasks.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/gosh_web_upgrade_05_msg_v2tov3.jpg)
+
+Select the version you want to update.
+
+![](../images/gosh_web_upgrade_06_settings_v2tov3.jpg)
 
 
 
 * __From version 1 to version 3__
 
+* __From version 3 to version 4__
+
+<!-- short description of DAO located in the _index repository
 
 You can leave a comment on the proposal.
+
+To transfer a brief description of the DAO from the _index repository
+
+and
+
+check mark on the permission for additional token issuance - individual proposal -->
 
 
 ### __Proposals and voting in SMV (Soft Majority Vote)__
@@ -409,7 +453,11 @@ You can leave a comment on the proposal.
 
 Actions that require a DAO vote are performed by creating a proposal.
 
-* [**create a pull request**](gosh-web.md#create-pull-request)
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+
+* [**Create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
