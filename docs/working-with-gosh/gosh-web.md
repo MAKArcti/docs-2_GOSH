@@ -11,12 +11,13 @@ You will be able to create your GOSH account and Decentralized Autonomous Organi
 <!-- 
 tabs:
 
-Overview
-DAO
-Repositories
-Members
+Overview -- 
+DAO         
+Repositories 
+Members   
 Tasks
-Settings -->
+Settings 
+-->
 
 
 <!-- 
@@ -27,34 +28,35 @@ Overview
     * create repo
     * ...
 -----
-* DAO total supply
-* DAO reserve
-* Your wallet balance
-* Allowance
-* Members1 + Invite members
+* DAO total supply ---
+* DAO reserve----
+* Your wallet balance----
+* Allowance---
+* Members1 + Invite members---
 
 DAO
-* DAO events
+* DAO events---
 
 Repositories
 * DAO system repository ?
-* create repo
+* create repo---
 
 Members
-* Invite user to DAO
+* Invite user to DAO---
 
 Tasks
 * create task
 
 Settings
 * DAO Set up
-    * Token setup
-    * Proposal setup
-    * Members setup
-    * Save changes
+    * Token setup----
+    * Proposal setup---
+    * Members setup---
+    * Save changes---
 
 * Upgrade
-    * Upgrade DAO -->
+    * Upgrade DAO 
+-->
 
 
 ## __Working with account__
@@ -107,20 +109,31 @@ If you're new to blockchain, all you need to know, is that this is the key to yo
 
 To create the GOSH-account, the seed phrase will be generated for you. If you already have the GOSH-account, click **Clear** and enter your own one seed phrase.
 
-![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
-
-!!! danger
-    Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
-
 !!! info
     Your seed phrase will be used to log into GOSH.
 
+
+!!! danger
+    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
+
+
 Once you have written down your seed phrase, click **Continue.**
 
-Then choose a short nickname or create a new one and click **Create account**.
+![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
+
+
+Then choose your username in GOSH. **This is your unique cryptographic identifier in Gosh.
+**
+
+!!! Danger
+    **Please note that after creating your username it will be impossible to change it in the future.**
+
+if your username is already taken, please choose another one.
 
 !!! warning
-    The Usernames must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+    The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+And click **Create account**.
 
 ![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
@@ -178,9 +191,6 @@ To view your public key go to the main page of your account and click [**Setting
 
 
 ​Once created, your organization will appear in the organization list. Click on it to continue.
-
-<!-- TODO
-change image when -->
 
 ![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
 
@@ -312,7 +322,7 @@ The **_index** is a DAO system repository that is created automatically.
     a text file with a brief description of your DAO,
     which you added in the settings earlier.
 
-To add a README for your DAO, go to the _index repository and [create a file](ggosh-web/#create-file) in the main branch.
+To add a README for your DAO, go to the _index repository and [create a file](gosh-web.md#create-file) in the main branch.
 
 ![](../images/gosh_web_OVERVIEW_04_readme_md.jpg)
 
@@ -356,17 +366,103 @@ Then add a comment on changing the settings for other members of the DAO and cli
     __All settings and actions in the DAO will be performed the [voting](gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
 
 
+### __Upgrade__
+
+
+When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
+
+The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
+
+
+!!! info
+    Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
+
+
+You can see a message about the availability of a new version 
+and an invitation to update in the DAO.
+
+Depending on which version you currently have, choose the appropriate update method.
+
+* __From version 1 to version 2__
+
+![](../images/gosh_web_upgrade_01_msg_v1tov2.jpg)
+
+You can go to the **Upgrade** section from the new version message or go to the **Settings** tab.
+
+Select the version you want to upgrade and click **Create proposal for DAO upgrade**:
+
+![](../images/gosh_web_upgrade_02_in_settings.jpg)
+
+You will be taken to the DAO page with events.
+
+![](../images/gosh_web_upgrade_03_proposal.jpg)
+
+After the completion of [voting for the proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote), the procedure for updating your DAO will begin.
+
+Then you need to update all the Repositories.
+
+To do this, go to their tab and click **Get repositories**
+
+![](../images/gosh_web_upgrade_04_1_get_repo.jpg)
+
+and then click **Start repositories upgrade** to create a proposal
+
+![](../images/gosh_web_upgrade_04_2_upgr_repo.jpg)
+
+On the DAO tab, vote for the proposal to create a repository
+
+![](../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg)
+
+
+* __From version 2 to version 3__
+
+Tasks were added in contracts version 2.
+
+Uninitialized Tasks will not be migrated to the new version.
+
+!!! warning
+    Before starting the update make sure that there are commits in the Tasks.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/gosh_web_upgrade_05_msg_v2tov3.jpg)
+
+Select the version you want to update.
+
+![](../images/gosh_web_upgrade_06_settings_v2tov3.jpg)
+
+
+
+* __From version 1 to version 3__
+
+* __From version 3 to version 4__
+
+<!-- short description of DAO located in the _index repository
+
+You can leave a comment on the proposal.
+
+To transfer a brief description of the DAO from the _index repository
+
+and
+
+check mark on the permission for additional token issuance - individual proposal -->
+
+
 ### __Proposals and voting in SMV (Soft Majority Vote)__
 
 
 Actions that require a DAO vote are performed by creating a proposal.
 
-* [**create a pull request**](gosh-web.md#create-pull-request)
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+
+* [**Create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
-* **Upgrade DAO**
+* [**Upgrade DAO**](gosh-web.md#upgrade)
 * **Delete task**
 * **Create task**
 * [**Create repository**](gosh-web.md#create-repository)
