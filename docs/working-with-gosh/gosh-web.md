@@ -194,9 +194,9 @@ To view your public key go to the main page of your account and click [**Setting
 
 ![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
 
-The first mandatory member is the creator, identified by their username.
+The first mandatory member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+The second member is the creator, identified by their username.
 
 At any later time the list of members [can be expanded](gosh-web.md#add-members-to-dao) by voting.
 
@@ -882,6 +882,8 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 ## __Working with Task__
 
+
+
 To create a Task, go to the Tasks tab and click **Create Task**
 
 ![](../images/gosh_web_Create_Task_01.jpg)
@@ -892,27 +894,31 @@ Select the repository for which the Task is being created.
 
 ![](../images/gosh_web_Task_02_fill_repo.jpg)
 
-Add the task name. 
+Add the Task name.
 
-You can add up to 3 tags separated by spaces to quickly find the task.
+You can add 3 tags separated by spaces to quickly find the task.
 
 ![](../images/gosh_web_Task_03_name_tags.jpg)
 
 Then you need to evaluate the Task.
 
+The cost of the Task is the number of tokens that will be paid from the DAO reserve.
+
 !!! info
-    The cost of Tasks is determined by the members of the DAO.
+    The members of the DAO agree between themselves how to evaluate the tasks.
 
+The results of the Task should be a pull request.
 
-If a pull request is attached to the Task after completion, these tokens will be distributed from DAO reserve between the author, reviewer(s) and manager.
-
+After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
 
 **Author** - The person who executes the Task.  
-**Reviewer** - The person who checks the correctness of the task. There could be more about.  
-**Manager** - The person who makes the decision to complete the task.
+**Reviewer** - The person who checks the correctness of the Task.  
+**Manager** - The person who makes the decision to complete the Task.
 
 !!! info
-    If the Task does not have a reviewer(s) and/or a manager, then do not specify their part.
+    The number of authors, areviewers and managers is set at your choice.  
+    <!-- If, when forming a task, you assign rewards for the reviewer and the manager, and the task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
+    All non-rewards will be returned to the DAO Reserve. -->
 
 ![](../images/gosh_web_Task_04_cost_distrb.jpg)
 
@@ -921,7 +927,10 @@ Select vesting and lock periods.
 **Lock (Cliif)** - The period in which the tokens are locked up.  
 **Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
 
-For example, lock - 12 months, vesting - 18 months.  
+For example, lock - 12 months, vesting - 2 months.  
+
+!!! warning
+    In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the participants of the task must be a multiple of the number of months of investment.
 
 ![](../images/gosh_web_Task_05_lock_vesting.jpg)
 
@@ -933,7 +942,13 @@ After creating the proposal, you will be taken to the DAO page with events.
 
 ![](../images/gosh_web_Task_07_event.jpg)
 
+Inside the proposal you will be able to see all the conditions of the Task.  
+In the table you can see the period since which month and in what parts the payments will be made to the participants of the Task.
 
+<!-- ![](../images/gosh_web_Task_08_proposal.jpg) -->
 
-!!! info
-    If there are no costs in the Task, then you do not need to vote for it.
+![](../images/gosh_web_Task_09_event_details.jpg)
+
+After accepting the Offer, the Task will appear in the list on the Tasks tab.
+
+![](../images/gosh_web_Task_10_list_tasks.jpg)
