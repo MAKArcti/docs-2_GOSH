@@ -322,13 +322,46 @@ The **_index** is a DAO system repository that is created automatically.
     a text file with a brief description of your DAO,
     which you added in the settings earlier.
 
-To add a README for your DAO, go to the _index repository and [create a file](gosh-web.md#create-file) in the main branch.
+To add a README for your DAO, go to the _index repository or follow the link in this section.
+
+<!-- and [create a file](gosh-web.md#create-file) in the main branch. -->
 
 ![](../images/gosh_web_OVERVIEW_04_readme_md.jpg)
 
-<!-- TODO 
-    add organization description by placing
-    readme.md file to main branch of _index repository -->
+Make sure you are in the **main** branch and click **Add file** button.
+
+![](../images/gosh_web_Readme_md_01.jpg)
+
+Enter file contents and name.
+
+![](../images/gosh_web_Readme_md_02_content.jpg)
+
+You can use **Preview** if needed. MD syntax is supported for preview.
+
+After scroll down and enter commit info:
+
+* Commit description - you can add a description of your commit;
+
+* Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;
+
+<!-- ![](../images/gosh_web_Readme_md_03_data_commit.jpg) -->
+![](../images/gosh_web_Readme_md_03_2_data_commit.jpg)
+
+* Select a task - if you want to attach your commit to the solution of the Task, then select the desired task from the list;
+
+![](../images/gosh_web_Task_11_select_tast.jpg)
+
+* and add Assigners, Reviewers and Managers if necessary.
+
+![](../images/gosh_web_Task_11_2_select_tast_participants.jpg)
+
+If a Task has been selected, check the **Create proposal** box.
+
+And click **Commit changes**
+
+![](../images/gosh_web_Readme_md_03_data_commit.jpg)
+
+<!-- ![](../images/gosh_web_Readme_md_04_commit_prosess.jpg) -->
 
 
 ### __DAO Set up__
@@ -902,10 +935,10 @@ You can add 3 tags separated by spaces to quickly find the task.
 
 Then you need to evaluate the Task.
 
-The cost of the Task is the number of tokens that will be paid from the DAO reserve.
+**Task cost** is the number of tokens that will be paid from the DAO reserve for its execution.
 
 !!! info
-    The members of the DAO agree between themselves how to evaluate the tasks.
+    The members of the DAO agree between themselves how to evaluate the Tasks.
 
 The results of the Task should be a pull request.
 
@@ -917,7 +950,7 @@ After attaching a pull request to the Task, the tokens will be distributed betwe
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
-    <!-- If, when forming a task, you assign rewards for the reviewer and the manager, and the task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
+    <!-- If, when forming a Task, you assign rewards for the reviewer and the manager, and the Task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
     All non-rewards will be returned to the DAO Reserve. -->
 
 ![](../images/gosh_web_Task_04_cost_distrb.jpg)
