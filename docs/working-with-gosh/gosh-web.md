@@ -882,6 +882,58 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 ## __Working with Task__
 
-
+To create a Task, go to the Tasks tab and click **Create Task**
 
 ![](../images/gosh_web_Create_Task_01.jpg)
+
+Then you need to fill in the Task conditions.
+
+Select the repository for which the Task is being created.
+
+![](../images/gosh_web_Task_02_fill_repo.jpg)
+
+Add the task name. 
+
+You can add up to 3 tags separated by spaces to quickly find the task.
+
+![](../images/gosh_web_Task_03_name_tags.jpg)
+
+Then you need to evaluate the Task.
+
+!!! info
+    The cost of Tasks is determined by the members of the DAO.
+
+
+If a pull request is attached to the Task after completion, these tokens will be distributed from DAO reserve between the author, reviewer(s) and manager.
+
+
+**Author** - The person who executes the Task.  
+**Reviewer** - The person who checks the correctness of the task. There could be more about.  
+**Manager** - The person who makes the decision to complete the task.
+
+!!! info
+    If the Task does not have a reviewer(s) and/or a manager, then do not specify their part.
+
+![](../images/gosh_web_Task_04_cost_distrb.jpg)
+
+Select vesting and lock periods. 
+
+**Lock (Cliif)** - The period in which the tokens are locked up.  
+**Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
+
+For example, lock - 12 months, vesting - 18 months.  
+
+![](../images/gosh_web_Task_05_lock_vesting.jpg)
+
+Add a comment the token distribution rules and click **Create task and start proposal**
+
+![](../images/gosh_web_Task_06_comment.jpg)
+
+After creating the proposal, you will be taken to the DAO page with events.
+
+![](../images/gosh_web_Task_07_event.jpg)
+
+
+
+!!! info
+    If there are no costs in the Task, then you do not need to vote for it.
