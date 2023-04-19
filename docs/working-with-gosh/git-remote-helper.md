@@ -2,8 +2,60 @@
 
 Git Remote Helper (this is a standard mechanism for working with non-standard code storages) is a [`git-client helper`](https://git-scm.com/docs/gitremote-helpers#_description) to interact with remote repositories hosted on the GOSH blockchain. 
 
+
 ## __Installation__
+
+
+### __Install helper using the installation script__
+
+If you have macOS or Linux, you can use this installation method.
+
+```
+wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
+```
+
+If you have Windows, you can use the installation methods below.
+
+[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+
+
+### __Install helper from binary releases__
+
+
+1. Follow the [`link`](https://github.com/gosh-sh/gosh/releases)
+and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows).
+
+2. Extract files from tar-file
+
+    (e.g. for Linux x64):
+
+    ```
+    tar xvf git-remote-gosh-linux-amd64.tar
+    ```
+
+3. Move binary files to any searchable path
+
+    (e.g. /usr/local/bin):
+
+      ```
+      mv git-remote-gosh /usr/local/bin
+      ```
+
+      ```
+      mv git-remote-gosh_v?_0_0 /usr/local/bin
+      ```
+
+    and move dispatcher.ini to ~/.gosh/ folder:
+
+    ```
+    mkdir ~/.gosh || mv dispatcher.ini ~/.gosh/
+    ```
+
+[Checking](git-remote-helper.md#verifying-the-installation-resulte) the installation results.
+
+
 ### __Install helper from source__
+
 
 1. Prerequisites:
 
@@ -42,6 +94,10 @@ Git Remote Helper (this is a standard mechanism for working with non-standard co
     ```
 
     ```
+      cd v4_x/git-remote-gosh && make install
+    ```
+
+    ```
       cd gosh-dispatcher && make install
     ```
 
@@ -66,67 +122,42 @@ Git Remote Helper (this is a standard mechanism for working with non-standard co
         git-remote-gosh_v3_0_0
       ```
 
-      You can check the correctness of the configuration file by running the command:
-
-    ```
-      git-remote-gosh dispatcher_ini
-    ```
+      ```
+        git-remote-gosh_v4_0_0
+      ```
 
 
-      As a result, you will see the following:
-
-      ![](../images/git_remote_helper_dispatcher_ini.jpg)
+### __Verifying the installation resulte__
 
 
-4. Run the following command to make sure it's available:
+You can check the correctness of the configuration file by running the command:
 
-    ```
-    which git-remote-gosh
-    ```
+```
+git-remote-gosh dispatcher_ini
+```
 
-    If the Git Remote Helper is not available, then add path with `git-remote-gosh`
+As a result, you will see the following:
+
+![](../images/git_remote_helper_dispatcher_ini_v4.jpg)
+
+
+Run the following command to make sure it's available:
+
+```
+which git-remote-gosh
+```
+
+If the Git Remote Helper is not available, then add path with `git-remote-gosh`
     
-    for availability via `$PATH`:
+for availability via `$PATH`:
 
-    ```
-    export PATH="~/.cargo/bin:$PATH"
-    ```
-
-
-### __Install helper from binary releases__
-
-
-1. Follow the [`link`](https://github.com/gosh-sh/gosh/releases)
-and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows).
-
-2. Extract files from tar-file
-
-    (e.g. for Linux x64):
-
-    ```
-    tar xvf git-remote-gosh-linux-amd64.tar
-    ```
-
-3. Move binary files to any searchable path
-
-    (e.g. /usr/local/bin):
-
-      ```
-      mv git-remote-gosh /usr/local/bin
-      ```
-
-      ```
-      mv git-remote-gosh_v?_0_0 /usr/local/bin
-      ```
-
-    and move dispatcher.ini to ~/.gosh/ folder:
-
-    ```
-    mkdir ~/.gosh || mv dispatcher.ini ~/.gosh/
-    ```
+```
+export PATH="~/.cargo/bin:$PATH"
+```
 
 
 ## __Setup user account__
+
 
 When creating your account in [GOSH Web](gosh-web.md) or [Docker extension](docker-extension.md) you received a GOSH wallet address and keys.
 
@@ -155,6 +186,7 @@ for example:
   }
 }
 ```
+
 
 ## __Use GOSH as remote__
 
