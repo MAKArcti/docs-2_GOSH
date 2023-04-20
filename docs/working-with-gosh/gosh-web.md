@@ -325,6 +325,8 @@ The **_index** is a DAO system repository that is created automatically.
 To add a README for your DAO, go to the _index repository or follow the link in this section.
 
 <!-- and [create a file](gosh-web.md#create-file) in the main branch. -->
+<!-- TODO
+replace to create file -->
 
 ![](../images/gosh_web_OVERVIEW_04_readme_md.jpg)
 
@@ -363,6 +365,13 @@ And click **Commit changes**
 
 <!-- ![](../images/gosh_web_Readme_md_04_commit_prosess.jpg) -->
 
+After that a proposal to the pull request will be created.
+
+![](../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg)
+
+When the proposal to the pull request is accepted, the description of the DAO will appear on the **Overview** tab.
+
+![](../images/gosh_web_Readme_md_05_owerviw.jpg)
 
 ### __DAO Set up__
 
@@ -944,9 +953,9 @@ The results of the Task should be a pull request.
 
 After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
 
-**Author** - The person who executes the Task.  
-**Reviewer** - The person who checks the correctness of the Task.  
-**Manager** - The person who makes the decision to complete the Task.
+**Author** - the person who executes the Task.  
+**Reviewer** - the person who checks the correctness of the Task.  
+**Manager** - the person who makes the decision to complete the Task.
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
@@ -982,6 +991,35 @@ In the table you can see the period since which month and in what parts the paym
 
 ![](../images/gosh_web_Task_09_event_details.jpg)
 
-After accepting the Offer, the Task will appear in the list on the Tasks tab.
+After accepting the proposal, the Task will appear in the list on the **Tasks** tab with the status *Awaiting commits*.
 
 ![](../images/gosh_web_Task_10_list_tasks.jpg)
+
+When the Author has completed the Task, he adds it to the commit.
+
+!!! info
+    If you need to make several commits to complete a Task, do **Select task**  in the last one, to create the proposal to the pull request.
+
+![](../images/gosh_web_Readme_md_03_data_commit.jpg)
+
+After that a proposal to the pull request will be created.  
+
+![](../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg)
+
+Detailed information can be viewed by going to it on the DAO tab with events.
+
+![](../images/gosh_web_Task_13_detail_proposal.jpg)
+
+If the reviewer was specified during the commit, the event will wait for verification from them.
+
+![](../images/gosh_web_Task_14_event%20review.jpg)
+
+After the reviewer send the solution, it will be possible to vote for the proposal.  
+When the pull request is accepted, the Task status will change to **Confirmed**.
+
+![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
+
+To receive a reward, the participant of the Task needs to go to the **Tasks** tab into the completed Task and click **Claim reward**.  
+The tokens will be transferred to the wallets of the participants of the completed Task.
+
+![](../images/gosh_web_Task_16_claim_reward.jpg)
