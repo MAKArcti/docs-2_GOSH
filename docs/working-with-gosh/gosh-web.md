@@ -11,12 +11,13 @@ You will be able to create your GOSH account and Decentralized Autonomous Organi
 <!-- 
 tabs:
 
-Overview
-DAO
-Repositories
-Members
+Overview -- 
+DAO         
+Repositories 
+Members   
 Tasks
-Settings -->
+Settings 
+-->
 
 
 <!-- 
@@ -27,34 +28,35 @@ Overview
     * create repo
     * ...
 -----
-* DAO total supply
-* DAO reserve
-* Your wallet balance
-* Allowance
-* Members1 + Invite members
+* DAO total supply ---
+* DAO reserve----
+* Your wallet balance----
+* Allowance---
+* Members1 + Invite members---
 
 DAO
-* DAO events
+* DAO events---
 
 Repositories
 * DAO system repository ?
-* create repo
+* create repo---
 
 Members
-* Invite user to DAO
+* Invite user to DAO---
 
 Tasks
 * create task
 
 Settings
 * DAO Set up
-    * Token setup
-    * Proposal setup
-    * Members setup
-    * Save changes
+    * Token setup----
+    * Proposal setup---
+    * Members setup---
+    * Save changes---
 
 * Upgrade
-    * Upgrade DAO -->
+    * Upgrade DAO 
+-->
 
 
 ## __Working with account__
@@ -107,20 +109,31 @@ If you're new to blockchain, all you need to know, is that this is the key to yo
 
 To create the GOSH-account, the seed phrase will be generated for you. If you already have the GOSH-account, click **Clear** and enter your own one seed phrase.
 
-![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
-
-!!! danger
-    Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.
-
 !!! info
     Your seed phrase will be used to log into GOSH.
 
+
+!!! danger
+    **Write your seed phrase down and store it somewhere safe, and never share it with anyone. Avoid storing it in plain text or screenshots, or any other non-secure way. If you lose it, you lose access to your assets. Anyone who gets it, gets full access to your assets.**
+
+
 Once you have written down your seed phrase, click **Continue.**
 
-Then choose a short nickname or create a new one and click **Create account**.
+![](../images/gosh_web_Authorize_Gosh_06_seedF.jpg)
+
+
+Then choose your username in GOSH. **This is your unique cryptographic identifier in Gosh.
+**
+
+!!! Danger
+    **Please note that after creating your username it will be impossible to change it in the future.**
+
+if your username is already taken, please choose another one.
 
 !!! warning
-    The Usernames must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+    The username must contain only Latin letters, numbers, hyphen, underscore character `( a...z, 0...9, -, _ )`
+
+And click **Create account**.
 
 ![](../images/gosh_web_Authorize_Gosh_07_createAk.jpg)
 
@@ -179,14 +192,11 @@ To view your public key go to the main page of your account and click [**Setting
 
 ​Once created, your organization will appear in the organization list. Click on it to continue.
 
-<!-- TODO
-change image when -->
-
 ![](../images/gosh_web_Create_ORG_03_list_orgs.jpg)
 
-The first mandatory member is the creator, identified by their username.
+The first mandatory member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
 
-The second member is the GOSH DAO Bot. It will synchronize repositories with github on Gosh.
+The second member is the creator, identified by their username.
 
 At any later time the list of members [can be expanded](gosh-web.md#add-members-to-dao) by voting.
 
@@ -312,14 +322,56 @@ The **_index** is a DAO system repository that is created automatically.
     a text file with a brief description of your DAO,
     which you added in the settings earlier.
 
-To add a README for your DAO, go to the _index repository and [create a file](ggosh-web/#create-file) in the main branch.
+To add a README for your DAO, go to the _index repository or follow the link in this section.
+
+<!-- and [create a file](gosh-web.md#create-file) in the main branch. -->
+<!-- TODO
+replace to create file -->
 
 ![](../images/gosh_web_OVERVIEW_04_readme_md.jpg)
 
-<!-- TODO 
-    add organization description by placing
-    readme.md file to main branch of _index repository -->
+Make sure you are in the **main** branch and click **Add file** button.
 
+![](../images/gosh_web_Readme_md_01.jpg)
+
+Enter file contents and name.
+
+![](../images/gosh_web_Readme_md_02_content.jpg)
+
+You can use **Preview** if needed. MD syntax is supported for preview.
+
+After scroll down and enter commit info:
+
+* Commit description - you can add a description of your commit;
+
+* Commit tags - this is a mutable pointer of the commit. You can add the tag to quickly go to this commit and see what has been done;
+
+<!-- ![](../images/gosh_web_Readme_md_03_data_commit.jpg) -->
+![](../images/gosh_web_Readme_md_03_2_data_commit.jpg)
+
+* Select a task - if you want to attach your commit to the solution of the Task, then select the desired task from the list;
+
+![](../images/gosh_web_Task_11_select_tast.jpg)
+
+* and add Assigners, Reviewers and Managers if necessary.
+
+![](../images/gosh_web_Task_11_2_select_tast_participants.jpg)
+
+If a Task has been selected, check the **Create proposal** box.
+
+And click **Commit changes**
+
+![](../images/gosh_web_Readme_md_03_data_commit.jpg)
+
+<!-- ![](../images/gosh_web_Readme_md_04_commit_prosess.jpg) -->
+
+After that a proposal to the pull request will be created.
+
+![](../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg)
+
+When the proposal to the pull request is accepted, the description of the DAO will appear on the **Overview** tab.
+
+![](../images/gosh_web_Readme_md_05_owerviw.jpg)
 
 ### __DAO Set up__
 
@@ -356,17 +408,103 @@ Then add a comment on changing the settings for other members of the DAO and cli
     __All settings and actions in the DAO will be performed the [voting](gosh-web.md#voting-in-smv-soft-majority-vote) procedure.__
 
 
+### __Upgrade__
+
+
+When a new version of contracts is released in GOSH, the user needs to upgrade their contracts.
+
+The upgrade is initiated by the [proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote).
+
+
+!!! info
+    Complete all proposle before starting the upgrade. All uncompleted proposals will be rejected and will not be transferred to the upgraded version.
+
+
+You can see a message about the availability of a new version 
+and an invitation to update in the DAO.
+
+Depending on which version you currently have, choose the appropriate update method.
+
+* __From version 1 to version 2__
+
+![](../images/gosh_web_upgrade_01_msg_v1tov2.jpg)
+
+You can go to the **Upgrade** section from the new version message or go to the **Settings** tab.
+
+Select the version you want to upgrade and click **Create proposal for DAO upgrade**:
+
+![](../images/gosh_web_upgrade_02_in_settings.jpg)
+
+You will be taken to the DAO page with events.
+
+![](../images/gosh_web_upgrade_03_proposal.jpg)
+
+After the completion of [voting for the proposal](gosh-web.md#proposals-and-voting-in-smv-soft-majority-vote), the procedure for updating your DAO will begin.
+
+Then you need to update all the Repositories.
+
+To do this, go to their tab and click **Get repositories**
+
+![](../images/gosh_web_upgrade_04_1_get_repo.jpg)
+
+and then click **Start repositories upgrade** to create a proposal
+
+![](../images/gosh_web_upgrade_04_2_upgr_repo.jpg)
+
+On the DAO tab, vote for the proposal to create a repository
+
+![](../images/gosh_web_upgrade_04_3_proposal_upgr_repo.jpg)
+
+
+* __From version 2 to version 3__
+
+Tasks were added in contracts version 2.
+
+Uninitialized Tasks will not be migrated to the new version.
+
+!!! warning
+    Before starting the update make sure that there are commits in the Tasks.
+
+Go to the Settings tab or follow the link in the upgrade message.
+
+![](../images/gosh_web_upgrade_05_msg_v2tov3.jpg)
+
+Select the version you want to update.
+
+![](../images/gosh_web_upgrade_06_settings_v2tov3.jpg)
+
+
+
+* __From version 1 to version 3__
+
+* __From version 3 to version 4__
+
+<!-- short description of DAO located in the _index repository
+
+You can leave a comment on the proposal.
+
+To transfer a brief description of the DAO from the _index repository
+
+and
+
+check mark on the permission for additional token issuance - individual proposal -->
+
+
 ### __Proposals and voting in SMV (Soft Majority Vote)__
 
 
 Actions that require a DAO vote are performed by creating a proposal.
 
-* [**create a pull request**](gosh-web.md#create-pull-request)
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+
+* [**Create a pull request**](gosh-web.md#create-pull-request)
 * **Add branch protection**
 * **Remove branch protection**
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
-* **Upgrade DAO**
+* [**Upgrade DAO**](gosh-web.md#upgrade)
 * **Delete task**
 * **Create task**
 * [**Create repository**](gosh-web.md#create-repository)
@@ -788,4 +926,100 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 
 
+To create a Task, go to the Tasks tab and click **Create Task**
+
 ![](../images/gosh_web_Create_Task_01.jpg)
+
+Then you need to fill in the Task conditions.
+
+Select the repository for which the Task is being created.
+
+![](../images/gosh_web_Task_02_fill_repo.jpg)
+
+Add the Task name.
+
+You can add 3 tags separated by spaces to quickly find the task.
+
+![](../images/gosh_web_Task_03_name_tags.jpg)
+
+Then you need to evaluate the Task.
+
+**Task cost** is the number of tokens that will be paid from the DAO reserve for its execution.
+
+!!! info
+    The members of the DAO agree between themselves how to evaluate the Tasks.
+
+The results of the Task should be a pull request.
+
+After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
+
+**Author** - the person who executes the Task.  
+**Reviewer** - the person who checks the correctness of the Task.  
+**Manager** - the person who makes the decision to complete the Task.
+
+!!! info
+    The number of authors, areviewers and managers is set at your choice.  
+    <!-- If, when forming a Task, you assign rewards for the reviewer and the manager, and the Task was performed without them, then author will receive his part, and not the ones issued to return to the dao reserve.  
+    All non-rewards will be returned to the DAO Reserve. -->
+
+![](../images/gosh_web_Task_04_cost_distrb.jpg)
+
+Select vesting and lock periods. 
+
+**Lock (Cliif)** - The period in which the tokens are locked up.  
+**Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
+
+For example, lock - 12 months, vesting - 2 months.  
+
+!!! warning
+    In order for the investment scheme to be correct, the smaller of the number of tokens allocated to the participants of the task must be a multiple of the number of months of investment.
+
+![](../images/gosh_web_Task_05_lock_vesting.jpg)
+
+Add a comment the token distribution rules and click **Create task and start proposal**
+
+![](../images/gosh_web_Task_06_comment.jpg)
+
+After creating the proposal, you will be taken to the DAO page with events.
+
+![](../images/gosh_web_Task_07_event.jpg)
+
+Inside the proposal you will be able to see all the conditions of the Task.  
+In the table you can see the period since which month and in what parts the payments will be made to the participants of the Task.
+
+<!-- ![](../images/gosh_web_Task_08_proposal.jpg) -->
+
+![](../images/gosh_web_Task_09_event_details.jpg)
+
+After accepting the proposal, the Task will appear in the list on the **Tasks** tab with the status *Awaiting commits*.
+
+![](../images/gosh_web_Task_10_list_tasks.jpg)
+
+When the Author has completed the Task, he adds it to the commit.
+
+!!! info
+    If you need to make several commits to complete a Task, do **Select task**  in the last one, to create the proposal to the pull request.
+
+![](../images/gosh_web_Readme_md_03_data_commit.jpg)
+
+After that a proposal to the pull request will be created.  
+
+![](../images/gosh_web_Task_12_proposal_to_commit_with_task.jpg)
+
+Detailed information can be viewed by going to it on the DAO tab with events.
+
+![](../images/gosh_web_Task_13_detail_proposal.jpg)
+
+If the reviewer was specified during the commit, the event will wait for verification from them.
+
+![](../images/gosh_web_Task_14_event%20review.jpg)
+
+After the reviewer send the solution, it will be possible to vote for the proposal.  
+When the pull request is accepted, the Task status will change to **Confirmed**.
+
+![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
+
+To receive a reward, the participant of the Task needs to go to the **Tasks** tab into the completed Task and click **Claim reward**.  
+The tokens will be transferred to the wallets of the participants of the completed Task.
+
+![](../images/gosh_web_Task_16_claim_reward.jpg)
