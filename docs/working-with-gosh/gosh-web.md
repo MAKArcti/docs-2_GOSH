@@ -505,8 +505,8 @@ Actions that require a DAO vote are performed by creating a proposal.
 * [**Add DAO member**](gosh-web.md#add-members-to-dao)
 * **Remove DAO member**
 * [**Upgrade DAO**](gosh-web.md#upgrade)
-* **Delete task**
-* **Create task**
+* [**Delete task**](gosh-web.md#deleting-task)
+* [**Create task**](gosh-web.md#create-task)
 * [**Create repository**](gosh-web.md#create-repository)
 * **Add voting tokens**
 * **Add regular tokens**
@@ -514,7 +514,7 @@ Actions that require a DAO vote are performed by creating a proposal.
 * **Add DAO tag**
 * **Remove DAO tag**
 * **Disable minting DAO tokens**
-* **Change DAO member Karma**
+* [**Change DAO member Karma**](gosh-web.md#change-dao-member-karma)
 
 <!-- !!! Warning
     Be careful when distributing karma among the members of the TAO.
@@ -628,11 +628,14 @@ Other members of the Organization, who have transferred their tokens to SMV, wil
     Currently, even in organizations with a single member, voting still takes place when a proposal is created. 51 tokens are needed to approve a proposal in such a repository.
 
 Once a majority has been reached early, or the voting period ended and the soft majority vote result was decided, the proposal completes and the proposed action is performed.
-
 <!-- ![](../images/docker_ext_Voiting_SMV_03_result.jpg) -->
 
 
-### __Add Members to DAO__
+
+## **Working with DAO Members**
+
+
+### __Adding Members to DAO__
 
 Membership in the DAO can be obtained in several ways.
 
@@ -647,12 +650,11 @@ Also, the user can independently [create a membership request](gosh-web/#request
 *Depending on the chosen path, tokens and Karma will be distributed immediately after acceptance proposal, or additional proposals will need to be created for this.*
 
 
-#### <u>Add by GOSH username or e-mail</u>
+#### <u>Adding by GOSH username or e-mail</u>
 
 
 A DAO member can create a proposle to add GOSH user into the DAO.
 
-<!-- To do this, on the tab **Members** in the section **Invite user to DAO** enter the username of the GOSH user or email address. -->
 To do this, go to the tab **Members** in the section **Invite user to DAO**.
 
 * If you know the GOSH username, then enter it.
@@ -736,7 +738,6 @@ After the proposal is accepted, its status will change to **Accepted**
 
 !!! info
     You will be able to request voting tokens after you are accepted into the DAO by creating your proposal.
-
 <!-- TODO
 add a cross-reference to the karma change propos -->
 
@@ -773,13 +774,67 @@ You can follow the voting and discussion by opening the event.
 searching for users by DAO
 ![](../images/gosh_web_Invite_to_DAO_by_link_01.jpg) -->
 
-<!-- 
-TODO
-use it when I describe a request to increase karma
+
+### __Change DAO member Karma__
+
+
+Any member of the DAO can send a request to change Karma.  
+To do this, go to the **Members** tab and change the number of Karma and token balance of one or more DAO members, including for yourself.
+
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+![](../images/gosh_web_memeber_change_karma_01_request.jpg)
+
 !!! Warning
-    Be careful when distributing karma among the members of the DAO.
-    Avoid the possibility of a preponderance in the votes of one of the DAO members.
-    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet. -->
+    Be careful when distributing karma among the members of the DAO.  
+    Avoid the possibility of a preponderance in the votes of one of the DAO members.  
+    To avoid a situation where one participant will be able to transfer the entire balance of the DAO to his wallet.
+
+Then click **Save changes and create proposal**.  
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_change_karma_02_event.jpg)
+
+Inside the event, you can get details of Multi proposal.
+
+![](../images/gosh_web_memeber_change_karma_03_detal_multi_proposal.jpg)
+
+After accepting the multi proposal, the user will receive tokens and Karma from DAO reserve. This can be seen on the **Members** tab
+
+![](../images/gosh_web_memeber_change_karma_04_check_user_data.jpg)
+
+### __Delete Members from the DAO__
+
+To delete a member from the DAO, go to the **Members** tab and click on the cross to the desired member.
+
+!!! warning
+    To create an proposal, you must have at least 20 tokens on your wallet balance.
+
+![](../images/gosh_web_memeber_delete_01.jpg)
+
+Confirm the deletion by clicking OK.
+
+![](../images/gosh_web_memeber_delete_02_confirm.jpg)
+
+As a result, a Multi proposal will be created and you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_memeber_delete_03_event.jpg)
+
+The details of the multi proposl can be seen by going to it.
+
+![](../images/gosh_web_memeber_delete_04_event_detal.jpg)
+
+After voting and accepting multi proposal, the user will be deleted from the list of members of the DAO. 
+
+![](../images/gosh_web_memeber_delete_05_list_without_user.jpg)
+
+The Karma of the deleted user will be equal to 0.  
+But the tokens, if they were, will stay on the balance of the user's wallet.
+
+![](../images/gosh_web_memeber_delete_06_balance_user.jpg)
+
+
 
 
 ### __What's next?__
@@ -926,11 +981,16 @@ The branches will be compared. Review the changes, set up the pull request and c
 
 
 
+### __Create Task__
+
+
 To create a Task, go to the Tasks tab and click **Create Task**
 
 ![](../images/gosh_web_Create_Task_01.jpg)
 
 Then you need to fill in the Task conditions.
+
+The result of the Task should be a pull request to include changes in the repository.
 
 Select the repository for which the Task is being created.
 
@@ -949,13 +1009,11 @@ Then you need to evaluate the Task.
 !!! info
     The members of the DAO agree between themselves how to evaluate the Tasks.
 
-The results of the Task should be a pull request.
-
 After attaching a pull request to the Task, the tokens will be distributed between the author, reviewer and manager in the ratio you set.
 
 **Author** - the person who executes the Task.  
 **Reviewer** - the person who checks the correctness of the Task.  
-**Manager** - the person who makes the decision to complete the Task.
+**Manager** - the person who manages the Task execution process.
 
 !!! info
     The number of authors, areviewers and managers is set at your choice.  
@@ -966,7 +1024,8 @@ After attaching a pull request to the Task, the tokens will be distributed betwe
 
 Select vesting and lock periods. 
 
-**Lock (Cliif)** - The period in which the tokens are locked up.  
+**Lock (cliff)** - the period after which the reward payments will begin. 
+The countdown will start after accepting the proposal about completing the Task.  
 **Vesting** - rules for transferring the fixed part of the tokens to the disposal of the contractor.
 
 For example, lock - 12 months, vesting - 2 months.  
@@ -998,7 +1057,8 @@ After accepting the proposal, the Task will appear in the list on the **Tasks** 
 When the Author has completed the Task, he adds it to the commit.
 
 !!! info
-    If you need to make several commits to complete a Task, do **Select task**  in the last one, to create the proposal to the pull request.
+    If you need to make several commits to complete a Task,, create a separate branch.  
+    And do **Select task** when creating the proposal to the pull request.
 
 ![](../images/gosh_web_Readme_md_03_data_commit.jpg)
 
@@ -1014,12 +1074,34 @@ If the reviewer was specified during the commit, the event will wait for verific
 
 ![](../images/gosh_web_Task_14_event%20review.jpg)
 
-After the reviewer send the solution, it will be possible to vote for the proposal.  
+Then, after the reviewer send the solution, it will be possible to vote for the proposal.  
 When the pull request is accepted, the Task status will change to **Confirmed**.
 
 ![](../images/gosh_web_Task_15_task_status_confirmed.jpg)
 
-To receive a reward, the participant of the Task needs to go to the **Tasks** tab into the completed Task and click **Claim reward**.  
-The tokens will be transferred to the wallets of the participants of the completed Task.
+After the lock period ends, the participants of the Task can receive a reward.
+To do this, go to the **Tasks** tab in the completed Task and click **Claim reward**.
+
+!!! note
+    If Lock period (cliff) has been set to zero, then you can click **Claim reward** immediately after accepting the pull request.
 
 ![](../images/gosh_web_Task_16_claim_reward.jpg)
+
+Thus the tokens will begin to be transferred to the wallets of the participants of the completed Task in accordance with the vesting scheme when the lock period ends.
+
+
+### __Deletе Task__
+
+
+To delete a Task, go to it on the **Tasks** tab.
+And click to **Delete task**
+
+![](../images/gosh_web_Task_delete_01.jpg)
+
+After creating a proposal about deleting a Task, you will be redirected to the event page **Dao**.
+
+![](../images/gosh_web_Task_delete_02_event.jpg)
+
+When the proposal is accepted, the Task will be deleted.  
+The tokens allocated for this Task will be returned to the DAO reserve.
+

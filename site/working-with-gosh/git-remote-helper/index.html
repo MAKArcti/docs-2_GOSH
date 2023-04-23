@@ -446,8 +446,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-helper-from-source" class="md-nav__link">
-    Install helper from source
+  <a href="#install-helper-using-the-installation-script" class="md-nav__link">
+    Install helper using the installation script
   </a>
   
 </li>
@@ -455,6 +455,20 @@
           <li class="md-nav__item">
   <a href="#install-helper-from-binary-releases" class="md-nav__link">
     Install helper from binary releases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-helper-from-source" class="md-nav__link">
+    Install helper from source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-the-installation-resulte" class="md-nav__link">
+    Verifying the installation resulte
   </a>
   
 </li>
@@ -570,8 +584,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#install-helper-from-source" class="md-nav__link">
-    Install helper from source
+  <a href="#install-helper-using-the-installation-script" class="md-nav__link">
+    Install helper using the installation script
   </a>
   
 </li>
@@ -579,6 +593,20 @@
           <li class="md-nav__item">
   <a href="#install-helper-from-binary-releases" class="md-nav__link">
     Install helper from binary releases
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-helper-from-source" class="md-nav__link">
+    Install helper from source
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifying-the-installation-resulte" class="md-nav__link">
+    Verifying the installation resulte
   </a>
   
 </li>
@@ -648,6 +676,33 @@
 <h1 id="git-remote-helper"><strong>Git Remote Helper</strong></h1>
 <p>Git Remote Helper (this is a standard mechanism for working with non-standard code storages) is a <a href="https://git-scm.com/docs/gitremote-helpers#_description"><code>git-client helper</code></a> to interact with remote repositories hosted on the GOSH blockchain. </p>
 <h2 id="installation"><strong>Installation</strong></h2>
+<h3 id="install-helper-using-the-installation-script"><strong>Install helper using the installation script</strong></h3>
+<p>If you have macOS or Linux, you can use this installation method.</p>
+<pre><code>wget -O - https://raw.githubusercontent.com/gosh-sh/gosh/dev/install.sh | bash -s
+</code></pre>
+<p>If you have Windows, you can use the installation methods below.</p>
+<p><a href="./#verifying-the-installation-resulte">Checking</a> the installation results.</p>
+<h3 id="install-helper-from-binary-releases"><strong>Install helper from binary releases</strong></h3>
+<ol>
+<li>
+<p>Follow the <a href="https://github.com/gosh-sh/gosh/releases"><code>link</code></a>
+and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows).</p>
+</li>
+<li>
+<p>Extract files from tar-file</p>
+<p>(e.g. for Linux x64):</p>
+<p><code>tar xvf git-remote-gosh-linux-amd64.tar</code></p>
+</li>
+<li>
+<p>Move binary files to any searchable path</p>
+<p>(e.g. /usr/local/bin):</p>
+<p><code>mv git-remote-gosh /usr/local/bin</code></p>
+<p><code>mv git-remote-gosh_v?_0_0 /usr/local/bin</code></p>
+<p>and move dispatcher.ini to ~/.gosh/ folder:</p>
+<p><code>mkdir ~/.gosh || mv dispatcher.ini ~/.gosh/</code></p>
+</li>
+</ol>
+<p><a href="./#verifying-the-installation-resulte">Checking</a> the installation results.</p>
 <h3 id="install-helper-from-source"><strong>Install helper from source</strong></h3>
 <ol>
 <li>
@@ -678,6 +733,7 @@
 <p><code>cd v1_x/git-remote-gosh &amp;&amp; make install</code></p>
 <p><code>cd v2_x/git-remote-gosh &amp;&amp; make install</code></p>
 <p><code>cd v3_x/git-remote-gosh &amp;&amp; make install</code></p>
+<p><code>cd v4_x/git-remote-gosh &amp;&amp; make install</code></p>
 <p><code>cd gosh-dispatcher &amp;&amp; make install</code></p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -688,39 +744,22 @@
 <p><code>git-remote-gosh_v1_0_0</code></p>
 <p><code>git-remote-gosh_v2_0_0</code></p>
 <p><code>git-remote-gosh_v3_0_0</code></p>
-<p>You can check the correctness of the configuration file by running the command:</p>
-<p><code>git-remote-gosh dispatcher_ini</code></p>
-<p>As a result, you will see the following:</p>
-<p><img alt="" src="../../images/git_remote_helper_dispatcher_ini.jpg" /></p>
+<p><code>git-remote-gosh_v4_0_0</code></p>
 </li>
-<li>
+</ol>
+<h3 id="verifying-the-installation-resulte"><strong>Verifying the installation resulte</strong></h3>
+<p>You can check the correctness of the configuration file by running the command:</p>
+<pre><code>git-remote-gosh dispatcher_ini
+</code></pre>
+<p>As a result, you will see the following:</p>
+<p><img alt="" src="../../images/git_remote_helper_dispatcher_ini_v4.jpg" /></p>
 <p>Run the following command to make sure it's available:</p>
-<p><code>which git-remote-gosh</code></p>
+<pre><code>which git-remote-gosh
+</code></pre>
 <p>If the Git Remote Helper is not available, then add path with <code>git-remote-gosh</code></p>
 <p>for availability via <code>$PATH</code>:</p>
-<p><code>export PATH="~/.cargo/bin:$PATH"</code></p>
-</li>
-</ol>
-<h3 id="install-helper-from-binary-releases"><strong>Install helper from binary releases</strong></h3>
-<ol>
-<li>
-<p>Follow the <a href="https://github.com/gosh-sh/gosh/releases"><code>link</code></a>
-and download the version of the Git Remote Helper for the required operating system (macOS, Linux, Windows).</p>
-</li>
-<li>
-<p>Extract files from tar-file</p>
-<p>(e.g. for Linux x64):</p>
-<p><code>tar xvf git-remote-gosh-linux-amd64.tar</code></p>
-</li>
-<li>
-<p>Move binary files to any searchable path</p>
-<p>(e.g. /usr/local/bin):</p>
-<p><code>mv git-remote-gosh /usr/local/bin</code></p>
-<p><code>mv git-remote-gosh_v?_0_0 /usr/local/bin</code></p>
-<p>and move dispatcher.ini to ~/.gosh/ folder:</p>
-<p><code>mkdir ~/.gosh || mv dispatcher.ini ~/.gosh/</code></p>
-</li>
-</ol>
+<pre><code>export PATH=&quot;~/.cargo/bin:$PATH&quot;
+</code></pre>
 <h2 id="setup-user-account"><strong>Setup user account</strong></h2>
 <p>When creating your account in <a href="../gosh-web/">GOSH Web</a> or <a href="../docker-extension/">Docker extension</a> you received a GOSH wallet address and keys.</p>
 <p>To be able to push to Gosh repositories, you need to set up these credentials for Git Remote Helper.</p>
