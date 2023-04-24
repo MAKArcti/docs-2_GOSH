@@ -13,7 +13,7 @@ pipeline {
                 script {
                     if (env.ghprbPullLink) {
                         env.COMMIT = env.ghprbSourceBranch
-                        env.BUCKET_NAME = "${BUILD_NUMBER}_${COMMIT}"
+                        env.BUCKET_NAME = "${BUILD_NUMBER}-${COMMIT}"
                         
                     } else {
                         env.COMMIT = params.sha1
