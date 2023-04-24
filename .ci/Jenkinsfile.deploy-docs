@@ -39,8 +39,8 @@ pipeline {
                                 aws s3 sync . s3://${BUCKET_NAME}
                                 sed "s/BUCKET_NAME/\$BUCKET_NAME/g" ../.ci/nginx/proxy.s3.conf.template >> /opt/nginx/s3-proxy.conf
                             """
-                            echo "http://${BUCKET_NAME}.s3-website.eu-west-2.amazonaws.com"
                         }
+                        echo "http://${BUCKET_NAME}.s3-website.eu-west-2.amazonaws.com"
                     }
                     /*timeout(15) {
                         waitUntil {
