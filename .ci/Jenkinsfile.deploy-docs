@@ -13,7 +13,12 @@ pipeline {
     stages {
         stage('Docs: deploy') {
             steps {
-                git branch: "${sha1}", url: 'https://github.com/gosh-sh/docs.git'
+                if (env.ghprbPullLink) {
+                    env.COMMIT = env.ghprbSourceBranch
+                } else {
+                    env.COMMIT = params.sha1
+                }
+                git branch: "${env.COMMIT}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
                     env.BUCKET_NAME = 'docs-gosh'
