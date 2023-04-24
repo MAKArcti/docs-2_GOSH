@@ -18,6 +18,7 @@ pipeline {
                 } else {
                     env.COMMIT = params.sha1
                 }
+                echo "${COMMIT}"
                 git branch: "${env.COMMIT}", url: 'https://github.com/gosh-sh/docs.git'
                 checkout scm
                 script {
