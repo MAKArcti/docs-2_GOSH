@@ -13,11 +13,11 @@ pipeline {
                 script {
                     if (env.ghprbPullLink) {
                         env.COMMIT = env.ghprbSourceBranch
-                        env.BUCKET_NAME = 'docs-gosh'
+                        env.BUCKET_NAME = "${BUILD_NUMBER}_${COMMIT}"
                         
                     } else {
                         env.COMMIT = params.sha1
-                        env.BUCKET_NAME = "${BUILD_NUMBER}_${COMMIT}"
+                        env.BUCKET_NAME = 'docs-gosh'
                     }
                 }
                 echo "${COMMIT}"
@@ -26,7 +26,7 @@ pipeline {
                 script {
 
                     dir('site') {
-                        def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
+                        def status = sh(script: "aws s3api head-bucket --bucket ${w}", returnStatus: true)
                         if (status == 0) {
                             echo 'Bucket already exists. Just syncing.'
                             sh "aws s3 sync . s3://${BUCKET_NAME}"
