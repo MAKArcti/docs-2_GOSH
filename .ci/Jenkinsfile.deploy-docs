@@ -28,7 +28,7 @@ pipeline {
                     dir('site') {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
                         if (status == 0) {
-                            echo 'Bucket already exists. Just syncing.'
+                            echo 'Bucket already exists! Just syncing.'
                             sh "aws s3 sync . s3://${BUCKET_NAME}"
                         } else {
                             sh """
