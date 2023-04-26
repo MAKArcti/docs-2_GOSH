@@ -4,26 +4,25 @@ pipeline {
             label 'jenkins-main'
         }
     }
-    parameters {
+    /*parameters {
         gitParameter branchFilter: 'origin/(.*)', defaultValue: 'main', name: 'sha1', type: 'PT_BRANCH', quickFilterEnabled: true
-    }
+    }*/
     stages {
         stage('Docs: deploy') {
             steps {
                 script {
-                    if (env.ghprbPullLink) {
-                        env.COMMIT = env.ghprbSourceBranch
+                    if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
                         
-                    } else {
-                        env.COMMIT = params.sha1
+                    } else if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
-                }
-                echo "${COMMIT}"
-                git branch: "${env.COMMIT}", url: 'https://github.com/gosh-sh/docs.git'
-                checkout scm
-                script {
+                    currentBuild.displayName = "${BUILD_NUMBER}_${env.CURRENT_BRANCH_NAME}"
+                    echo "${env.CURRENT_BRANCH_NAME}"
+                    env.TRIMMED_BRANCH_NAME = env.CURRENT_BRANCH_NAME.replace("refs/heads/", "")
+                    echo "${TRIMMED_BRANCH_NAME}"
+                    git branch: "${env.TRIMMED_BRANCH_NAME}", url: 'https://github.com/gosh-sh/docs.git'
+                    checkout scm
 
                     dir('site') {
                         def status = sh(script: "aws s3api head-bucket --bucket ${BUCKET_NAME}", returnStatus: true)
