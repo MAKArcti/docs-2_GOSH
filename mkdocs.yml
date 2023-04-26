@@ -7,7 +7,7 @@ nav:
     - GOSH smart contracts: on-chain-architecture/gosh-smart-contracts.md
   - Working with GOSH:
     - GOSH Web: working-with-gosh/gosh-web.md
-      # - Overview: empty.md
+      ## - Overview: empty.md
       # - DAO: empty.md
       # - Repositories: empty.md
       # - Members: empty.md
