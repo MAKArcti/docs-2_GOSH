@@ -14,7 +14,7 @@ pipeline {
                     if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
                         env.BUCKET_NAME = "staging-docs-gosh"
                         
-                    } else if (env.CURRENT_BRANCH_NAME == "refs/heads/dev") {
+                    } else if (env.CURRENT_BRANCH_NAME == "refs/heads/main") {
                         env.BUCKET_NAME = 'docs-gosh'
                     }
                     currentBuild.displayName = "${BUILD_NUMBER}_${env.CURRENT_BRANCH_NAME}"
